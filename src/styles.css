@@ -1,3 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+body.lang-my {
+  font-family: 'Noto Sans Myanmar', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

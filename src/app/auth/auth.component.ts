@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { LanguageSwitcherComponent } from '../core/i18n/language-switcher.component';
+import { TranslatePipe } from '../core/i18n/translate.pipe';
+
+@Component({
+  selector: 'app-auth',
+  imports: [RouterOutlet, RouterLink, TranslatePipe, LanguageSwitcherComponent],
+  templateUrl: './auth.component.html',
+  styleUrl: './auth.component.css'
+})
+export class AuthComponent {
+  protected readonly year = new Date().getFullYear();
+}

@@ -1,0 +1,128 @@
+{
+  "common": {
+    "appName": "Nexus Retail",
+    "language": "Language",
+    "english": "English",
+    "burmese": "Burmese",
+    "save": "Save",
+    "cancel": "Cancel",
+    "menu": "Menu",
+    "signOut": "Sign out",
+    "profile": "Profile",
+    "dashboard": "Dashboard"
+  },
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Enter your username or work email and password. New users are added by your company or system administrator.",
+    "usernameOrEmail": "Username or email",
+    "usernamePlaceholder": "you or you@company.com",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Keep me signed in on this device",
+    "signIn": "Sign in",
+    "demoTitle": "Demo accounts",
+    "demoHint": "Choose a role to explore the dashboard and menus. No password required.",
+    "demoSystemAdmin": "System administrator",
+    "demoCompanyAdmin": "Company administrator",
+    "demoStoreManager": "Store manager",
+    "demoStaff": "Store staff"
+  },
+  "forgot": {
+    "title": "Forgot password",
+    "subtitle": "Enter the email address associated with your account. If it matches our records, you will receive a link to reset your password.",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "sendResetLink": "Send reset link",
+    "backToSignIn": "Back to sign in"
+  },
+  "nav": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "accountMenu": "Account menu"
+  },
+  "sidebar": {
+    "sectionMain": "Main",
+    "sectionAdmin": "Administration",
+    "sectionStore": "Store",
+    "sectionMe": "Me"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "users": "Users & access",
+    "companies": "Companies",
+    "audit": "Audit log",
+    "settings": "Settings",
+    "stores": "Stores",
+    "staff": "Staff",
+    "reports": "Reports",
+    "inventory": "Inventory",
+    "sales": "Sales",
+    "schedules": "Schedules",
+    "myShifts": "My shifts",
+    "tasks": "Tasks"
+  },
+  "dashboard": {
+    "greeting": "Welcome back",
+    "yourRole": "Your role",
+    "hint": "Figures below are sample data for this demo role.",
+    "system_admin": {
+      "subtitle": "Cross-tenant visibility and platform controls.",
+      "c1t": "Platform users",
+      "c1h": "Across all companies",
+      "c2t": "Active companies",
+      "c2h": "Billing in good standing",
+      "c3t": "Open incidents",
+      "c3h": "Last 24 hours"
+    },
+    "company_admin": {
+      "subtitle": "Your organization, stores, and people.",
+      "c1t": "Stores live",
+      "c1h": "In your company",
+      "c2t": "Active staff",
+      "c2h": "With portal access",
+      "c3t": "MTD revenue",
+      "c3h": "Company total (demo)"
+    },
+    "store_manager": {
+      "subtitle": "This store’s performance and operations.",
+      "c1t": "Sales today",
+      "c1h": "This location",
+      "c2t": "Low-stock SKUs",
+      "c2h": "Needs attention",
+      "c3t": "Team on shift",
+      "c3h": "Right now"
+    },
+    "staff": {
+      "subtitle": "Your day at a glance.",
+      "c1t": "Tasks due",
+      "c1h": "Assigned to you",
+      "c2t": "Next shift",
+      "c2h": "Scheduled start",
+      "c3t": "Announcements",
+      "c3h": "From your manager"
+    }
+  },
+  "profile": {
+    "title": "Your profile",
+    "subtitle": "Update how you appear to colleagues. Username can be changed here; contact an administrator for email changes.",
+    "username": "Username",
+    "usernameHint": "Letters, numbers, and periods. 3–32 characters.",
+    "avatar": "Profile picture",
+    "avatarHint": "Pick an avatar — uploads are not enabled yet.",
+    "emailReadonly": "Work email (read-only)",
+    "saveProfile": "Save changes",
+    "savedToast": "Profile updated (demo)."
+  },
+  "authAside": {
+    "lead": "A calm, dependable workspace for your stores and teams. Accounts are created by your organization; sign in when you are ready."
+  },
+  "roles": {
+    "system_admin": "System administrator",
+    "company_admin": "Company administrator",
+    "store_manager": "Store manager",
+    "staff": "Store staff"
+  },
+  "section": {
+    "placeholderHint": "This area will load live data from your server. Navigation wiring is ready for your API."
+  }
+}

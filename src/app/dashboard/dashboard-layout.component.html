@@ -1,0 +1,123 @@
+@if (session.user(); as u) {
+  <div
+    class="flex min-h-dvh bg-slate-50 font-['Helvetica_Neue',Helvetica,Arial,sans-serif]"
+  >
+    @if (sidebarOpen()) {
+      <button
+        type="button"
+        class="fixed inset-0 z-40 bg-slate-900/40 lg:hidden"
+        (click)="closeSidebar()"
+        [attr.aria-label]="'nav.closeMenu' | translate"
+      ></button>
+    }
+
+    <aside
+      class="sidebar fixed inset-y-0 left-0 z-50 flex w-64 flex-col border-r border-slate-800 bg-slate-900 text-white lg:z-auto"
+      [class.sidebar-open]="sidebarOpen()"
+    >
+      <div class="flex h-16 shrink-0 items-center gap-2 border-b border-white/10 px-4">
+        <span
+          class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sm font-bold"
+          >N</span
+        >
+        <span class="truncate font-semibold">{{ 'common.appName' | translate }}</span>
+      </div>
+      <nav class="flex-1 overflow-y-auto px-3 py-4" aria-label="Main">
+        @for (g of navGroups(); track g.sectionKey + $index) {
+          <p
+            class="mb-2 mt-4 px-3 text-xs font-semibold uppercase tracking-wider text-slate-400 first:mt-0"
+          >
+            {{ g.sectionKey | translate }}
+          </p>
+          @for (item of g.items; track item.labelKey) {
+            <a
+              [routerLink]="linkFor(item)"
+              routerLinkActive="bg-white/10 text-white"
+              [routerLinkActiveOptions]="linkActiveOptions(item)"
+              (click)="closeSidebar()"
+              class="mb-1 flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 no-underline transition hover:bg-white/5 hover:text-white"
+            >
+              <app-nav-icon [icon]="item.icon" />
+              {{ item.labelKey | translate }}
+            </a>
+          }
+        }
+      </nav>
+    </aside>
+
+    <div class="flex min-w-0 flex-1 flex-col lg:pl-64">
+      <header
+        class="sticky top-0 z-30 flex h-16 shrink-0 items-center gap-3 border-b border-slate-200 bg-white/90 px-4 backdrop-blur sm:px-6"
+      >
+        <button
+          type="button"
+          class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 lg:hidden"
+          (click)="toggleSidebar()"
+          [attr.aria-label]="'nav.openMenu' | translate"
+        >
+          <svg
+            class="size-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <div class="flex flex-1 items-center justify-end gap-3">
+          <app-language-switcher [compact]="true" />
+          <div class="relative">
+            <button
+              type="button"
+              class="flex max-w-[14rem] items-center gap-2 rounded-lg border border-slate-200 py-1.5 pl-1.5 pr-3 text-left text-sm hover:bg-slate-50"
+              (click)="toggleAccount()"
+              [attr.aria-expanded]="accountOpen()"
+              [attr.aria-label]="'nav.accountMenu' | translate"
+            >
+              <img
+                [src]="avatarUrl(u.avatarId)"
+                alt=""
+                class="size-8 shrink-0 rounded-lg border border-slate-200 object-cover"
+                width="32"
+                height="32"
+              />
+              <span class="truncate font-medium text-slate-900">{{ u.displayName }}</span>
+            </button>
+            @if (accountOpen()) {
+              <div
+                class="absolute right-0 mt-1 w-52 rounded-lg border border-slate-200 bg-white py-1 shadow-lg ring-1 ring-slate-900/5"
+                role="menu"
+              >
+                <a
+                  routerLink="/dashboard/profile"
+                  class="block px-4 py-2.5 text-sm text-slate-700 no-underline hover:bg-slate-50"
+                  (click)="closeAccountOnNavigate()"
+                  role="menuitem"
+                >
+                  {{ 'common.profile' | translate }}
+                </a>
+                <button
+                  type="button"
+                  class="block w-full px-4 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-50"
+                  (click)="logout()"
+                  role="menuitem"
+                >
+                  {{ 'common.signOut' | translate }}
+                </button>
+              </div>
+            }
+          </div>
+        </div>
+      </header>
+      <main class="flex-1 p-4 sm:p-6 lg:p-8">
+        <router-outlet />
+      </main>
+    </div>
+  </div>
+}

@@ -1,0 +1,103 @@
+<div
+  class="rounded-2xl border border-slate-200/80 bg-white p-8 shadow-sm shadow-slate-200/60 sm:p-10"
+>
+  <h1 class="text-2xl font-semibold tracking-tight text-slate-900">
+    {{ 'login.title' | translate }}
+  </h1>
+  <p class="mt-2 text-[15px] leading-relaxed text-slate-600">
+    {{ 'login.subtitle' | translate }}
+  </p>
+
+  <form class="mt-8 space-y-5" (ngSubmit)="login()">
+    <div class="space-y-2">
+      <label for="login-identity" class="block text-sm font-medium text-slate-700">
+        {{ 'login.usernameOrEmail' | translate }}
+      </label>
+      <input
+        id="login-identity"
+        name="identity"
+        type="text"
+        autocomplete="username"
+        [placeholder]="'login.usernamePlaceholder' | translate"
+        class="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-[16px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-900/10"
+      />
+    </div>
+
+    <div class="space-y-2">
+      <div class="flex items-center justify-between gap-3">
+        <label for="login-password" class="block text-sm font-medium text-slate-700">
+          {{ 'login.password' | translate }}
+        </label>
+        <a
+          routerLink="/auth/forgot-password"
+          class="shrink-0 text-sm font-medium text-slate-600 underline-offset-4 hover:text-slate-900 hover:underline"
+        >
+          {{ 'login.forgotPassword' | translate }}
+        </a>
+      </div>
+      <input
+        id="login-password"
+        name="password"
+        type="password"
+        autocomplete="current-password"
+        placeholder="••••••••"
+        class="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-[16px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-900/10"
+      />
+    </div>
+
+    <label class="flex cursor-pointer items-center gap-3 select-none">
+      <input
+        type="checkbox"
+        name="remember"
+        class="size-4 rounded border-slate-300 text-slate-900 focus:ring-slate-900/20"
+      />
+      <span class="text-sm text-slate-600">{{ 'login.rememberMe' | translate }}</span>
+    </label>
+
+    <button
+      type="submit"
+      class="flex w-full items-center justify-center rounded-lg bg-slate-900 px-4 py-3.5 text-[15px] font-semibold text-white shadow-sm transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:scale-[0.99]"
+    >
+      {{ 'login.signIn' | translate }}
+    </button>
+  </form>
+
+  <div class="mt-10 border-t border-slate-100 pt-8">
+    <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-500">
+      {{ 'login.demoTitle' | translate }}
+    </h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-600">
+      {{ 'login.demoHint' | translate }}
+    </p>
+    <div class="mt-4 grid gap-2 sm:grid-cols-2">
+      <button
+        type="button"
+        class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-left text-sm font-medium text-slate-800 transition hover:border-slate-300 hover:bg-white"
+        (click)="enterDemo('system_admin')"
+      >
+        {{ 'login.demoSystemAdmin' | translate }}
+      </button>
+      <button
+        type="button"
+        class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-left text-sm font-medium text-slate-800 transition hover:border-slate-300 hover:bg-white"
+        (click)="enterDemo('company_admin')"
+      >
+        {{ 'login.demoCompanyAdmin' | translate }}
+      </button>
+      <button
+        type="button"
+        class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-left text-sm font-medium text-slate-800 transition hover:border-slate-300 hover:bg-white"
+        (click)="enterDemo('store_manager')"
+      >
+        {{ 'login.demoStoreManager' | translate }}
+      </button>
+      <button
+        type="button"
+        class="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2.5 text-left text-sm font-medium text-slate-800 transition hover:border-slate-300 hover:bg-white"
+        (click)="enterDemo('staff')"
+      >
+        {{ 'login.demoStaff' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,38 @@
 import { Routes } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { LoginComponent } from './auth/login/login.component';
+import { authGuard, guestGuard } from './core/auth/auth.guard';
+import { DashboardHomeComponent } from './dashboard/dashboard-home.component';
+import { DashboardLayoutComponent } from './dashboard/dashboard-layout.component';
+import { ProfileComponent } from './dashboard/profile/profile.component';
+import { SectionPlaceholderComponent } from './dashboard/section-placeholder.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
+  {
+    path: 'auth',
+    component: AuthComponent,
+    canActivate: [guestGuard],
+    children: [
+      { path: '', pathMatch: 'full', redirectTo: 'login' },
+      { path: 'login', component: LoginComponent, title: 'Sign in' },
+      {
+        path: 'forgot-password',
+        component: ForgotPasswordComponent,
+        title: 'Forgot password'
+      }
+    ]
+  },
+  {
+    path: 'dashboard',
+    component: DashboardLayoutComponent,
+    canActivate: [authGuard],
+    children: [
+      { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
+      { path: 'profile', component: ProfileComponent, title: 'Profile' },
+      { path: 'section/:slug', component: SectionPlaceholderComponent }
+    ]
+  },
+  { path: '**', redirectTo: 'auth/login' }
+];
