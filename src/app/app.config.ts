@@ -1,4 +1,4 @@
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import {
   ApplicationConfig,
   inject,
@@ -10,16 +10,18 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { TranslateService } from './core/i18n/translate.service';
+import { ThemeService } from './core/theme/theme.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     provideAppInitializer(() => {
       const translate = inject(TranslateService);
       return translate.init();
-    })
+    }),
+    provideAppInitializer(() => inject(ThemeService).init())
   ]
 };

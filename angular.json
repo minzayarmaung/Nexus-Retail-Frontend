@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "d30f8969-b77a-48d5-8b66-82dddf58f5f9"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -38,6 +39,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environment/environment.ts",
+                  "with": "src/environment/environment.production.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",

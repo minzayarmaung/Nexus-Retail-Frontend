@@ -21,6 +21,7 @@ export interface NavItem {
   labelKey: string;
   icon: NavIcon;
   sectionKey: 'sidebar.sectionMain' | 'sidebar.sectionAdmin' | 'sidebar.sectionStore' | 'sidebar.sectionMe';
+  children?: NavItem[];
 }
 
 export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
@@ -50,10 +51,18 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionAdmin'
     },
     {
-      path: ['section', 'settings'],
+      path: ['settings'],
       labelKey: 'menu.settings',
       icon: 'cog',
-      sectionKey: 'sidebar.sectionAdmin'
+      sectionKey: 'sidebar.sectionAdmin',
+      children: [
+        {
+          path: ['settings', 'manage-codes'],
+          labelKey: 'menu.manageCodes',
+          icon: 'cog',
+          sectionKey: 'sidebar.sectionAdmin'
+        }
+      ]
     }
   ],
   company_admin: [
@@ -82,10 +91,18 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionStore'
     },
     {
-      path: ['section', 'settings'],
+      path: ['settings'],
       labelKey: 'menu.settings',
       icon: 'cog',
-      sectionKey: 'sidebar.sectionAdmin'
+      sectionKey: 'sidebar.sectionAdmin',
+      children: [
+        {
+          path: ['settings', 'manage-codes'],
+          labelKey: 'menu.manageCodes',
+          icon: 'cog',
+          sectionKey: 'sidebar.sectionAdmin'
+        }
+      ]
     }
   ],
   store_manager: [
@@ -114,10 +131,18 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionStore'
     },
     {
-      path: ['section', 'settings'],
+      path: ['settings'],
       labelKey: 'menu.settings',
       icon: 'cog',
-      sectionKey: 'sidebar.sectionAdmin'
+      sectionKey: 'sidebar.sectionAdmin',
+      children: [
+        {
+          path: ['settings', 'manage-codes'],
+          labelKey: 'menu.manageCodes',
+          icon: 'cog',
+          sectionKey: 'sidebar.sectionAdmin'
+        }
+      ]
     }
   ],
   staff: [
@@ -140,10 +165,18 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionMe'
     },
     {
-      path: ['section', 'settings'],
+      path: ['settings'],
       labelKey: 'menu.settings',
       icon: 'cog',
-      sectionKey: 'sidebar.sectionAdmin'
+      sectionKey: 'sidebar.sectionAdmin',
+      children: [
+        {
+          path: ['settings', 'manage-codes'],
+          labelKey: 'menu.manageCodes',
+          icon: 'cog',
+          sectionKey: 'sidebar.sectionAdmin'
+        }
+      ]
     }
   ]
 };

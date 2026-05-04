@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '../../core/i18n/translate.pipe';
 import { TranslateService } from '../../core/i18n/translate.service';
+import { ThemeToggleComponent } from '../../core/theme/theme-toggle.component';
 import { ToastService } from '../../core/toast/toast.service';
 import {
   AVATAR_IDS,
@@ -14,7 +15,7 @@ import { SessionService } from '../../core/user/session.service';
 
 @Component({
   selector: 'app-profile',
-  imports: [FormsModule, RouterLink, TranslatePipe],
+  imports: [FormsModule, RouterLink, TranslatePipe, ThemeToggleComponent],
   templateUrl: './profile.component.html'
 })
 export class ProfileComponent {

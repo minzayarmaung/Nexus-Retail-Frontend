@@ -4,6 +4,7 @@ import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.
 import { LoginComponent } from './auth/login/login.component';
 import { authGuard, guestGuard } from './core/auth/auth.guard';
 import { DashboardHomeComponent } from './dashboard/dashboard-home.component';
+import { ConfigurationComponent } from './dashboard/configuration/configuration.component';
 import { DashboardLayoutComponent } from './dashboard/dashboard-layout.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import { SectionPlaceholderComponent } from './dashboard/section-placeholder.component';
@@ -30,6 +31,9 @@ export const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
+      { path: 'configuration', pathMatch: 'full', redirectTo: 'settings/manage-codes' },
+      { path: 'settings', pathMatch: 'full', redirectTo: 'settings/manage-codes' },
+      { path: 'settings/manage-codes', component: ConfigurationComponent, title: 'Manage Codes' },
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'section/:slug', component: SectionPlaceholderComponent }
     ]

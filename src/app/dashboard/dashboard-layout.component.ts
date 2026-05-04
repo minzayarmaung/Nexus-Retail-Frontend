@@ -26,6 +26,7 @@ export class DashboardLayoutComponent {
 
   protected readonly sidebarOpen = signal(false);
   protected readonly accountOpen = signal(false);
+  protected readonly expandedGroups = signal<Record<string, boolean>>({ settings: true });
 
   protected readonly avatarUrl = (id: string) => avatarDataUrl(resolveAvatarId(id));
 
@@ -52,6 +53,26 @@ export class DashboardLayoutComponent {
       return ['/dashboard'];
     }
     return ['/dashboard', ...item.path];
+  }
+
+  protected hasChildren(item: NavItem): boolean {
+    return !!item.children?.length;
+  }
+
+  protected toggleGroup(labelKey: string): void {
+    this.expandedGroups.update((groups) => ({
+      ...groups,
+      [labelKey]: !groups[labelKey]
+    }));
+  }
+
+  protected isGroupExpanded(labelKey: string): boolean {
+    return !!this.expandedGroups()[labelKey];
+  }
+
+  protected parentActive(item: NavItem): boolean {
+    const url = this.router.url;
+    return item.children?.some((child) => url.startsWith(this.linkFor(child).join('/'))) ?? false;
   }
 
   protected linkActiveOptions(item: NavItem): { exact: boolean } {

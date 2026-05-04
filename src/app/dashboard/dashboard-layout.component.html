@@ -1,6 +1,6 @@
 @if (session.user(); as u) {
   <div
-    class="flex min-h-dvh bg-slate-50 font-['Helvetica_Neue',Helvetica,Arial,sans-serif]"
+    class="flex min-h-dvh bg-slate-50 font-['Helvetica_Neue',Helvetica,Arial,sans-serif] dark:bg-slate-950"
   >
     @if (sidebarOpen()) {
       <button
@@ -12,12 +12,12 @@
     }
 
     <aside
-      class="sidebar fixed inset-y-0 left-0 z-50 flex w-64 flex-col border-r border-slate-800 bg-slate-900 text-white lg:z-auto"
+      class="sidebar fixed inset-y-0 left-0 z-50 flex w-64 flex-col border-r border-slate-200 bg-white text-slate-900 lg:z-auto dark:border-slate-800 dark:bg-slate-900 dark:text-white"
       [class.sidebar-open]="sidebarOpen()"
     >
-      <div class="flex h-16 shrink-0 items-center gap-2 border-b border-white/10 px-4">
+      <div class="flex h-16 shrink-0 items-center gap-2 border-b border-slate-200/80 px-4 dark:border-white/10">
         <span
-          class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sm font-bold"
+          class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-900 text-sm font-bold text-white dark:bg-white/10"
           >N</span
         >
         <span class="truncate font-semibold">{{ 'common.appName' | translate }}</span>
@@ -25,21 +25,61 @@
       <nav class="flex-1 overflow-y-auto px-3 py-4" aria-label="Main">
         @for (g of navGroups(); track g.sectionKey + $index) {
           <p
-            class="mb-2 mt-4 px-3 text-xs font-semibold uppercase tracking-wider text-slate-400 first:mt-0"
+            class="mb-2 mt-4 px-3 text-xs font-semibold uppercase tracking-wider text-slate-500 first:mt-0 dark:text-slate-400"
           >
             {{ g.sectionKey | translate }}
           </p>
           @for (item of g.items; track item.labelKey) {
-            <a
-              [routerLink]="linkFor(item)"
-              routerLinkActive="bg-white/10 text-white"
-              [routerLinkActiveOptions]="linkActiveOptions(item)"
-              (click)="closeSidebar()"
-              class="mb-1 flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 no-underline transition hover:bg-white/5 hover:text-white"
-            >
-              <app-nav-icon [icon]="item.icon" />
-              {{ item.labelKey | translate }}
-            </a>
+            @if (hasChildren(item)) {
+              <div class="mb-1">
+                <button
+                  type="button"
+                  (click)="toggleGroup(item.labelKey)"
+                  class="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
+                  [class.bg-slate-100]="parentActive(item)"
+                  [class.text-slate-900]="parentActive(item)"
+                  [class.dark:bg-white/10]="parentActive(item)"
+                  [class.dark:text-white]="parentActive(item)"
+                >
+                  <app-nav-icon [icon]="item.icon" />
+                  <span class="flex-1">{{ item.labelKey | translate }}</span>
+                  <svg
+                    class="size-4 transition-transform"
+                    [class.rotate-180]="isGroupExpanded(item.labelKey)"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.51a.75.75 0 01-1.08 0l-4.25-4.51a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                @if (isGroupExpanded(item.labelKey)) {
+                  <div class="ml-7 mt-1 space-y-1 border-l border-slate-200 pl-3 dark:border-slate-700">
+                    @for (child of item.children!; track child.labelKey) {
+                      <a
+                        [routerLink]="linkFor(child)"
+                        routerLinkActive="bg-slate-100 text-slate-900 dark:bg-white/10 dark:text-white"
+                        (click)="closeSidebar()"
+                        class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 no-underline transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
+                      >
+                        {{ child.labelKey | translate }}
+                      </a>
+                    }
+                  </div>
+                }
+              </div>
+            } @else {
+              <a
+                [routerLink]="linkFor(item)"
+                routerLinkActive="bg-slate-100 text-slate-900 dark:bg-white/10 dark:text-white"
+                [routerLinkActiveOptions]="linkActiveOptions(item)"
+                (click)="closeSidebar()"
+                class="mb-1 flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 no-underline transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
+              >
+                <app-nav-icon [icon]="item.icon" />
+                {{ item.labelKey | translate }}
+              </a>
+            }
           }
         }
       </nav>
@@ -47,11 +87,11 @@
 
     <div class="flex min-w-0 flex-1 flex-col lg:pl-64">
       <header
-        class="sticky top-0 z-30 flex h-16 shrink-0 items-center gap-3 border-b border-slate-200 bg-white/90 px-4 backdrop-blur sm:px-6"
+        class="sticky top-0 z-30 flex h-16 shrink-0 items-center gap-3 border-b border-slate-200 bg-white/90 px-4 backdrop-blur sm:px-6 dark:border-slate-800 dark:bg-slate-950/80"
       >
         <button
           type="button"
-          class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 lg:hidden"
+          class="rounded-lg p-2 text-slate-600 hover:bg-slate-100 lg:hidden dark:text-slate-300 dark:hover:bg-slate-900/60"
           (click)="toggleSidebar()"
           [attr.aria-label]="'nav.openMenu' | translate"
         >
@@ -75,7 +115,7 @@
           <div class="relative">
             <button
               type="button"
-              class="flex max-w-[14rem] items-center gap-2 rounded-lg border border-slate-200 py-1.5 pl-1.5 pr-3 text-left text-sm hover:bg-slate-50"
+              class="flex max-w-[14rem] items-center gap-2 rounded-lg border border-slate-200 py-1.5 pl-1.5 pr-3 text-left text-sm hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-900/50"
               (click)="toggleAccount()"
               [attr.aria-expanded]="accountOpen()"
               [attr.aria-label]="'nav.accountMenu' | translate"
@@ -83,20 +123,20 @@
               <img
                 [src]="avatarUrl(u.avatarId)"
                 alt=""
-                class="size-8 shrink-0 rounded-lg border border-slate-200 object-cover"
+                class="size-8 shrink-0 rounded-lg border border-slate-200 object-cover dark:border-slate-700"
                 width="32"
                 height="32"
               />
-              <span class="truncate font-medium text-slate-900">{{ u.displayName }}</span>
+              <span class="truncate font-medium text-slate-900 dark:text-slate-100">{{ u.displayName }}</span>
             </button>
             @if (accountOpen()) {
               <div
-                class="absolute right-0 mt-1 w-52 rounded-lg border border-slate-200 bg-white py-1 shadow-lg ring-1 ring-slate-900/5"
+                class="absolute right-0 mt-1 w-52 rounded-lg border border-slate-200 bg-white py-1 shadow-lg ring-1 ring-slate-900/5 dark:border-slate-800 dark:bg-slate-900 dark:ring-white/10"
                 role="menu"
               >
                 <a
                   routerLink="/dashboard/profile"
-                  class="block px-4 py-2.5 text-sm text-slate-700 no-underline hover:bg-slate-50"
+                  class="block px-4 py-2.5 text-sm text-slate-700 no-underline hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800/60"
                   (click)="closeAccountOnNavigate()"
                   role="menuitem"
                 >
@@ -104,7 +144,7 @@
                 </a>
                 <button
                   type="button"
-                  class="block w-full px-4 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-50"
+                  class="block w-full px-4 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800/60"
                   (click)="logout()"
                   role="menuitem"
                 >
