@@ -8,6 +8,8 @@ export interface EmployeeRequest {
   position?: string;
   hireDate?: string;
   salary?: string;
+  nrc?: string;
+  profilePicUrl?: string;
   createUserAccount?: boolean;
   userRole?: string;
   username?: string;
@@ -25,6 +27,7 @@ export interface EmployeeDto {
   position?: string | null;
   hireDate?: string | null;
   salary?: string | null;
+  nrc?: string | null;
+  profilePicUrl?: string | null;
   shopId?: number | null;
 }
-
