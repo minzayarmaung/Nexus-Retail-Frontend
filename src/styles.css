@@ -2,6 +2,7 @@
 
 @config '../tailwind.config.js';
 @import 'tailwindcss';
+@import 'gridstack/dist/gridstack.min.css';
 
 body.lang-my {
   font-family: 'Noto Sans Myanmar', 'Helvetica Neue', Helvetica, Arial, sans-serif;

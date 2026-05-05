@@ -15,6 +15,8 @@ export interface CodeValueRequest {
   display: string;
   description?: string;
   orderPosition: number;
+  /** 1 = Active, 0 = Inactive */
+  status?: number;
 }
 
 export interface CodeValueDto {
@@ -24,5 +26,7 @@ export interface CodeValueDto {
   display: string;
   description?: string | null;
   orderPosition: number;
+  /** 1 = Active, 0 = Inactive */
+  status?: number | null;
 }
 

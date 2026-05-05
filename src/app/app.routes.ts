@@ -31,9 +31,13 @@ export const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
-      { path: 'configuration', pathMatch: 'full', redirectTo: 'settings/manage-codes' },
-      { path: 'settings', pathMatch: 'full', redirectTo: 'settings/manage-codes' },
-      { path: 'settings/manage-codes', component: ConfigurationComponent, title: 'Manage Codes' },
+      { path: 'configurations', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
+      { path: 'configurations/manage-codes', component: ConfigurationComponent, title: 'Manage Codes' },
+
+      // Backward-compatible redirects
+      { path: 'configuration', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
+      { path: 'settings', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
+      { path: 'settings/manage-codes', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
       { path: 'profile', component: ProfileComponent, title: 'Profile' },
       { path: 'section/:slug', component: SectionPlaceholderComponent }
     ]

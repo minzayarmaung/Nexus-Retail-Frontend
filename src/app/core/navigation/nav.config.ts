@@ -51,13 +51,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionAdmin'
     },
     {
-      path: ['settings'],
+      path: ['configurations'],
       labelKey: 'menu.settings',
       icon: 'cog',
       sectionKey: 'sidebar.sectionAdmin',
       children: [
         {
-          path: ['settings', 'manage-codes'],
+          path: ['configurations', 'manage-codes'],
           labelKey: 'menu.manageCodes',
           icon: 'cog',
           sectionKey: 'sidebar.sectionAdmin'
@@ -91,13 +91,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionStore'
     },
     {
-      path: ['settings'],
+      path: ['configurations'],
       labelKey: 'menu.settings',
       icon: 'cog',
       sectionKey: 'sidebar.sectionAdmin',
       children: [
         {
-          path: ['settings', 'manage-codes'],
+          path: ['configurations', 'manage-codes'],
           labelKey: 'menu.manageCodes',
           icon: 'cog',
           sectionKey: 'sidebar.sectionAdmin'
@@ -131,13 +131,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionStore'
     },
     {
-      path: ['settings'],
+      path: ['configurations'],
       labelKey: 'menu.settings',
       icon: 'cog',
       sectionKey: 'sidebar.sectionAdmin',
       children: [
         {
-          path: ['settings', 'manage-codes'],
+          path: ['configurations', 'manage-codes'],
           labelKey: 'menu.manageCodes',
           icon: 'cog',
           sectionKey: 'sidebar.sectionAdmin'
@@ -165,13 +165,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionMe'
     },
     {
-      path: ['settings'],
+      path: ['configurations'],
       labelKey: 'menu.settings',
       icon: 'cog',
       sectionKey: 'sidebar.sectionAdmin',
       children: [
         {
-          path: ['settings', 'manage-codes'],
+          path: ['configurations', 'manage-codes'],
           labelKey: 'menu.manageCodes',
           icon: 'cog',
           sectionKey: 'sidebar.sectionAdmin'

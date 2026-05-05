@@ -9,11 +9,11 @@ import { SECTION_SLUG_TO_LABEL_KEY } from '../core/navigation/section-slugs';
   selector: 'app-section-placeholder',
   imports: [TranslatePipe],
   template: `
-    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
-      <h1 class="text-2xl font-semibold tracking-tight text-slate-900">
+    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10 dark:border-slate-700/60 dark:bg-slate-900 dark:shadow-none">
+      <h1 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
         {{ titleKey() | translate }}
       </h1>
-      <p class="mt-3 max-w-xl text-[15px] leading-relaxed text-slate-600">
+      <p class="mt-3 max-w-xl text-[15px] leading-relaxed text-slate-600 dark:text-slate-400">
         {{ 'section.placeholderHint' | translate }}
       </p>
     </div>
