@@ -7,6 +7,8 @@ import {
   inject,
   signal
 } from '@angular/core';
+import { AuthApiService } from '../auth/auth.api';
+import { normalizeRole } from '../auth/auth.model';
 import type { SessionUser, UserRole } from './user.model';
 import { DEFAULT_AVATAR_ID, type AvatarId } from './avatars';
 
@@ -55,6 +57,7 @@ const DEMO_PRESETS: Record<
 @Injectable({ providedIn: 'root' })
 export class SessionService {
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly authApi = inject(AuthApiService);
 
   private readonly _user = signal<SessionUser | null>(null);
   readonly user = this._user.asReadonly();
@@ -100,7 +103,40 @@ export class SessionService {
     });
   }
 
-  logout(): void {
+  async login(credentials: { identity: string; password: string }): Promise<void> {
+    const identity = credentials.identity.trim();
+    const password = credentials.password;
+    if (!identity) {
+      throw new Error('Username or email is required');
+    }
+    if (!password.trim()) {
+      throw new Error('Password is required');
+    }
+
+    const payload = identity.includes('@')
+      ? { email: identity, password }
+      : { username: identity, password };
+
+    const res = await this.authApi.login(payload);
+    this._user.set({
+      id: String(res.userId),
+      username: res.username || identity,
+      email: res.email || '',
+      displayName: res.username || identity,
+      role: normalizeRole(res.role),
+      avatarId: DEFAULT_AVATAR_ID,
+    });
+  }
+
+  async logout(): Promise<void> {
+    try {
+      await this.authApi.logout();
+    } finally {
+      this._user.set(null);
+    }
+  }
+
+  logoutLocal(): void {
     this._user.set(null);
   }
 

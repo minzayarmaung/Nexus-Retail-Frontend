@@ -79,10 +79,10 @@ export class DashboardLayoutComponent {
     return { exact: item.path.length === 0 };
   }
 
-  protected logout(): void {
+  protected async logout(): Promise<void> {
     this.accountOpen.set(false);
-    this.session.logout();
-    void this.router.navigate(['/auth/login']);
+    await this.session.logout();
+    await this.router.navigate(['/auth/login']);
   }
 
   protected closeSidebar(): void {

@@ -12,22 +12,34 @@ export class ApiClientService {
   /**
    * Use absolute URL if needed, otherwise pass `/api/...`.
    */
-  get<T>(url: string, options?: { params?: HttpParams | Record<string, string | number | boolean | null | undefined> }): Observable<T> {
+  get<T>(
+    url: string,
+    options?: {
+      params?: HttpParams | Record<string, string | number | boolean | null | undefined>;
+      withCredentials?: boolean;
+    },
+  ): Observable<T> {
     return this.http
-      .get<ApiResponse<T>>(url, { params: options?.params as any })
+      .get<ApiResponse<T>>(url, { params: options?.params as any, withCredentials: options?.withCredentials ?? false })
       .pipe(map((res) => this.unwrap(res)));
   }
 
-  post<T>(url: string, body?: unknown): Observable<T> {
-    return this.http.post<ApiResponse<T>>(url, body).pipe(map((res) => this.unwrap(res)));
+  post<T>(url: string, body?: unknown, options?: { withCredentials?: boolean }): Observable<T> {
+    return this.http
+      .post<ApiResponse<T>>(url, body, { withCredentials: options?.withCredentials ?? false })
+      .pipe(map((res) => this.unwrap(res)));
   }
 
-  put<T>(url: string, body?: unknown): Observable<T> {
-    return this.http.put<ApiResponse<T>>(url, body).pipe(map((res) => this.unwrap(res)));
+  put<T>(url: string, body?: unknown, options?: { withCredentials?: boolean }): Observable<T> {
+    return this.http
+      .put<ApiResponse<T>>(url, body, { withCredentials: options?.withCredentials ?? false })
+      .pipe(map((res) => this.unwrap(res)));
   }
 
-  delete<T>(url: string): Observable<T> {
-    return this.http.delete<ApiResponse<T>>(url).pipe(map((res) => this.unwrap(res)));
+  delete<T>(url: string, options?: { withCredentials?: boolean }): Observable<T> {
+    return this.http
+      .delete<ApiResponse<T>>(url, { withCredentials: options?.withCredentials ?? false })
+      .pipe(map((res) => this.unwrap(res)));
   }
 
   getPaginated<T>(url: string, req: PaginationRequest): Observable<PaginatedApiResponse<T>> {

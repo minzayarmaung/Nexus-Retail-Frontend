@@ -21,6 +21,7 @@
         name="identity"
         type="text"
         autocomplete="username"
+        [(ngModel)]="identity"
         [placeholder]="'login.usernamePlaceholder' | translate"
         class="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-[16px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-900/10 dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:bg-slate-950/70 dark:focus:ring-white/10"
       />
@@ -46,6 +47,7 @@
         name="password"
         type="password"
         autocomplete="current-password"
+        [(ngModel)]="password"
         placeholder="••••••••"
         class="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-[16px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-900/10 dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:bg-slate-950/70 dark:focus:ring-white/10"
       />
@@ -64,9 +66,10 @@
 
     <button
       type="submit"
+      [disabled]="loading"
       class="flex w-full items-center justify-center rounded-lg bg-slate-900 px-4 py-3.5 text-[15px] font-semibold text-white shadow-sm transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:scale-[0.99]"
     >
-      {{ 'login.signIn' | translate }}
+      {{ loading ? 'Signing in...' : ('login.signIn' | translate) }}
     </button>
   </form>
 

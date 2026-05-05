@@ -60,7 +60,9 @@
     "sales": "Sales",
     "schedules": "Schedules",
     "myShifts": "My shifts",
-    "tasks": "Tasks"
+    "tasks": "Tasks",
+    "employees": "Employees",
+    "shopOwners": "Shop Owners"
   },
   "dashboard": {
     "greeting": "Welcome back",

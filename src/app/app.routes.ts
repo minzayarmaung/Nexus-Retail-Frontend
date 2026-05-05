@@ -3,10 +3,13 @@ import { AuthComponent } from './auth/auth.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { LoginComponent } from './auth/login/login.component';
 import { authGuard, guestGuard } from './core/auth/auth.guard';
+import { roleGuard } from './core/auth/role.guard';
 import { DashboardHomeComponent } from './dashboard/dashboard-home.component';
 import { ConfigurationComponent } from './dashboard/configuration/configuration.component';
 import { DashboardLayoutComponent } from './dashboard/dashboard-layout.component';
+import { EmployeeManagementComponent } from './dashboard/employee/employee-management.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
+import { ShopOwnerManagementComponent } from './dashboard/shop-owner/shop-owner-management.component';
 import { SectionPlaceholderComponent } from './dashboard/section-placeholder.component';
 
 export const routes: Routes = [
@@ -31,6 +34,20 @@ export const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
+      {
+        path: 'employees',
+        component: EmployeeManagementComponent,
+        title: 'Employees',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin', 'company_admin'] }
+      },
+      {
+        path: 'shop-owners',
+        component: ShopOwnerManagementComponent,
+        title: 'Shop Owners',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] }
+      },
       { path: 'configurations', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
       { path: 'configurations/manage-codes', component: ConfigurationComponent, title: 'Manage Codes' },
 

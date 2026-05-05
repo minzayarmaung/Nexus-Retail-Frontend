@@ -33,14 +33,14 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionMain'
     },
     {
-      path: ['section', 'users'],
-      labelKey: 'menu.users',
+      path: ['employees'],
+      labelKey: 'menu.employees',
       icon: 'users',
       sectionKey: 'sidebar.sectionAdmin'
     },
     {
-      path: ['section', 'companies'],
-      labelKey: 'menu.companies',
+      path: ['shop-owners'],
+      labelKey: 'menu.shopOwners',
       icon: 'building',
       sectionKey: 'sidebar.sectionAdmin'
     },
@@ -73,22 +73,10 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionMain'
     },
     {
-      path: ['section', 'stores'],
-      labelKey: 'menu.stores',
-      icon: 'store',
-      sectionKey: 'sidebar.sectionStore'
-    },
-    {
-      path: ['section', 'staff'],
-      labelKey: 'menu.staff',
+      path: ['employees'],
+      labelKey: 'menu.employees',
       icon: 'team',
-      sectionKey: 'sidebar.sectionStore'
-    },
-    {
-      path: ['section', 'reports'],
-      labelKey: 'menu.reports',
-      icon: 'chart',
-      sectionKey: 'sidebar.sectionStore'
+      sectionKey: 'sidebar.sectionAdmin'
     },
     {
       path: ['configurations'],
