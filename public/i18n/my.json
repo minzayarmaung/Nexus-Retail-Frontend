@@ -6,6 +6,7 @@
     "burmese": "မြန်မာ",
     "save": "သိမ်းရန်",
     "cancel": "ပယ်ဖျက်ရန်",
+    "email": "အီးမေးလ်",
     "menu": "မီနူး",
     "signOut": "ထွက်ရန်",
     "profile": "ကိုယ်ရေးအချက်အလက်",
@@ -127,5 +128,35 @@
   },
   "section": {
     "placeholderHint": "ဤနေရာတွင် သင့်ဆာဗာမှ တိုက်ရိုက်ဒေတာများ ပြသပါမည်။ လမ်းညွှန်ချက်ချိတ်ဆက်မှုများ API အတွက် အဆင်သင့်ဖြစ်ပါသည်။"
+  },
+  "employees": {
+    "title": "ဝန်ထမ်းများ",
+    "subtitleManage": "ဝန်ထမ်းများကို စီမံခန့်ခွဲနိုင်ပါသည်။",
+    "subtitleReadonly": "ဖတ်ရှုနိုင်သည့်အခြေအနေသာ။",
+    "newEmployee": "ဝန်ထမ်းအသစ်",
+    "editEmployee": "ဝန်ထမ်းပြင်ရန်",
+    "importExcel": "တင်သွင်း",
+    "exportExcel": "ထုတ်ယူ",
+    "searchPlaceholder": "အမည်၊ အီးမေးလ်၊ ဖုန်းနံပါတ်ဖြင့် ရှာဖွေပါ…",
+    "allPositions": "ရာထူးအားလုံး",
+    "profilePhoto": "ပရိုဖိုင်ဓာတ်ပုံ",
+    "uploadPhoto": "ဓာတ်ပုံတင်ရန်",
+    "name": "အမည်",
+    "namePlaceholder": "ဝန်ထမ်းအမည်",
+    "phone": "ဖုန်း",
+    "phonePlaceholder": "(+959)422659650",
+    "position": "ရာထူး",
+    "selectPosition": "ရာထူးရွေးပါ",
+    "hireDate": "အလုပ်ဝင်ရက်",
+    "dob": "မွေးသက္ကရာဇ်",
+    "age": "အသက်",
+    "payLevel": "လစာအဆင့်",
+    "selectPayLevel": "လစာအဆင့်ရွေးပါ",
+    "address": "လိပ်စာ",
+    "addressPlaceholder": "လိပ်စာ",
+    "nrc": "မှတ်ပုံတင်",
+    "saving": "သိမ်းနေသည်…",
+    "saveChanges": "ပြင်ဆင်မှု သိမ်းရန်",
+    "createEmployee": "ဝန်ထမ်းဖန်တီးရန်"
   }
 }

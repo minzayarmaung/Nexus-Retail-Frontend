@@ -6,6 +6,7 @@
     "burmese": "Burmese",
     "save": "Save",
     "cancel": "Cancel",
+    "email": "Email",
     "menu": "Menu",
     "signOut": "Sign out",
     "profile": "Profile",
@@ -127,5 +128,35 @@
   },
   "section": {
     "placeholderHint": "This area will load live data from your server. Navigation wiring is ready for your API."
+  },
+  "employees": {
+    "title": "Employees",
+    "subtitleManage": "Manage your team members.",
+    "subtitleReadonly": "Read-only view.",
+    "newEmployee": "New Employee",
+    "editEmployee": "Edit Employee",
+    "importExcel": "Import",
+    "exportExcel": "Export",
+    "searchPlaceholder": "Search name, email, phone…",
+    "allPositions": "All Positions",
+    "profilePhoto": "Profile Photo",
+    "uploadPhoto": "Upload photo",
+    "name": "Name",
+    "namePlaceholder": "Employee name",
+    "phone": "Phone",
+    "phonePlaceholder": "(+959)422659650",
+    "position": "Position",
+    "selectPosition": "Select position",
+    "hireDate": "Hire Date",
+    "dob": "Date of Birth",
+    "age": "Age",
+    "payLevel": "Pay Level",
+    "selectPayLevel": "Select pay level",
+    "address": "Address",
+    "addressPlaceholder": "Address",
+    "nrc": "NRC (Myanmar ID)",
+    "saving": "Saving…",
+    "saveChanges": "Save Changes",
+    "createEmployee": "Create Employee"
   }
 }

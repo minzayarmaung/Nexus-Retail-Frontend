@@ -1,13 +1,15 @@
+import type { PaginatedApiResponse } from '../../core/api/paginated-api-response';
+import type { PaginationRequest } from '../../core/api/pagination-request';
+
 export interface EmployeeRequest {
-  firstName: string;
-  lastName: string;
-  email: string;
+  name: string;
+  email?: string;
   phoneNo: string;
   dateOfBirth?: string;
   address?: string;
   position?: string;
   hireDate?: string;
-  salary?: string;
+  payLevel?: string;
   nrc?: string;
   profilePicUrl?: string;
   createUserAccount?: boolean;
@@ -18,16 +20,20 @@ export interface EmployeeRequest {
 
 export interface EmployeeDto {
   id: number;
-  firstName: string;
-  lastName: string;
-  email: string;
+  name: string;
+  email?: string | null;
   phoneNo: string;
   dateOfBirth?: string | null;
   address?: string | null;
   position?: string | null;
   hireDate?: string | null;
-  salary?: string | null;
+  payLevel?: string | null;
   nrc?: string | null;
   profilePicUrl?: string | null;
+  serviceYear?: number | null;
   shopId?: number | null;
 }
+
+export interface EmployeeListRequest extends PaginationRequest {}
+
+export type EmployeeListResponse = PaginatedApiResponse<EmployeeDto>;

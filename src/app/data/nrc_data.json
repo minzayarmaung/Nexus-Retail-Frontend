@@ -1,0 +1,6824 @@
+{
+  "nrcTypes": [
+    {
+      "id": "td02i9-VCkVil1fS",
+      "name": {
+        "en": "N",
+        "mm": "နိုင်"
+      }
+    },
+    {
+      "id": "v9eS9ElCS9dw_vvy",
+      "name": {
+        "en": "E",
+        "mm": "ဧည့်"
+      }
+    },
+    {
+      "id": "xujB8kn-uSOQkTBs",
+      "name": {
+        "en": "P",
+        "mm": "ပြု"
+      }
+    },
+    {
+      "id": "N_xJUnlEQbrFZ7gy",
+      "name": {
+        "en": "T",
+        "mm": "သာသနာ"
+      }
+    },
+    {
+      "id": "-H6LTNZhywXRp4AC",
+      "name": {
+        "en": "Y",
+        "mm": "ယာယီ"
+      }
+    },
+    {
+      "id": "5u6NHDCpEowFaonY",
+      "name": {
+        "en": "S",
+        "mm": "စ"
+      }
+    }
+  ],
+  "nrcStates": [
+    {
+      "id": "bTuNIfLfchNvk1N_",
+      "code": "KACHIN",
+      "number": {
+        "en": "1",
+        "mm": "၁"
+      },
+      "name": {
+        "en": "Kachin",
+        "mm": "ကချင်"
+      }
+    },
+    {
+      "id": "ta4SEQoCI0DVTK2T",
+      "code": "KAYAH",
+      "number": {
+        "en": "2",
+        "mm": "၂"
+      },
+      "name": {
+        "en": "Kayah",
+        "mm": "ကယား"
+      }
+    },
+    {
+      "id": "1dzIVEs684iyjetc",
+      "code": "KAYIN",
+      "number": {
+        "en": "3",
+        "mm": "၃"
+      },
+      "name": {
+        "en": "Kayin",
+        "mm": "ကရင်"
+      }
+    },
+    {
+      "id": "aVHfHbYrrdNZu9bW",
+      "code": "CHIN",
+      "number": {
+        "en": "4",
+        "mm": "၄"
+      },
+      "name": {
+        "en": "Chin",
+        "mm": "ချင်း"
+      }
+    },
+    {
+      "id": "EbUz7oziqo6OB5pL",
+      "code": "SAGAING",
+      "number": {
+        "en": "5",
+        "mm": "၅"
+      },
+      "name": {
+        "en": "Sagaing",
+        "mm": "စစ်ကိုင်း"
+      }
+    },
+    {
+      "id": "X8rt_XwuTgAggCju",
+      "code": "TANINTHARYI",
+      "number": {
+        "en": "6",
+        "mm": "၆"
+      },
+      "name": {
+        "en": "Tanintharyi",
+        "mm": "တနသာရီ"
+      }
+    },
+    {
+      "id": "zBMPM_jGuwbus35I",
+      "code": "BAGO",
+      "number": {
+        "en": "7",
+        "mm": "၇"
+      },
+      "name": {
+        "en": "Bago",
+        "mm": "ပဲခူး"
+      }
+    },
+    {
+      "id": "u431U0SGuX9lkur-",
+      "code": "MAGWAY",
+      "number": {
+        "en": "8",
+        "mm": "၈"
+      },
+      "name": {
+        "en": "Magway",
+        "mm": "မကွေး"
+      }
+    },
+    {
+      "id": "5PflwjWItczLTOof",
+      "code": "MANDALAY",
+      "number": {
+        "en": "9",
+        "mm": "၉"
+      },
+      "name": {
+        "en": "Mandalay",
+        "mm": "မန္တလေး"
+      }
+    },
+    {
+      "id": "uQgglJ-AhohYQJNB",
+      "code": "MON",
+      "number": {
+        "en": "10",
+        "mm": "၁၀"
+      },
+      "name": {
+        "en": "Mon",
+        "mm": "မွန်"
+      }
+    },
+    {
+      "id": "OfeDuBL9FsUHKi8j",
+      "code": "RAKHINE",
+      "number": {
+        "en": "11",
+        "mm": "၁၁"
+      },
+      "name": {
+        "en": "Rakhine",
+        "mm": "ရခိုင်"
+      }
+    },
+    {
+      "id": "Zvxm3m8cAwCeDgz1",
+      "code": "YANGON",
+      "number": {
+        "en": "12",
+        "mm": "၁၂"
+      },
+      "name": {
+        "en": "Yangon",
+        "mm": "ရန်ကုန်"
+      }
+    },
+    {
+      "id": "DZ1kOrvrt-7LntG4",
+      "code": "SHAN",
+      "number": {
+        "en": "13",
+        "mm": "၁၃"
+      },
+      "name": {
+        "en": "Shan",
+        "mm": "ရှမ်း"
+      }
+    },
+    {
+      "id": "tY793VdREy9r5xsl",
+      "code": "AYEYAWADY",
+      "number": {
+        "en": "14",
+        "mm": "၁၄"
+      },
+      "name": {
+        "en": "Ayeyawady",
+        "mm": "ဧရာ၀တီ"
+      }
+    },
+    {
+      "id": "sH0ybsmxNuxmeOT_",
+      "code": "NAYPYITAW",
+      "number": {
+        "en": "9*",
+        "mm": "၉*"
+      },
+      "name": {
+        "en": "Naypyitaw",
+        "mm": "နေပြည်တော်"
+      }
+    }
+  ],
+  "nrcTownships": [
+    {
+      "id": "W_7wtdGa_p8AZ4hq",
+      "code": "HOPIN",
+      "short": {
+        "en": "HaPaNa",
+        "mm": "ဟပန"
+      },
+      "name": {
+        "en": "Ho Pin",
+        "mm": "ဟိုပင်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "cAy7xIR6FwHJHMU8",
+      "code": "KANYEIKTI",
+      "short": {
+        "en": "KaPaTa",
+        "mm": "ကပတ"
+      },
+      "name": {
+        "en": "Kan YeiK Ti",
+        "mm": "ကမ်ပတီ"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "mKK_kRmtjzFCfaSZ",
+      "code": "KHAWBUDAE",
+      "short": {
+        "en": "KhaBada",
+        "mm": "ခဘဒ"
+      },
+      "name": {
+        "en": "Khaw Bu Dae",
+        "mm": "ခေါ်ဘူဒဲ"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "_XkhjBIER0i7APgS",
+      "code": "PHAKANT",
+      "short": {
+        "en": "PhaKaNa",
+        "mm": "ဖကန"
+      },
+      "name": {
+        "en": "Pha Kant",
+        "mm": "ဖားကန့်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "YwSNNC_QhN79Y_GM",
+      "code": "MACHANBAW",
+      "short": {
+        "en": "MakHaBa",
+        "mm": "မခဘ"
+      },
+      "name": {
+        "en": "Ma Chan Baw",
+        "mm": "မချမ်းဘော"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "-PhegWB56SRfAvEI",
+      "code": "DOTPHONEYAN",
+      "short": {
+        "en": "DaPhaya",
+        "mm": "ဒဖယ"
+      },
+      "name": {
+        "en": "Dot Phone Yan",
+        "mm": "ဒေါ့ဖုန်းယန်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "vJ36EQIzjQ_pnWG-",
+      "code": "PANWAR",
+      "short": {
+        "en": "PaWaNa",
+        "mm": "ပ၀န"
+      },
+      "name": {
+        "en": "Pan War",
+        "mm": "ပန်ဝါ"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "U5DTeH4YCTY_UpVc",
+      "code": "PANNANDIN",
+      "short": {
+        "en": "PaNaDa",
+        "mm": "ပနဒ"
+      },
+      "name": {
+        "en": "Pan Nan Din",
+        "mm": "ပန်နန်းဒင်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "aMI7h3E5rsntyvz9",
+      "code": "HSADONE",
+      "short": {
+        "en": "SaDaNa",
+        "mm": "ဆဒန"
+      },
+      "name": {
+        "en": "Hsa Done",
+        "mm": "ဆဒုံး"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "6q4-EJQW_PHyAO5y",
+      "code": "BHAMO",
+      "short": {
+        "en": "BaMaNa",
+        "mm": "ဗမန"
+      },
+      "name": {
+        "en": "Bha Mo",
+        "mm": "ဗန်းမော်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "tj8uMpSgk3jLRH7r",
+      "code": "PHA KANT",
+      "short": {
+        "en": "PhaKaNa",
+        "mm": "ဖကန"
+      },
+      "name": {
+        "en": "Pha Kant",
+        "mm": "ဖားကန့်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "ibqQAMqgkdONCc1n",
+      "code": "MANSI",
+      "short": {
+        "en": "MaSaNa",
+        "mm": "မစန"
+      },
+      "name": {
+        "en": "Man Si",
+        "mm": "မံစီ"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "JUC5--8SHHor8UKG",
+      "code": "LWEGE",
+      "short": {
+        "en": "LaGaNa",
+        "mm": "လဂန"
+      },
+      "name": {
+        "en": "Lwe Ge",
+        "mm": "လွယ်ဂေ"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "2g4sxriajpkYrdUd",
+      "code": "NAUNGMOON",
+      "short": {
+        "en": "NaMaNa",
+        "mm": "နမန"
+      },
+      "name": {
+        "en": "Naung Moon",
+        "mm": "နောင်မွန်း"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "NbbisKJ6cYqa4j5G",
+      "code": "MOMAUK",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Moe Mauk",
+        "mm": "မိုးမောက်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "2xDUSYGUabM4IoOY",
+      "code": "KAMINE",
+      "short": {
+        "en": "KaMaNa",
+        "mm": "ကမန"
+      },
+      "name": {
+        "en": "Ka Mine",
+        "mm": "ကာမိုင်း"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "yuibWtL69cKVlr8G",
+      "code": "MOGAUNG",
+      "short": {
+        "en": "MaKaTa",
+        "mm": "မကတ"
+      },
+      "name": {
+        "en": "Mo Gaung",
+        "mm": "မိုးကောင်း"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "MKSBi-k1gxTibOOA",
+      "code": "MOHNYIN",
+      "short": {
+        "en": "MaNyaNa",
+        "mm": "မညန"
+      },
+      "name": {
+        "en": "Moh Nyin",
+        "mm": "မိုးညှင်း"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "qCWSDti9uzuir6_p",
+      "code": "CHIPHWE",
+      "short": {
+        "en": "KhaPhaNa",
+        "mm": "ခဖန"
+      },
+      "name": {
+        "en": "Chi Phwe",
+        "mm": "ချီဖွေ"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "J3tWOGdc_oe1vO7A",
+      "code": "HSINBO",
+      "short": {
+        "en": "SaBaNa",
+        "mm": "ဆဘန"
+      },
+      "name": {
+        "en": "Sin Bo",
+        "mm": "ဆင်ဘို"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "vg2dGu-Edn2Q99gF",
+      "code": "HSOTLAW",
+      "short": {
+        "en": "SaLaNa",
+        "mm": "ဆလန"
+      },
+      "name": {
+        "en": "Saw Law",
+        "mm": "ဆော့လော်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "RGWcrfF94mBI_-LC",
+      "code": "INGYANYAN",
+      "short": {
+        "en": "AhGaYa",
+        "mm": "အဂယ"
+      },
+      "name": {
+        "en": "Ing Yan Yan",
+        "mm": "အင်ဂျန်းယန်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "9jKUg_YrVbtzcHSB",
+      "code": "MYITKYINA",
+      "short": {
+        "en": "MaKaNa",
+        "mm": "မကန"
+      },
+      "name": {
+        "en": "Myit Kyi Na",
+        "mm": "မြစ်ကြီးနား"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "QzQngTsUPM6ktfmK",
+      "code": "SHINBWAYYAN",
+      "short": {
+        "en": "YaBaYa",
+        "mm": "ရဘယ"
+      },
+      "name": {
+        "en": "Shin Bway Yan",
+        "mm": "ရှင်ဘွီယန်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "WelAEipDPFdUMs78",
+      "code": "TANAING",
+      "short": {
+        "en": "TaNaNa",
+        "mm": "တနန"
+      },
+      "name": {
+        "en": "Ta Naing",
+        "mm": "တနိုင်း"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "ES5_U1I71DhYCmpK",
+      "code": "KHAUNGLANPHOO",
+      "short": {
+        "en": "KhaLaPha",
+        "mm": "ခလဖ"
+      },
+      "name": {
+        "en": "Khaung Lan Phoo",
+        "mm": "ခေါင်လန်ဖူး"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "Pey_NLCfQOXz4qQG",
+      "code": "PUTAO",
+      "short": {
+        "en": "PaTaAh",
+        "mm": "ပတအ"
+      },
+      "name": {
+        "en": "Pa Ta O",
+        "mm": "ပူတာအို"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "yZyB719It-X-JD_X",
+      "code": "SUMPRABUM",
+      "short": {
+        "en": "SaPaBa",
+        "mm": "ဆပဘ"
+      },
+      "name": {
+        "en": "Sum Pra Bum",
+        "mm": "ဆွမ်ပရာဘွမ်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "rsByqGuC2oGCHzHw",
+      "code": "SHWEGU",
+      "short": {
+        "en": "YaKaNa",
+        "mm": "ရကန"
+      },
+      "name": {
+        "en": "Shwe Gu",
+        "mm": "ရွှေကူ"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "QjkdH9SEJlPIcceH",
+      "code": "WAINGMAW",
+      "short": {
+        "en": "WaMaNa",
+        "mm": "၀မန"
+      },
+      "name": {
+        "en": "Waing Maw",
+        "mm": "ဝိုင်းမော်"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "-8Zyq0kGJcCly-ff",
+      "code": "MYOHLAMYO",
+      "short": {
+        "en": "MaLaNa",
+        "mm": "မလန"
+      },
+      "name": {
+        "en": "Myohlamyo",
+        "mm": "မြို့လှမြို့"
+      },
+      "stateId": "bTuNIfLfchNvk1N_",
+      "stateCode": "1"
+    },
+    {
+      "id": "V7KfFkHzqmuQDsT1",
+      "code": "PARSAUNG",
+      "short": {
+        "en": "PhaSaNa",
+        "mm": "ဖဆန"
+      },
+      "name": {
+        "en": "Par Saung",
+        "mm": "ဖားဆောင်း"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "w-8IYr7okCPo_2GN",
+      "code": "PHRUSO",
+      "short": {
+        "en": "PhaYaSa",
+        "mm": "ဖရဆ"
+      },
+      "name": {
+        "en": "Phru So",
+        "mm": "ဖရူးဆိုး"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "512VwEQXJuCJ9Ey5",
+      "code": "BAWLAKHE",
+      "short": {
+        "en": "BaLaKha",
+        "mm": "ဘလခ"
+      },
+      "name": {
+        "en": "Baw La Khe",
+        "mm": "ဘော်လခဲ"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "Xz6HhRjc14_XT81P",
+      "code": "MEISI",
+      "short": {
+        "en": "MaSaNa",
+        "mm": "မစန"
+      },
+      "name": {
+        "en": "Meisi",
+        "mm": "မယ်စီ"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "7n2jV5MTrmXYyvlE",
+      "code": "YWATHIT",
+      "short": {
+        "en": "YaThaNa",
+        "mm": "ရသန"
+      },
+      "name": {
+        "en": "Ywa Thit",
+        "mm": "ရွာသစ်"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "xY6oWEw3GNrUMnO8",
+      "code": "LOIKAW",
+      "short": {
+        "en": "LaKaNa",
+        "mm": "လကန"
+      },
+      "name": {
+        "en": "LoiKaw",
+        "mm": "လွိုင်ကော်"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "5Wf0UDGwPTlrg9VY",
+      "code": "SHARDAW",
+      "short": {
+        "en": "YaTaNa",
+        "mm": "ရတန"
+      },
+      "name": {
+        "en": "Shar Daw",
+        "mm": "ရှားတော်"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "nNyti8Yxqtz53szX",
+      "code": "DIMAWSO",
+      "short": {
+        "en": "DaMaSa",
+        "mm": "ဒမဆ"
+      },
+      "name": {
+        "en": "Di MaW So",
+        "mm": "ဒီမောဆိုး"
+      },
+      "stateId": "ta4SEQoCI0DVTK2T",
+      "stateCode": "2"
+    },
+    {
+      "id": "mL56z6lD5fCD6DlG",
+      "code": "BAWGALI",
+      "short": {
+        "en": "BaKaLa",
+        "mm": "ဘကလ"
+      },
+      "name": {
+        "en": "Baw Ga Li",
+        "mm": "ဘောကလိ"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "sw7fLrWawA6t8NZi",
+      "code": "THANDAUNGGYI",
+      "short": {
+        "en": "ThaTaKa",
+        "mm": "သတက"
+      },
+      "name": {
+        "en": "Than Daung Gyi",
+        "mm": "သံတောင်ကြီး"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "iC5NX-QpfHox0VUg",
+      "code": "SUGALI",
+      "short": {
+        "en": "SaKaLa",
+        "mm": "စကလ"
+      },
+      "name": {
+        "en": "Su Ga Li",
+        "mm": "စုကလိ"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "53OOlTy_ttH8RAT2",
+      "code": "WALEMYAING",
+      "short": {
+        "en": "WaLaMa",
+        "mm": "၀လမ"
+      },
+      "name": {
+        "en": "Wale Myaing",
+        "mm": "ေ၀ါလင်မြိုင်"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "fA_IV-02Zg8Wd8v3",
+      "code": "BAW GA LI",
+      "short": {
+        "en": "BaGaLa",
+        "mm": "ဘဂလ"
+      },
+      "name": {
+        "en": "Baw Ga Li",
+        "mm": "ဘော်ဂလိ"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "sI0SmL5VfRgHxmou",
+      "code": "KAWKAREIK",
+      "short": {
+        "en": "KaKaYa",
+        "mm": "ကကရ"
+      },
+      "name": {
+        "en": "Kaw Ka Reik",
+        "mm": "ကော့ကရိတ်"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "GQY_uYyyGKMZmqb9",
+      "code": "PAINGKYON",
+      "short": {
+        "en": "PaKaNa",
+        "mm": "ပကန"
+      },
+      "name": {
+        "en": "Paing Kyon",
+        "mm": "ပိုင်ကျုံး"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "yl4abNgJKsvQQ4OU",
+      "code": "HLAINGBWE",
+      "short": {
+        "en": "LaBaNa",
+        "mm": "လဘန"
+      },
+      "name": {
+        "en": "Hlaing Bwe",
+        "mm": "လှိုင်းဘွဲ့"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "DzJikNhDk8BI9ti7",
+      "code": "HPA-AN",
+      "short": {
+        "en": "BaAhNa",
+        "mm": "ဘအန"
+      },
+      "name": {
+        "en": "Hpa-An",
+        "mm": "ဘားအံ"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "yOXyuybt0xd7c31P",
+      "code": "LEIKTHO",
+      "short": {
+        "en": "LaThaNa",
+        "mm": "လသန"
+      },
+      "name": {
+        "en": "Leiktho",
+        "mm": "လိပ်သို"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "ngHF07USecW-Qt4P",
+      "code": "SHANYWATHIT",
+      "short": {
+        "en": "YaYaTha",
+        "mm": "ရရသ"
+      },
+      "name": {
+        "en": "Shan Ywa Thit",
+        "mm": "ရှမ်းရွာသစ်"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "xUfysVWy8Hkc9xz1",
+      "code": "KYAIDON",
+      "short": {
+        "en": "KaDaNa",
+        "mm": "ကဒန"
+      },
+      "name": {
+        "en": "Kyai Don",
+        "mm": "ကျုံဒိုး"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "HEt6V2wZjeSx3s6N",
+      "code": "KYARINSEIKKYI",
+      "short": {
+        "en": "KaSaKa",
+        "mm": "ကဆက"
+      },
+      "name": {
+        "en": "Kyar In Seik Kyi",
+        "mm": "ကြာအင်းဆိပ်ကြီး"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "VfSJHkvNBd0ltQM2",
+      "code": "THANTAUNG",
+      "short": {
+        "en": "ThaTaNa",
+        "mm": "သတန"
+      },
+      "name": {
+        "en": "Thantaung",
+        "mm": "သံတောင်"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "LRV3Buop3b0Z69LV",
+      "code": "PAYARTHONEZU",
+      "short": {
+        "en": "BaThaSa",
+        "mm": "ဘသဆ"
+      },
+      "name": {
+        "en": "Pa Yar Thone Zu",
+        "mm": "ဘုရားသုံးဆူ"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "XEusP7vrIsmq1uOn",
+      "code": "MYAWADY",
+      "short": {
+        "en": "MaWaDa",
+        "mm": "မဝတ"
+      },
+      "name": {
+        "en": "Mya Wa Dy",
+        "mm": "မြဝတီ"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "oMquaPZ-Uc31Hhbn",
+      "code": "KAMAMAUNG",
+      "short": {
+        "en": "KaMaMa",
+        "mm": "ကမမ"
+      },
+      "name": {
+        "en": "Ka Ma Maung",
+        "mm": "ကမမောင်"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "i5eLS_GpQOipTmx_",
+      "code": "PHARPON-KAYIN",
+      "short": {
+        "en": "PhaPaNa",
+        "mm": "ဖပန"
+      },
+      "name": {
+        "en": "Pharpon-Kayin",
+        "mm": "ဖာပွန်"
+      },
+      "stateId": "1dzIVEs684iyjetc",
+      "stateCode": "3"
+    },
+    {
+      "id": "hzqcOq54St_ybBFO",
+      "code": "PALETWA",
+      "short": {
+        "en": "PaLaWa",
+        "mm": "ပလဝ"
+      },
+      "name": {
+        "en": "Pa Let Wa",
+        "mm": "ပလက်ဝ"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "M2O6RzO6lpSPguln",
+      "code": "CIKHA",
+      "short": {
+        "en": "KaKhaNa",
+        "mm": "ကခန"
+      },
+      "name": {
+        "en": "Cikha",
+        "mm": "ကျီခါး"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "crDH_EsA2PLyt6bL",
+      "code": "FALAM",
+      "short": {
+        "en": "PhaLaNa",
+        "mm": "ဖလန"
+      },
+      "name": {
+        "en": "Fa Lam",
+        "mm": "ဖလမ်း"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "LeY1Rll3hJ3x_FCc",
+      "code": "TEDIM",
+      "short": {
+        "en": "TaTaNa",
+        "mm": "တတန"
+      },
+      "name": {
+        "en": "Tedim",
+        "mm": "တီးတိန်"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "5JuhhzYwRfjIHWt2",
+      "code": "TONZAUNG",
+      "short": {
+        "en": "TaZaNa",
+        "mm": "တဇန"
+      },
+      "name": {
+        "en": "Ton Zaung",
+        "mm": "တွန်းဇံ"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "pDbUU8bOj-7Xf5jM",
+      "code": "MATUPI",
+      "short": {
+        "en": "MaTaPa",
+        "mm": "မတပ"
+      },
+      "name": {
+        "en": "Ma Tu Pi",
+        "mm": "မတူပီ"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "XEg2ZWYrZF40CkBE",
+      "code": "MINDAT",
+      "short": {
+        "en": "MaTaNa",
+        "mm": "မတန"
+      },
+      "name": {
+        "en": "Mindat",
+        "mm": "မင်းတပ်"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "9D4N0ndMiSebAJgW",
+      "code": "SAMI",
+      "short": {
+        "en": "SaMaNa",
+        "mm": "ဆမန"
+      },
+      "name": {
+        "en": "Sami",
+        "mm": "စမီး"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "du3_6nkkO30kM4k3",
+      "code": "KANPALET",
+      "short": {
+        "en": "KaPaLa",
+        "mm": "ကပလ"
+      },
+      "name": {
+        "en": "Kan Pa Let",
+        "mm": "ကန်ပက်လက်"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "7s8T3BMNfJaEyxsY",
+      "code": "RIHKHUADAL",
+      "short": {
+        "en": "YaKhaDa",
+        "mm": "ရခဒ"
+      },
+      "name": {
+        "en": "Rih Khua Dal",
+        "mm": "ရခူးဒဲ"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "7QyePxaRYn8xT47x",
+      "code": "HAKA",
+      "short": {
+        "en": "HaKhaNa",
+        "mm": "ဟခန"
+      },
+      "name": {
+        "en": "Haka",
+        "mm": "ဟားခါး"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "EIz_tVK6aZTDM-n3",
+      "code": "HTANTALANG",
+      "short": {
+        "en": "HtaTaLa",
+        "mm": "ထတလ"
+      },
+      "name": {
+        "en": "Htan Ta Lang",
+        "mm": "ထန်တလန်"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "7n1zhWPjs-CRI5Gt",
+      "code": "YAYSWAR",
+      "short": {
+        "en": "YaZaNa",
+        "mm": "ရဇန"
+      },
+      "name": {
+        "en": "Yayswar",
+        "mm": "ရေဇွာ"
+      },
+      "stateId": "aVHfHbYrrdNZu9bW",
+      "stateCode": "4"
+    },
+    {
+      "id": "JhgQlvV0F6yjfxuj",
+      "code": "PINLEBU",
+      "short": {
+        "en": "PaLaBa",
+        "mm": "ပလဘ"
+      },
+      "name": {
+        "en": "Pin Le Bu",
+        "mm": "ပင်လယ်ဘူး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "mjFI1i0HGAlgzjGK",
+      "code": "PANSAUNG",
+      "short": {
+        "en": "PaSaNa",
+        "mm": "ပဆန"
+      },
+      "name": {
+        "en": "Pansaung",
+        "mm": "ပန်ဆောင်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "vRiPXJmJ-OfP6wAV",
+      "code": "AYARTAW",
+      "short": {
+        "en": "AhYaTa",
+        "mm": "အရတ"
+      },
+      "name": {
+        "en": "A Yar Taw",
+        "mm": "အရာတော်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "4F67ogW_s-niHErq",
+      "code": "KHAMPAT",
+      "short": {
+        "en": "KhaPaNa",
+        "mm": "ခပန"
+      },
+      "name": {
+        "en": "Kham Pat",
+        "mm": "ခမ်းပတ်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "LY7MoRt2PTd9fbdi",
+      "code": "KYAUKMYAUNG-SAGAING",
+      "short": {
+        "en": "KaMaNa",
+        "mm": "ကမန"
+      },
+      "name": {
+        "en": "Kyaukmyaung-Sagaing",
+        "mm": "ကျောက်မြောင်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "yTgN79JQOvg8XOUO",
+      "code": "MYOTHIT-SAGAING",
+      "short": {
+        "en": "MaThaNa",
+        "mm": "မသန"
+      },
+      "name": {
+        "en": "Myo Thit-Sagaing",
+        "mm": "မြို့သစ်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "g_1mgcXHtsujek_q",
+      "code": "HOMALIN",
+      "short": {
+        "en": "HaMaLa",
+        "mm": "ဟမလ"
+      },
+      "name": {
+        "en": "Ho Ma Lin",
+        "mm": "ဟုမ္မလင်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "wJBGcj1QJ8oDi_IH",
+      "code": "BANMAUK",
+      "short": {
+        "en": "BaMaNa",
+        "mm": "ဗမန"
+      },
+      "name": {
+        "en": "Ban Mauk",
+        "mm": "ဗန်းမောက်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "P8WRYnOsZYAbY9fB",
+      "code": "MYAUNG",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Myaung",
+        "mm": "မြောင်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "RQlhceAep1VXf-Pu",
+      "code": "SALINGYI",
+      "short": {
+        "en": "SaLaKa",
+        "mm": "ဆလက"
+      },
+      "name": {
+        "en": "Sa Lin Gyi",
+        "mm": "ဆားလင်းကြီး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "vvXeYDWCXWhxx11v",
+      "code": "NGANZUN",
+      "short": {
+        "en": "NgaZaNa",
+        "mm": "ငဇန"
+      },
+      "name": {
+        "en": "Ngan Zun",
+        "mm": "ငါန်းဇွန်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "iFI9Mqtoo4OWtjW6",
+      "code": "YEU",
+      "short": {
+        "en": "YaOuNa",
+        "mm": "ရဥန"
+      },
+      "name": {
+        "en": "Ye U",
+        "mm": "ရေဦး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "k2QCAkYMe2UQ__Fh",
+      "code": "KALAY",
+      "short": {
+        "en": "KaLaHta",
+        "mm": "ကလထ"
+      },
+      "name": {
+        "en": "Ka Lay",
+        "mm": "ကလေး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "wsjC90s0uT5orvQw",
+      "code": "YWATHITGYI",
+      "short": {
+        "en": "YaThaKa",
+        "mm": "ရသက"
+      },
+      "name": {
+        "en": "Ywa Thit Gyi",
+        "mm": "ရွာသစ်ကြီး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "FWm8GYPBQ3ErNORF",
+      "code": "SWAMMARA",
+      "short": {
+        "en": "HsaMaRa",
+        "mm": "ဆမရ"
+      },
+      "name": {
+        "en": "Swammara",
+        "mm": "ဆွမ္မရာ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "OWv56MGVrX7XGOwS",
+      "code": "SAGAING",
+      "short": {
+        "en": "SaKaNa",
+        "mm": "စကန"
+      },
+      "name": {
+        "en": "Sa Gaing",
+        "mm": "စစ်ကိုင်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "-JDGUjHFP0ed6v5O",
+      "code": "MAWLAIK",
+      "short": {
+        "en": "MaLaNa",
+        "mm": "မလန"
+      },
+      "name": {
+        "en": "Mawlaik",
+        "mm": "မော်လိုက်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "Alsd1ObVlnrxOqrJ",
+      "code": "YINMARPIN",
+      "short": {
+        "en": "YaMaPa",
+        "mm": "ယမပ"
+      },
+      "name": {
+        "en": "Yin Mar Pin",
+        "mm": "ယင်းမာပင်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "IAUnGPwR027W2_wL",
+      "code": "KAWLIN",
+      "short": {
+        "en": "KaLaTa",
+        "mm": "ကလတ"
+      },
+      "name": {
+        "en": "Kawlin",
+        "mm": "ကောလင်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "dBAb82g6xMcStYau",
+      "code": "KYUNHLA",
+      "short": {
+        "en": "KaLaNa",
+        "mm": "ကလန"
+      },
+      "name": {
+        "en": "Kyunhla",
+        "mm": "ကျွန်းလှ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "YvNu1EdzE9wYxnFK",
+      "code": "HKAMTI",
+      "short": {
+        "en": "KhaTaNa",
+        "mm": "ခတန"
+      },
+      "name": {
+        "en": "Hkamti",
+        "mm": "ခန္တီး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "Pzr_A68MOEgSPA21",
+      "code": "HTANPARKWAY",
+      "short": {
+        "en": "HtaPaKha",
+        "mm": "ထပခ"
+      },
+      "name": {
+        "en": "Htan Par Kway",
+        "mm": "ထန်ပါခွေ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "-YY8UUdcaMKyZKdH",
+      "code": "LAHE",
+      "short": {
+        "en": "LaHaNa",
+        "mm": "လဟန"
+      },
+      "name": {
+        "en": "Lahe",
+        "mm": "လေဟေ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "9g345tIdnxUmmufn",
+      "code": "LESHI",
+      "short": {
+        "en": "LaYaNa",
+        "mm": "လရန"
+      },
+      "name": {
+        "en": "Le Shi",
+        "mm": "လေရှီး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "u9odDjYskhnqGyPo",
+      "code": "NANYUN",
+      "short": {
+        "en": "NaYaNa",
+        "mm": "နယန"
+      },
+      "name": {
+        "en": "Nan Yun",
+        "mm": "နန်းယွန်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "x1nbdbSilCIiTGmR",
+      "code": "KALEWA",
+      "short": {
+        "en": "KaLaWa",
+        "mm": "ကလ၀"
+      },
+      "name": {
+        "en": "Kalewa",
+        "mm": "ကလေးဝ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "26wLO7jJW10Qou3c",
+      "code": "MINKIN",
+      "short": {
+        "en": "MaKaNa",
+        "mm": "မကန"
+      },
+      "name": {
+        "en": "Min Kin",
+        "mm": "မင်းကင်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "klSwT1oH_su_6f28",
+      "code": "HTIGYAING",
+      "short": {
+        "en": "HtaKhaNa",
+        "mm": "ထခန"
+      },
+      "name": {
+        "en": "Hti Gyaing",
+        "mm": "ထီးချိုင့်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "kJOqgpHu_Ou-nsw1",
+      "code": "INDAW",
+      "short": {
+        "en": "AhTaNa",
+        "mm": "အတန"
+      },
+      "name": {
+        "en": "In Daw-Sagaing",
+        "mm": "အင်းတော်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "fNn81PTzG4BzIZHk",
+      "code": "KATHA",
+      "short": {
+        "en": "KaThaNa",
+        "mm": "ကသန"
+      },
+      "name": {
+        "en": "Ka Tha",
+        "mm": "ကသာ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "4uiPBMb4P45-KIKy",
+      "code": "WUNTHO",
+      "short": {
+        "en": "WaThaNa",
+        "mm": "ဝသန"
+      },
+      "name": {
+        "en": "Wuntho",
+        "mm": "ဝန်းသို"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "mzMZCuxyylpYpz2C",
+      "code": "PHAUNGPYIN",
+      "short": {
+        "en": "PhaPaNa",
+        "mm": "ဖပန"
+      },
+      "name": {
+        "en": "Phaung Pyin",
+        "mm": "ဖောင်းပြင်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "BH37AcqtgC7Ug_ld",
+      "code": "CHAUNGOO",
+      "short": {
+        "en": "KhaOuTa",
+        "mm": "ခဥတ"
+      },
+      "name": {
+        "en": "Chaung Oo",
+        "mm": "ချောင်းဦး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "QgCH59oskLO2MoOY",
+      "code": "MONYWA",
+      "short": {
+        "en": "MaYaNa",
+        "mm": "မရန"
+      },
+      "name": {
+        "en": "Mon Ywa",
+        "mm": "မုံရွာ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "1OrTVMg1p0cszLFL",
+      "code": "DEPAYIN",
+      "short": {
+        "en": "DaPaYa",
+        "mm": "ဒပယ"
+      },
+      "name": {
+        "en": "De Pa Yin",
+        "mm": "ဒီပဲယင်း"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "lhNIgqUOKb56afyE",
+      "code": "KAMBALU",
+      "short": {
+        "en": "KaBaLa",
+        "mm": "ကဘလ"
+      },
+      "name": {
+        "en": "Kam Ba Lu",
+        "mm": "ကန့်ဘလူ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "FIwnV9Io6oxzj9ke",
+      "code": "KHINU",
+      "short": {
+        "en": "KhaOuNa",
+        "mm": "ခဥန"
+      },
+      "name": {
+        "en": "Khin U",
+        "mm": "ခင်ဦး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "JPfgft1uKXujn2Qr",
+      "code": "SHWEBO",
+      "short": {
+        "en": "YaBaNa",
+        "mm": "ရဘန"
+      },
+      "name": {
+        "en": "Shwe Bo",
+        "mm": "ရွှေဘို"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "iaa9zF8aiwKKV_L_",
+      "code": "TANSEI",
+      "short": {
+        "en": "TaSaNa",
+        "mm": "တဆန"
+      },
+      "name": {
+        "en": "Tan Sei",
+        "mm": "တန့်ဆည်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "hbv3gfxKHHIByrb1",
+      "code": "WETLET",
+      "short": {
+        "en": "WaLaNa",
+        "mm": "ဝလန"
+      },
+      "name": {
+        "en": "Wet Let",
+        "mm": "ဝက်လက်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "iBa2GG6GAfM1w4Tu",
+      "code": "BUTALIN",
+      "short": {
+        "en": "BaTaLa",
+        "mm": "ဘတလ"
+      },
+      "name": {
+        "en": "Bu Ta Lin",
+        "mm": "ဘုတလင်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "9ht_wfDAhF0JEaMr",
+      "code": "TAMU",
+      "short": {
+        "en": "TaMaNa",
+        "mm": "တမန"
+      },
+      "name": {
+        "en": "Tamu",
+        "mm": "တမူး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "D2kXH8zBQlWZoNL7",
+      "code": "KANI",
+      "short": {
+        "en": "KaNaNa",
+        "mm": "ကနန"
+      },
+      "name": {
+        "en": "Kani",
+        "mm": "ကနီ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "qIsjbicMvI2_jLF3",
+      "code": "PALAE",
+      "short": {
+        "en": "PaLaNa",
+        "mm": "ပလန"
+      },
+      "name": {
+        "en": "Palae",
+        "mm": "ပုလဲ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "TIfpoGgsqV_IlB3r",
+      "code": "MOPINE LOOT",
+      "short": {
+        "en": "MaPaLa",
+        "mm": "မပလ"
+      },
+      "name": {
+        "en": "Mopine Loot",
+        "mm": "မိုပိုင်းလွတ်"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "gn5XjF2LJNsL3k4V",
+      "code": "MINMU",
+      "short": {
+        "en": "MaMaTa",
+        "mm": "မမတ"
+      },
+      "name": {
+        "en": "Minmu",
+        "mm": "မြင်းမူ"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "O4KgfLPTpN5w3WBe",
+      "code": "KHAN TEE(UPPER)",
+      "short": {
+        "en": "DaHaNa",
+        "mm": "ဒဟန"
+      },
+      "name": {
+        "en": "Don Hee",
+        "mm": "ဒုံဟီး"
+      },
+      "stateId": "EbUz7oziqo6OB5pL",
+      "stateCode": "5"
+    },
+    {
+      "id": "VUxj0QjS1YcjTo6-",
+      "code": "KYUNSU",
+      "short": {
+        "en": "KaSaNa",
+        "mm": "ကစန"
+      },
+      "name": {
+        "en": "Kyun Su",
+        "mm": "ကျွန်းစု"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "oQ8xGCkKsQ4OVIYB",
+      "code": "MYEIK",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Myeik",
+        "mm": "မြိတ်"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "Ppv50cDzzlRxNmae",
+      "code": "MYEIKASHAE",
+      "short": {
+        "en": "MaAhYa",
+        "mm": "မအရ"
+      },
+      "name": {
+        "en": "Myeik A She",
+        "mm": "မြိတ်အရှေ့"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "4rCC9V4PSd4YsAJh",
+      "code": "TANINTHARYI",
+      "short": {
+        "en": "TaNaTha",
+        "mm": "တနသ"
+      },
+      "name": {
+        "en": "Ta Nin Thar Yi-Tha",
+        "mm": "တနင်္သာရီ"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "cCye9cIXevApXJlQ",
+      "code": "PYIGYIMANDAING",
+      "short": {
+        "en": "PaKaMa",
+        "mm": "ပကမ"
+      },
+      "name": {
+        "en": "Pyi Gyi Man Daing",
+        "mm": "ပြည်ကြီးမဏ္ဍိုင်"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "cS52I0lfMyvTWzMG",
+      "code": "PALAUK",
+      "short": {
+        "en": "PaLaTa",
+        "mm": "ပလတ"
+      },
+      "name": {
+        "en": "Pa Lauk",
+        "mm": "ပလောက်"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "HIveIJYbrI1EbOUT",
+      "code": "YEBYU",
+      "short": {
+        "en": "YaPhaNa",
+        "mm": "ရဖန"
+      },
+      "name": {
+        "en": "Ye Byu",
+        "mm": "ရေဖြူ"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "Ryn-PPekVDXpAEDf",
+      "code": "KAWTHOUNG",
+      "short": {
+        "en": "KaThaNa",
+        "mm": "ကသန"
+      },
+      "name": {
+        "en": "Kaw Thoung",
+        "mm": "ကော့သောင်း"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "fLdBC3RFRhjHX4QB",
+      "code": "TANINTHARYI-YA",
+      "short": {
+        "en": "TaThaYa",
+        "mm": "တသရ"
+      },
+      "name": {
+        "en": "Ta Nin Thar Yi",
+        "mm": "တနင်္သာရီ"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "__xkpK1HophRS7cF",
+      "code": "NGAYOKEKAUNG-TANINTHARYI",
+      "short": {
+        "en": "NgaYaKa",
+        "mm": "ငရက"
+      },
+      "name": {
+        "en": "Nga Yoke Kaung - Ta Nin Thar Yi",
+        "mm": "ငရုတ်ကောင်း - တနင်္သာရီ"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "4lVk74GIFgGJik73",
+      "code": "MYEIKANOUT",
+      "short": {
+        "en": "MaAhNa",
+        "mm": "မအန"
+      },
+      "name": {
+        "en": "Myeik A Nout",
+        "mm": "မြိတ်အနောက်"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "aawkfxJd8P2EXcpM",
+      "code": "KARATHURI",
+      "short": {
+        "en": "KaYaYa",
+        "mm": "ကရရ"
+      },
+      "name": {
+        "en": "Ka Ra Thu Ri",
+        "mm": "ကရသုရိ"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "Lxgvg1lRviXj2hts",
+      "code": "LOUNGLON",
+      "short": {
+        "en": "LaLaNa",
+        "mm": "လလန"
+      },
+      "name": {
+        "en": "Loung Lon",
+        "mm": "လောင်းလုံ"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "VE1dfr8VmbWC7bBD",
+      "code": "PALAW",
+      "short": {
+        "en": "PaLaNa",
+        "mm": "ပလန"
+      },
+      "name": {
+        "en": "Palaw",
+        "mm": "ပုလော"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "G82DW13qbQyudW-1",
+      "code": "KHAMAUKKYI",
+      "short": {
+        "en": "KhaMaKa",
+        "mm": "ခမက"
+      },
+      "name": {
+        "en": "Kha Mauk Kyi",
+        "mm": "ခမောက်ကြီး"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "tp6aiGIW6qVI57Gx",
+      "code": "DAWEI",
+      "short": {
+        "en": "HtaWaNa",
+        "mm": "ထဝန"
+      },
+      "name": {
+        "en": "Da Wei",
+        "mm": "ထားဝယ်"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "5shTcXaLOO7usWtn",
+      "code": "KALEINAUNG",
+      "short": {
+        "en": "KaLaAh",
+        "mm": "ကလအ"
+      },
+      "name": {
+        "en": "Ka Lein Aung",
+        "mm": "ကလိန်အောင်"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "CyEy8bq2KXD6WXsa",
+      "code": "MYITTA",
+      "short": {
+        "en": "MaTaNa",
+        "mm": "မတန"
+      },
+      "name": {
+        "en": "Myit Ta",
+        "mm": "မေတာ"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "j6sVngCzR4IPqRB6",
+      "code": "THAYETCHAUNG",
+      "short": {
+        "en": "ThaYaKha",
+        "mm": "သရခ"
+      },
+      "name": {
+        "en": "Tha Yet Chaung",
+        "mm": "သရက်ချောင်း"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "sSxbuoBNIUhYJbNk",
+      "code": "BOKEPYIN",
+      "short": {
+        "en": "BaPaNa",
+        "mm": "ဘပန"
+      },
+      "name": {
+        "en": "Boke Pyin",
+        "mm": "ဘုတ်ပြင်း"
+      },
+      "stateId": "X8rt_XwuTgAggCju",
+      "stateCode": "6"
+    },
+    {
+      "id": "UpGyPd6L25VEdPd3",
+      "code": "SHWEGYIN",
+      "short": {
+        "en": "YaKaNa",
+        "mm": "ရကန"
+      },
+      "name": {
+        "en": "Shweg Yin",
+        "mm": "ရွှေကျင်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "ZT984n-G_XLezmO6",
+      "code": "KAWA",
+      "short": {
+        "en": "KaWaNa",
+        "mm": "ကဝန"
+      },
+      "name": {
+        "en": "Ka Wa",
+        "mm": "ကဝ"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "C_dmO3JjxIJVZdNj",
+      "code": "PAUNDE",
+      "short": {
+        "en": "PaTaTa",
+        "mm": "ပတတ"
+      },
+      "name": {
+        "en": "Paun De",
+        "mm": "ပေါင်းတည်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "TlduR30XkXtXbhfo",
+      "code": "KYAUKKYI",
+      "short": {
+        "en": "KaKaNa",
+        "mm": "ကကန"
+      },
+      "name": {
+        "en": "Kyauk Kyi",
+        "mm": "ကျောက်ကြီး"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "-VzMq7MK3J6reN4x",
+      "code": "MINHLA-THAYAWADY",
+      "short": {
+        "en": "MaLaNa",
+        "mm": "မလန"
+      },
+      "name": {
+        "en": "Min Hla",
+        "mm": "မင်းလှ"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "c7eSHFdzmh_ZIvf5",
+      "code": "DAIKU",
+      "short": {
+        "en": "DaOuNa",
+        "mm": "ဒဥန"
+      },
+      "name": {
+        "en": "Daik U",
+        "mm": "ဒိုက်ဦး"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "QGuKr1seDZSSpu-U",
+      "code": "KYAUKTAGA",
+      "short": {
+        "en": "KaTaKha",
+        "mm": "ကတခ"
+      },
+      "name": {
+        "en": "Kyauk Ta Ga",
+        "mm": "ကျောက်တံခါး"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "rhBMvVSYNlHhHT8j",
+      "code": "TANATPIN",
+      "short": {
+        "en": "ThaNaPa",
+        "mm": "သနပ"
+      },
+      "name": {
+        "en": "Tanatpin",
+        "mm": "သနပ်ပင်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "p1pZ6RWsTbPyQibO",
+      "code": "WAW",
+      "short": {
+        "en": "WaMaNa",
+        "mm": "ဝမန"
+      },
+      "name": {
+        "en": "Waw",
+        "mm": "ဝေါ"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "iBIC-ue3p-hAAjDT",
+      "code": "PADAUNG",
+      "short": {
+        "en": "PaTaNa",
+        "mm": "ပတန"
+      },
+      "name": {
+        "en": "Pa Daung",
+        "mm": "ပန်းတောင်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "uHs8NPhl809Nlgr9",
+      "code": "SHWEDAUNG",
+      "short": {
+        "en": "YaTaNa",
+        "mm": "ရတန"
+      },
+      "name": {
+        "en": "Shwe Daung",
+        "mm": "ရွှေတောင်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "-CbHiLiNdbyIoDWi",
+      "code": "GYOBINGAUK",
+      "short": {
+        "en": "KaPaKa",
+        "mm": "ကပက"
+      },
+      "name": {
+        "en": "Gyo Bin Gauk",
+        "mm": "ကြို့ပင်ကောက်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "-27Lh6FIUe_iMun5",
+      "code": "MONYO",
+      "short": {
+        "en": "MaNyaNa",
+        "mm": "မညန"
+      },
+      "name": {
+        "en": "Monyo",
+        "mm": "မိုးညို"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "M3kMDS86cRDzLn1U",
+      "code": "ZIGON",
+      "short": {
+        "en": "ZaKaNa",
+        "mm": "ဇကန"
+      },
+      "name": {
+        "en": "Zigon",
+        "mm": "ဇီးကုန်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "PrLQtsR_v5CDj1Dr",
+      "code": "HTANTAPIN",
+      "short": {
+        "en": "HtaTaPa",
+        "mm": "ထတပ"
+      },
+      "name": {
+        "en": "Htan Ta Pin",
+        "mm": "ထန်းတပင်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "821GRLWIQ9Aa6657",
+      "code": "PYU",
+      "short": {
+        "en": "PhaMaNa",
+        "mm": "ဖမန"
+      },
+      "name": {
+        "en": "Pyu",
+        "mm": "ဖြူး"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "_y6hCtHBCIuNaAcU",
+      "code": "TOUNGOO",
+      "short": {
+        "en": "TaNgaNa",
+        "mm": "တငန"
+      },
+      "name": {
+        "en": "Toungoo",
+        "mm": "တောင်ငူ"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "d7g19L0K4Z7iDKr7",
+      "code": "YAEDASHE",
+      "short": {
+        "en": "YaTaYa",
+        "mm": "ရတရ"
+      },
+      "name": {
+        "en": "Yae Da She",
+        "mm": "ရေတာရှည်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "YYL-AhnQfi-W-c5j",
+      "code": "LETPADAN",
+      "short": {
+        "en": "LaPaTa",
+        "mm": "လပတ"
+      },
+      "name": {
+        "en": "Let Pa Dan",
+        "mm": "လက်ပံတန်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "ehJklS2qpFDjXA3w",
+      "code": "OKPO",
+      "short": {
+        "en": "AhPhaNa",
+        "mm": "အဖန"
+      },
+      "name": {
+        "en": "Okpo",
+        "mm": "အုတ်ဖို"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "Ci_V0duRSfL9k0e2",
+      "code": "THEGON",
+      "short": {
+        "en": "ThaKaNa",
+        "mm": "သကန"
+      },
+      "name": {
+        "en": "The Gon",
+        "mm": "သဲကုန်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "O1gjsyITz72gvxcm",
+      "code": "PAUKKHAUNG",
+      "short": {
+        "en": "PaKhaTa",
+        "mm": "ပခတ"
+      },
+      "name": {
+        "en": "Paukkhaung",
+        "mm": "ပေါက်ခေါင်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "SUCOHZqGZDJkUfOI",
+      "code": "OKPHAT",
+      "short": {
+        "en": "AhPhaNa",
+        "mm": "အဖန"
+      },
+      "name": {
+        "en": "Ok Phat",
+        "mm": "အုတ်ဖျက်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "sHvIn8plwy-U9nnB",
+      "code": "THONSAE",
+      "short": {
+        "en": "ThaSaNa",
+        "mm": "သဆန"
+      },
+      "name": {
+        "en": "Thon Sae",
+        "mm": "သုံးဆယ်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "ZHSzwEabWO-B2dw_",
+      "code": "KAYTUMATI",
+      "short": {
+        "en": "KaTaTa",
+        "mm": "ကတတ"
+      },
+      "name": {
+        "en": "Kay Tu Ma Ti",
+        "mm": "ကေတုမတီ"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "7CaefjA3UboaXAT5",
+      "code": "KUAUKKONE",
+      "short": {
+        "en": "KaKaNa",
+        "mm": "ကကန"
+      },
+      "name": {
+        "en": "Kuauk Kone",
+        "mm": "​ကျောက်ကုန်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "04QudjFQ5UBP4tGm",
+      "code": "BAGO",
+      "short": {
+        "en": "PaKhaNa",
+        "mm": "ပခန"
+      },
+      "name": {
+        "en": "Bago",
+        "mm": "ပဲခူး"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "onEU1_dRNHW4DyTq",
+      "code": "PYAY",
+      "short": {
+        "en": "PaMaNa",
+        "mm": "ပမန"
+      },
+      "name": {
+        "en": "Pyay",
+        "mm": "ပြည်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "OAVACVgdGLOkVHou",
+      "code": "THAYAWADY",
+      "short": {
+        "en": "ThaWaTa",
+        "mm": "သဝတ"
+      },
+      "name": {
+        "en": "Tha Ya Wa Dy",
+        "mm": "သာယာဝတီ"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "PsHaEttTtrWpvdO5",
+      "code": "NYAUNGLEBIN",
+      "short": {
+        "en": "NyaLaPa",
+        "mm": "ညလပ"
+      },
+      "name": {
+        "en": "Nyaung Le Bin",
+        "mm": "ညောင်လေးပင်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "4_X2AfTojfceN7Kz",
+      "code": "OATWIN",
+      "short": {
+        "en": "AhTaNa",
+        "mm": "အတန"
+      },
+      "name": {
+        "en": "Oa Twin",
+        "mm": "အုတ်တွင်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "NWb7HcLUSYMVB4xx",
+      "code": "NATTALIN",
+      "short": {
+        "en": "NaTaLa",
+        "mm": "နတလ"
+      },
+      "name": {
+        "en": "Nat Ta Lin",
+        "mm": "နတ်တလင်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "i_7MrNemGTYJSCP8",
+      "code": "PYUNTANSAR",
+      "short": {
+        "en": "PaTaSa",
+        "mm": "ပတဆ"
+      },
+      "name": {
+        "en": "Pyun Tan Sar",
+        "mm": "ပြွန်တန်ဆာ"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "RhlPpoepmQgdWjOe",
+      "code": "MADAUNK",
+      "short": {
+        "en": "MaDaNa",
+        "mm": "မဒန"
+      },
+      "name": {
+        "en": "Ma Daunk",
+        "mm": "မဒေါက်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "IYmG827ZQpD1tb8K",
+      "code": "PAENWEKONE",
+      "short": {
+        "en": "PaNaKa",
+        "mm": "ပနက"
+      },
+      "name": {
+        "en": "Pae Nwe Kone",
+        "mm": "ပဲနွယ်ကုန်း"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "UK3d5u7Ty8FTgCHR",
+      "code": "PAUNGTALAE",
+      "short": {
+        "en": "PaTaLa",
+        "mm": "ပတလ"
+      },
+      "name": {
+        "en": "Paung Ta Lae",
+        "mm": "ပေါင်းတလည်"
+      },
+      "stateId": "zBMPM_jGuwbus35I",
+      "stateCode": "7"
+    },
+    {
+      "id": "o0z5cVWPkfga0pyE",
+      "code": "MINBU",
+      "short": {
+        "en": "MaBaNa",
+        "mm": "မဘန"
+      },
+      "name": {
+        "en": "Min Bu",
+        "mm": "မင်းဘူး"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "-nNgh5Szy3N2LskT",
+      "code": "NGAPHAE",
+      "short": {
+        "en": "NgaPhaNa",
+        "mm": "ငဖန"
+      },
+      "name": {
+        "en": "Nga Phae",
+        "mm": "ငဖဲ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "v0ZputQ6bhO_vhJd",
+      "code": "PWINTPHYU",
+      "short": {
+        "en": "PaPhaNa",
+        "mm": "ပဖန"
+      },
+      "name": {
+        "en": "Pwint Phyu",
+        "mm": "ပွင့်ဖြူ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "Qd-lgt1oEldKNE3f",
+      "code": "SAKU",
+      "short": {
+        "en": "SaKaNa",
+        "mm": "စကန"
+      },
+      "name": {
+        "en": "Sa Ku",
+        "mm": "စကု"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "Sn67HyZFmmxqFSDL",
+      "code": "SALIN",
+      "short": {
+        "en": "SaLaNa",
+        "mm": "စလန"
+      },
+      "name": {
+        "en": "Sa Lin",
+        "mm": "စလင်း"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "yUNhDY1bl1rX7fvG",
+      "code": "MYAING",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Myaing",
+        "mm": "မြိုင်"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "5M0UcVWxY26ER3nY",
+      "code": "PAUK",
+      "short": {
+        "en": "PaMaNa",
+        "mm": "ပမန"
+      },
+      "name": {
+        "en": "Pauk",
+        "mm": "ပေါက်"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "1PPglEpG0LyA9wOV",
+      "code": "YAYSAKYO",
+      "short": {
+        "en": "YaSaKa",
+        "mm": "ရစက"
+      },
+      "name": {
+        "en": "Yay Sa Kyo",
+        "mm": "ရေစကြို"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "u3XHrGVuLkP932L1",
+      "code": "KAMMA",
+      "short": {
+        "en": "KaMaNa",
+        "mm": "ကမန"
+      },
+      "name": {
+        "en": "Kam Ma",
+        "mm": "ကံမ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "HpbZ9_MMh6YUbCI_",
+      "code": "MINHLA-MAGWAY",
+      "short": {
+        "en": "MaLaNa",
+        "mm": "မလန"
+      },
+      "name": {
+        "en": "Min Hla-Magway",
+        "mm": "မင်းလှ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "qy7AtOaGjDKGprio",
+      "code": "THAYET",
+      "short": {
+        "en": "ThaYaNa",
+        "mm": "သရန"
+      },
+      "name": {
+        "en": "Tha Yet",
+        "mm": "သရက်"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "fUxJOjaAiiy0356D",
+      "code": "SINPAUNGWAE",
+      "short": {
+        "en": "SaPaWa",
+        "mm": "ဆပ၀"
+      },
+      "name": {
+        "en": "Sin Paung Wae",
+        "mm": "ဆင်ပေါင်ဝဲ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "_c7XH023HJPZvcJh",
+      "code": "HSAW",
+      "short": {
+        "en": "SaMaNa",
+        "mm": "ဆမန"
+      },
+      "name": {
+        "en": "Hsaw",
+        "mm": "ဆော"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "Eh1eTvWgbavFg45U",
+      "code": "MINTONE",
+      "short": {
+        "en": "MaTaNa",
+        "mm": "မတန"
+      },
+      "name": {
+        "en": "Min Tone",
+        "mm": "မင်းတုန်း"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "FNrPp_Z5o4gNZklS",
+      "code": "TAUNGDWINGYI",
+      "short": {
+        "en": "TaTaKa",
+        "mm": "တတက"
+      },
+      "name": {
+        "en": "Taung Dwin Gyi",
+        "mm": "တောင်တွင်းကြီး"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "DK9mE0XT7ZYgvTQM",
+      "code": "HTILIN",
+      "short": {
+        "en": "HtaLaNa",
+        "mm": "ထလန"
+      },
+      "name": {
+        "en": "Hti Lin",
+        "mm": "ထီးလင်း"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "w86KZCx2ugIvayhp",
+      "code": "CHAUK",
+      "short": {
+        "en": "KhaMaNa",
+        "mm": "ခမန"
+      },
+      "name": {
+        "en": "Chauk",
+        "mm": "ချောက်"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "CVkO0hqyM-0pgWDn",
+      "code": "MYAYHTAE",
+      "short": {
+        "en": "MaHtaNa",
+        "mm": "မထန"
+      },
+      "name": {
+        "en": "Myay Htae",
+        "mm": "မြေထဲ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "3NHkosvrHv8S-1ha",
+      "code": "AUNGLAN",
+      "short": {
+        "en": "AhLaNa",
+        "mm": "အလန"
+      },
+      "name": {
+        "en": "Aung Lan",
+        "mm": "အောင်လံ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "qeA9kgXZQYVd04SF",
+      "code": "MYOTHIT-MAGWAY",
+      "short": {
+        "en": "MaThaNa",
+        "mm": "မသန"
+      },
+      "name": {
+        "en": "Myo Thit-Magway",
+        "mm": "မြို့သစ်"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "u7FQzukIDn1kf2zl",
+      "code": "PAKOKKU",
+      "short": {
+        "en": "PaKhaKa",
+        "mm": "ပခက"
+      },
+      "name": {
+        "en": "Pa Kok Ku",
+        "mm": "ပခုက္ကူ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "Ti55O51SEo0BvjPc",
+      "code": "MAGWAY",
+      "short": {
+        "en": "MaKaNa",
+        "mm": "မကန"
+      },
+      "name": {
+        "en": "Ma Gway",
+        "mm": "မကွေး"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "tsFnZj8yaujKVydq",
+      "code": "SEIKPHYU",
+      "short": {
+        "en": "SaPhaNa",
+        "mm": "ဆဖန"
+      },
+      "name": {
+        "en": "Seik Phyu",
+        "mm": "ဆိပ်ဖြူ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "FkVx4E-5dJ8FqTag",
+      "code": "SAYTOTTARA",
+      "short": {
+        "en": "SaTaYa",
+        "mm": "စတရ"
+      },
+      "name": {
+        "en": "Say Tot Ta Ra",
+        "mm": "စေတုတ္တရာ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "CYhfYyTEGDaD7YA7",
+      "code": "YAYNANCHAUNG",
+      "short": {
+        "en": "YaNaKha",
+        "mm": "ရနခ"
+      },
+      "name": {
+        "en": "Yay Nan Chaung",
+        "mm": "ရေနံချောင်း"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "6X-2nBE2egyCnITm",
+      "code": "GANGAW",
+      "short": {
+        "en": "GaGaNa",
+        "mm": "ဂဂန"
+      },
+      "name": {
+        "en": "Gan Gaw",
+        "mm": "ဂန့်ဂေါ"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "GqjXbKk_8a3dpAJr",
+      "code": "KYAUKHTU",
+      "short": {
+        "en": "KaHtaNa",
+        "mm": "ကထန"
+      },
+      "name": {
+        "en": "Kyauk Htu",
+        "mm": "ကျောက်ထု"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "baal5VnZ-P1vZRQ8",
+      "code": "YAW",
+      "short": {
+        "en": "YaMaNa",
+        "mm": "ယမန"
+      },
+      "name": {
+        "en": "Yaw",
+        "mm": "ယော"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "91IeSpgF5_2X6v2N",
+      "code": "NATMAUK",
+      "short": {
+        "en": "NaMaNa",
+        "mm": "နမန"
+      },
+      "name": {
+        "en": "Nat Mauk",
+        "mm": "နတ်မောက်"
+      },
+      "stateId": "u431U0SGuX9lkur-",
+      "stateCode": "8"
+    },
+    {
+      "id": "Yy-x1u7JXiC0mRLN",
+      "code": "KYAUKSE",
+      "short": {
+        "en": "KaSaNa",
+        "mm": "ကဆန"
+      },
+      "name": {
+        "en": "Kyauk Se",
+        "mm": "ကျောက်ဆည်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "s24xhSz9-fi9r8i5",
+      "code": "MYITTHAR",
+      "short": {
+        "en": "MaThaNa",
+        "mm": "မသန"
+      },
+      "name": {
+        "en": "Myit Thar",
+        "mm": "မြစ်သား"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "wdr4b2Cn4LEmA6pU",
+      "code": "AUNGMYETHARZAN",
+      "short": {
+        "en": "AhMaZa",
+        "mm": "အမဇ"
+      },
+      "name": {
+        "en": "Aung Mye Thar Zan",
+        "mm": "အောင်မြေသာဇံ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "dJZW945YDHGv3-eQ",
+      "code": "CHANMYATHARZI",
+      "short": {
+        "en": "KhaMaSa",
+        "mm": "ခမစ"
+      },
+      "name": {
+        "en": "Chan Mya Thar Zi",
+        "mm": "ချမ်းမြေ့သာစည်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "9QdAyBnMDEqdW1zz",
+      "code": "MAHAAUNGMYE",
+      "short": {
+        "en": "MaHaMa",
+        "mm": "မဟမ"
+      },
+      "name": {
+        "en": "Ma Ha Aung Mye",
+        "mm": "မဟာအောင်မြေ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "DKdjQ8olqz-vpfiy",
+      "code": "ZABUTHIRI",
+      "short": {
+        "en": "ZaBaTha",
+        "mm": "ဇဗသ"
+      },
+      "name": {
+        "en": "Za Bu Thiri",
+        "mm": "ဇမ္ဗူသီရိ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "ynThlvLeMFOR0N8I",
+      "code": "KYAUKPADAUNG",
+      "short": {
+        "en": "KaPaTa",
+        "mm": "ကပတ"
+      },
+      "name": {
+        "en": "Kyauk Pa Daung",
+        "mm": "ကျောက်ပန်းတောင်း"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "_8EmrD5ns9rLwYPm",
+      "code": "PATHEINGYI",
+      "short": {
+        "en": "PaThaKa",
+        "mm": "ပသက"
+      },
+      "name": {
+        "en": "Pa Thein Gyi",
+        "mm": "ပုသိမ်ကြီး"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "ZpnOLsYWQmCb-RHM",
+      "code": "TADAU",
+      "short": {
+        "en": "TaTaOu",
+        "mm": "တတဥ"
+      },
+      "name": {
+        "en": "Tadau",
+        "mm": "တံတားဦး"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "447CkZG492J8TwnW",
+      "code": "SINGAING",
+      "short": {
+        "en": "SaKaTa",
+        "mm": "စကတ"
+      },
+      "name": {
+        "en": "Sin Gaing",
+        "mm": "စဉ့်ကိုင်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "zCAl687RBvKXg9vF",
+      "code": "SINKU",
+      "short": {
+        "en": "SaKaNa",
+        "mm": "စကန"
+      },
+      "name": {
+        "en": "Sin Ku",
+        "mm": "စဉ့်ကူး"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "gN77WiQ859GFd4r0",
+      "code": "OTTARATHIRI",
+      "short": {
+        "en": "AuTaTha",
+        "mm": "ဥတသ"
+      },
+      "name": {
+        "en": "Ot Ta Ra Thiri",
+        "mm": "ဥတ္တရသီရိ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "xn3kFcvdyd3mh4Gq",
+      "code": "POBBATHIRI",
+      "short": {
+        "en": "PaBaTha",
+        "mm": "ပဗသ"
+      },
+      "name": {
+        "en": "Pob Ba Thiri",
+        "mm": "ပုဗ္ဗသီရိ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "I7D-R0RwijzMAyvQ",
+      "code": "KUME",
+      "short": {
+        "en": "KaMaNa",
+        "mm": "ကမန"
+      },
+      "name": {
+        "en": "Ku Me",
+        "mm": "ကူမဲ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "WzRc32_yKbZ5S0F3",
+      "code": "MAYMYO",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "May Myo",
+        "mm": "မေမြို့"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "rq4exxAlROXKaNgl",
+      "code": "MANNSHAEMYAUK",
+      "short": {
+        "en": "MaYaMa",
+        "mm": "မရမ"
+      },
+      "name": {
+        "en": "Mann Shae Myauk",
+        "mm": "မန်းရှေ့မြောက်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "VMEyAxuTkt1-qyEV",
+      "code": "AMARAPURA",
+      "short": {
+        "en": "AhMaYa",
+        "mm": "အမရ"
+      },
+      "name": {
+        "en": "A Ma Ra Pu Ra",
+        "mm": "အမရပူရ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "VuCC5mC1Enm9NP3m",
+      "code": "NATOGYI",
+      "short": {
+        "en": "NaHtaKa",
+        "mm": "နထက"
+      },
+      "name": {
+        "en": "Na To Gyi",
+        "mm": "နွားထိုးကြီး"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "BhYX-gtw-pd8GucA",
+      "code": "MANNNAUKMYAUK",
+      "short": {
+        "en": "MaNaMa",
+        "mm": "မနမ"
+      },
+      "name": {
+        "en": "Mann Nauk Myauk",
+        "mm": "မန်းနောက်မြောက်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "dJucp8ldRbUocA0Q",
+      "code": "MANNNAUKTAUNG",
+      "short": {
+        "en": "MaNaTa",
+        "mm": "မနတ"
+      },
+      "name": {
+        "en": "Mann Nauk Taung",
+        "mm": "မန်းနောက်တောင်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "SNJTEZYEYYdSwdje",
+      "code": "MANNSHAEAUNG",
+      "short": {
+        "en": "MaYaTa",
+        "mm": "မရတ"
+      },
+      "name": {
+        "en": "Mann Shae Taung",
+        "mm": "မန်းရှေ့တောင်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "ctjxT1TVs-1j13z9",
+      "code": "TATKON",
+      "short": {
+        "en": "TaKaNa",
+        "mm": "တကန"
+      },
+      "name": {
+        "en": "Tatkon",
+        "mm": "တပ်ကုန်း"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "wMEvpIt1m0slHoPa",
+      "code": "NYAUNGU",
+      "short": {
+        "en": "NyaOuNa",
+        "mm": "ညဥန"
+      },
+      "name": {
+        "en": "Nyaung U",
+        "mm": "ညောင်ဦး"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "VCeESLKeSCpbL2j9",
+      "code": "MEIKTILA",
+      "short": {
+        "en": "MaHtaLa",
+        "mm": "မထလ"
+      },
+      "name": {
+        "en": "Mei Kti La",
+        "mm": "မိတ္ထီလာ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "2eZdnlvemYpeWH9j",
+      "code": "WUNDWIN",
+      "short": {
+        "en": "WaTaNa",
+        "mm": "ဝတန"
+      },
+      "name": {
+        "en": "Wun Dwin",
+        "mm": "ဝမ်းတွင်း"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "N-hNSUVP3h5LaI7r",
+      "code": "TAGAUNG",
+      "short": {
+        "en": "TaKaTa",
+        "mm": "တကတ"
+      },
+      "name": {
+        "en": "Ta Gaung",
+        "mm": "တကောင်း"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "w62qDkRBDwbiKMy8",
+      "code": "PYIGYITAKHUN",
+      "short": {
+        "en": "PaKaKha",
+        "mm": "ပကခ"
+      },
+      "name": {
+        "en": "Pyi Gyi Ta Khun",
+        "mm": "ပြည်ကြီးတံခွန်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "rsGsFgXbYHgi8-9h",
+      "code": "THAZI",
+      "short": {
+        "en": "ThaSaNa",
+        "mm": "သစန"
+      },
+      "name": {
+        "en": "Tha Zi",
+        "mm": "သာစည်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "xlYsO9DL2khUNFkS",
+      "code": "MYINGYAN",
+      "short": {
+        "en": "MaKhaNa",
+        "mm": "မခန"
+      },
+      "name": {
+        "en": "Myin Gyan",
+        "mm": "မြင်းခြံ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "I1b39XFHcpDNdncy",
+      "code": "NGAZUN",
+      "short": {
+        "en": "NgaZaNa",
+        "mm": "ငဇန"
+      },
+      "name": {
+        "en": "Ngan Zun",
+        "mm": "ငါန်းဇွန်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "hynvIcJ4p69iGeLO",
+      "code": "NGATHAYAUK",
+      "short": {
+        "en": "NgaThaYa",
+        "mm": "ငသရ"
+      },
+      "name": {
+        "en": "Nga Tha Yauk",
+        "mm": "ငါးသရောက်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "7FdSE4aRiwcHPyLW",
+      "code": "MOGOK",
+      "short": {
+        "en": "MaKaNa",
+        "mm": "မကန"
+      },
+      "name": {
+        "en": "Mogok",
+        "mm": "မိုးကုတ်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "dWmV8TALPKlT7X1W",
+      "code": "PYINOOLWIN",
+      "short": {
+        "en": "PaOuLa",
+        "mm": "ပဥလ"
+      },
+      "name": {
+        "en": "Pyin Oo Lwin",
+        "mm": "ပြင်‌ဦးလွင်‌"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "HwGp-N5JK1eKCfF6",
+      "code": "THABEIKKYIN",
+      "short": {
+        "en": "ThaPaKa",
+        "mm": "သပက"
+      },
+      "name": {
+        "en": "Tha Beik Kyin",
+        "mm": "သပိတ်ကျင်း"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "IhhrvLN4RGPE_oI7",
+      "code": "PYAWBWE",
+      "short": {
+        "en": "PaBaNa",
+        "mm": "ပဘန"
+      },
+      "name": {
+        "en": "Pyaw Bwe",
+        "mm": "ပျော်ဘွယ်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "aV3n30bpYpfjftPe",
+      "code": "YAMETHIN",
+      "short": {
+        "en": "YaMaTha",
+        "mm": "ရမသ"
+      },
+      "name": {
+        "en": "Ya Me Thin",
+        "mm": "ရမည်းသင်း"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "DQlUKc6ejvr4pYhu",
+      "code": "DEKKHINATHIRI",
+      "short": {
+        "en": "DaKhaTha",
+        "mm": "ဒခသ"
+      },
+      "name": {
+        "en": "Dek Khi Na Thiri",
+        "mm": "ဒက္ခိဏသီရိ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "vdYRqAR_EDMdkFvy",
+      "code": "LEWE",
+      "short": {
+        "en": "LaWaNa",
+        "mm": "လဝန"
+      },
+      "name": {
+        "en": "Lewe",
+        "mm": "လယ်ဝေး"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "jiUCUunNLErLnvyj",
+      "code": "PYINMANA",
+      "short": {
+        "en": "PaMaNa",
+        "mm": "ပမန"
+      },
+      "name": {
+        "en": "Pyin Ma Na",
+        "mm": "ပျဉ်းမနား"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "LqfEkS4_G1K-Kxnm",
+      "code": "ZEYARTHIRI",
+      "short": {
+        "en": "ZaYaTha",
+        "mm": "ဇယသ"
+      },
+      "name": {
+        "en": "Ze Yar Thiri",
+        "mm": "ဇေယျာသီရိ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "S-YlIvEXHe4FMHu_",
+      "code": "MADAYA",
+      "short": {
+        "en": "MaTaYa",
+        "mm": "မတရ"
+      },
+      "name": {
+        "en": "Ma Da Ya",
+        "mm": "မတ္တရာ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "fdcDWBEXcCmIv96M",
+      "code": "TAUNGTHA",
+      "short": {
+        "en": "TaThaNa",
+        "mm": "တသန"
+      },
+      "name": {
+        "en": "Taung Tha",
+        "mm": "တောင်သာ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "5XPfw_dpPtzZ0fdL",
+      "code": "MAHLAING",
+      "short": {
+        "en": "MaLaNa",
+        "mm": "မလန"
+      },
+      "name": {
+        "en": "Ma Hlaing",
+        "mm": "မလှိုင်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "QLG4vgvPJVOnirhy",
+      "code": "CHANAYETHARZAN",
+      "short": {
+        "en": "KhaAhZa",
+        "mm": "ခအဇ"
+      },
+      "name": {
+        "en": "Chan Aye Thar Zan",
+        "mm": "ချမ်းအေးသာဇံ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "UP2KQOz9vaE_20FG",
+      "code": "BAGAN",
+      "short": {
+        "en": "-",
+        "mm": "-"
+      },
+      "name": {
+        "en": "Bagan",
+        "mm": "ပုဂံ"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "A2i3KO_tPsZdZJX4",
+      "code": "SHWEKYIN",
+      "short": {
+        "en": "YaKaNa",
+        "mm": "ရကန"
+      },
+      "name": {
+        "en": "Shwekyin",
+        "mm": "ရွှေကျင်"
+      },
+      "stateId": "5PflwjWItczLTOof",
+      "stateCode": "9"
+    },
+    {
+      "id": "3ZFbwzx4RgIWwqzz",
+      "code": "BILIN",
+      "short": {
+        "en": "BaLaNa",
+        "mm": "ဘလန"
+      },
+      "name": {
+        "en": "Bi Lin",
+        "mm": "ဘီလင်း"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "dfN0sOQvvrCtv0l-",
+      "code": "PAUNG",
+      "short": {
+        "en": "PaMaNa",
+        "mm": "ပမန"
+      },
+      "name": {
+        "en": "Paung",
+        "mm": "ပေါင်"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "IteUPxE6EGnDqbbn",
+      "code": "YE",
+      "short": {
+        "en": "YaMaNa",
+        "mm": "ရမန"
+      },
+      "name": {
+        "en": "Ye",
+        "mm": "ရေး"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "KpItim_6rbvbe0zU",
+      "code": "KYAIKKHAMI",
+      "short": {
+        "en": "KaKhaMa",
+        "mm": "ကခမ"
+      },
+      "name": {
+        "en": "Kyaik Kha Mi",
+        "mm": "ကျိုက်ခမီ"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "ZymwfgXhM8w_XbHW",
+      "code": "LAMINE",
+      "short": {
+        "en": "LaMaNa",
+        "mm": "လမန"
+      },
+      "name": {
+        "en": "La Mine",
+        "mm": "လမိုင်း"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "LnLFtCrD8ijGqvVG",
+      "code": "CHAUNGZON",
+      "short": {
+        "en": "KhaSaNa",
+        "mm": "ခဆန"
+      },
+      "name": {
+        "en": "Chaung Zon",
+        "mm": "ချောင်းဆုံ"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "hxWvHrSQsRSUXq1S",
+      "code": "KYAIKEMARAW",
+      "short": {
+        "en": "KaMaYa",
+        "mm": "ကမရ"
+      },
+      "name": {
+        "en": "Kyaike Ma Raw",
+        "mm": "ကျိုက်မရော"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "RNlgtOGsd2L6G1LH",
+      "code": "MAWLAMYINE",
+      "short": {
+        "en": "MaLaMa",
+        "mm": "မလမ"
+      },
+      "name": {
+        "en": "Maw La Myine",
+        "mm": "မော်လမြိုင်"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "7rgFP6a0MuSiivau",
+      "code": "MUDON",
+      "short": {
+        "en": "MaDaNa",
+        "mm": "မဒန"
+      },
+      "name": {
+        "en": "Mudon",
+        "mm": "မုဒုံ"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "BRsNzV8svoNFVpdm",
+      "code": "THANBYUZAYAT",
+      "short": {
+        "en": "ThaPhaYa",
+        "mm": "သဖရ"
+      },
+      "name": {
+        "en": "Than Byu Za Yat",
+        "mm": "သံဖြူဇရပ်"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "ICN-j5aDsNvHfpt7",
+      "code": "KYAIKTO",
+      "short": {
+        "en": "KaHtaNa",
+        "mm": "ကထန"
+      },
+      "name": {
+        "en": "Kyaik To",
+        "mm": "ကျိုက်ထို"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "r1P1_FN5TOTfeYfX",
+      "code": "THAHTON",
+      "short": {
+        "en": "ThaHtaNa",
+        "mm": "သထန"
+      },
+      "name": {
+        "en": "Thahton",
+        "mm": "သထုံ"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "Oc3qZ6TAbDCGzm9X",
+      "code": "KHAWZAR",
+      "short": {
+        "en": "KhaZaNa",
+        "mm": "ခဇန"
+      },
+      "name": {
+        "en": "Khaw Zar",
+        "mm": "ခေါဇာ"
+      },
+      "stateId": "uQgglJ-AhohYQJNB",
+      "stateCode": "10"
+    },
+    {
+      "id": "hXv7BUQLa1ORBS85",
+      "code": "GWA",
+      "short": {
+        "en": "GaMaNa",
+        "mm": "ဂမန"
+      },
+      "name": {
+        "en": "Gwa",
+        "mm": "ဂွ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "a5kASAP5stP2BOXC",
+      "code": "MYEBON",
+      "short": {
+        "en": "MaPaTa",
+        "mm": "မပတ"
+      },
+      "name": {
+        "en": "Mye Bon",
+        "mm": "မြေပုံ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "CLmdR7dJaNiP4N0J",
+      "code": "TAUNGPYO",
+      "short": {
+        "en": "TaPaWa",
+        "mm": "တပ၀"
+      },
+      "name": {
+        "en": "Taung Pyo",
+        "mm": "တောင်ပြိုလက်ဝဲဒ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "Vl5ebxQn_qxGzpI7",
+      "code": "THANDWE",
+      "short": {
+        "en": "ThaTaNa",
+        "mm": "သတန"
+      },
+      "name": {
+        "en": "Than Dwe",
+        "mm": "သံတွဲ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "8WA5b_JGAQGWvLwI",
+      "code": "BUTHIDAUNG",
+      "short": {
+        "en": "BaThaTa",
+        "mm": "ဘသတ"
+      },
+      "name": {
+        "en": "Bu Thi Daung",
+        "mm": "ဘူးသီးတောင်"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "_gdnz83gPR0qaX-o",
+      "code": "MAUNG TAW",
+      "short": {
+        "en": "MaTaNa",
+        "mm": "မတန"
+      },
+      "name": {
+        "en": "Maungtaw",
+        "mm": "မောင်းတော"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "TEzcGfrBKh9W5LSZ",
+      "code": "PONNAGYUN-1",
+      "short": {
+        "en": "PanaKa",
+        "mm": "ပနက"
+      },
+      "name": {
+        "en": "Pon Na Gyun",
+        "mm": "ပုဏ္ဏားကျွန်း"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "iuBuiTI1hatSutwf",
+      "code": "SITTWAY",
+      "short": {
+        "en": "SaTaNa",
+        "mm": "စတန"
+      },
+      "name": {
+        "en": "Sit Tway",
+        "mm": "စစ်တွေ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "NJ_UUyhsZ69urvuk",
+      "code": "KYEINTALI",
+      "short": {
+        "en": "KaTaLa",
+        "mm": "ကတလ"
+      },
+      "name": {
+        "en": "Kyei Nta Li",
+        "mm": "ကျိန္တလီ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "DZ5iTDGEf_wPK_yO",
+      "code": "AN",
+      "short": {
+        "en": "AhMaNa",
+        "mm": "အမန"
+      },
+      "name": {
+        "en": "An",
+        "mm": "အမ်း"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "NkEsafi60YXgB1R8",
+      "code": "KYAUKPYU",
+      "short": {
+        "en": "KaPhaNa",
+        "mm": "ကဖန"
+      },
+      "name": {
+        "en": "Kyauk Pyu",
+        "mm": "ကျောက်ဖြူ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "B0xizr4QR0mRAsW8",
+      "code": "MANNAUNG",
+      "short": {
+        "en": "MaAhNa",
+        "mm": "မအန"
+      },
+      "name": {
+        "en": "Mann Aung",
+        "mm": "မာန်အောင်"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "mUE3fc36BsLh3vIf",
+      "code": "YANBYE",
+      "short": {
+        "en": "YaBaNa",
+        "mm": "ရဗန"
+      },
+      "name": {
+        "en": "Yan Bye",
+        "mm": "ရမ်းဗြဲ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "sFmS8GnBmMYJsLHR",
+      "code": "MAUNGTAW",
+      "short": {
+        "en": "MaTaNa",
+        "mm": "မတန"
+      },
+      "name": {
+        "en": "Maung Taw",
+        "mm": "မောင်းတော"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "Fv6N-Md2_3a6_EMr",
+      "code": "MINBYA",
+      "short": {
+        "en": "MaPaNa",
+        "mm": "မပန"
+      },
+      "name": {
+        "en": "Min Bya",
+        "mm": "မင်းပြား"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "bhbhsMrZf1Hlxbi4",
+      "code": "MYAUKU",
+      "short": {
+        "en": "MaOuNa",
+        "mm": "မဥန"
+      },
+      "name": {
+        "en": "Myauk U",
+        "mm": "မြောက်ဦး"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "MXNQnSonoZpxcQmJ",
+      "code": "PAUKTAW",
+      "short": {
+        "en": "PaTaNa",
+        "mm": "ပတန"
+      },
+      "name": {
+        "en": "Pauk Taw",
+        "mm": "ပေါက်တော"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "KD_Y4qXlsHogtPK8",
+      "code": "PONNAGYUN",
+      "short": {
+        "en": "PaNaKa",
+        "mm": "ပဏက"
+      },
+      "name": {
+        "en": "Pon Na Gyun",
+        "mm": "ပုဏ္ဏားကျွန်း"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "jOUXDbW0H4OhAQMU",
+      "code": "YATHEDAUNG",
+      "short": {
+        "en": "YaThaTa",
+        "mm": "ရသတ"
+      },
+      "name": {
+        "en": "Ya The Daung",
+        "mm": "ရသေ့တောင်"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "jX1hM22WVl_-_IHj",
+      "code": "KYAUKTAW",
+      "short": {
+        "en": "KaTaNa",
+        "mm": "ကတန"
+      },
+      "name": {
+        "en": "Kyauk Taw",
+        "mm": "ကျောက်တော်"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "ibFQDVT8iPws8DVW",
+      "code": "TOUNGUP",
+      "short": {
+        "en": "TaKaNa",
+        "mm": "တကန"
+      },
+      "name": {
+        "en": "Toungup",
+        "mm": "တောင်ကုတ်"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "M3ufwykApSG0IO8n",
+      "code": "MAEI",
+      "short": {
+        "en": "MaAhTa",
+        "mm": "မအတ"
+      },
+      "name": {
+        "en": "Maei",
+        "mm": "မအီ"
+      },
+      "stateId": "OfeDuBL9FsUHKi8j",
+      "stateCode": "11"
+    },
+    {
+      "id": "iDAG41mvlUp7D0Qy",
+      "code": "DAGONMYOTHIT(EAST)",
+      "short": {
+        "en": "DaGaYa",
+        "mm": "ဒဂရ"
+      },
+      "name": {
+        "en": "DAGON MYOTHIT(EAST)",
+        "mm": "ဒဂုံမြို့သစ် (အရှေ့)"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "_4sJlYCailnh394X",
+      "code": "DAWBON",
+      "short": {
+        "en": "DaPaNa",
+        "mm": "ဒပန"
+      },
+      "name": {
+        "en": "Daw Bon",
+        "mm": "ဒေါပုံ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "_Agvhuwan67YtEIt",
+      "code": "SOUTHOKKALAPA",
+      "short": {
+        "en": "OuKaTa",
+        "mm": "ဥကတ"
+      },
+      "name": {
+        "en": "South Okkalapa",
+        "mm": "တောင်ဥက္ကလာ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "KAMe9hxWURfLzOu2",
+      "code": "THAKAYTA",
+      "short": {
+        "en": "ThaKaTa",
+        "mm": "သကတ"
+      },
+      "name": {
+        "en": "Tha Kay Ta",
+        "mm": "သာကေတ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "-v8PkAOXg8VmBrGE",
+      "code": "THINGANGYUN",
+      "short": {
+        "en": "ThaGaKa",
+        "mm": "သဃက"
+      },
+      "name": {
+        "en": "Thin Gan Gyun",
+        "mm": "သင်္ဃန်းကျွန်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "9-gh-5mvajAICDVj",
+      "code": "YANKIN",
+      "short": {
+        "en": "YaKaNa",
+        "mm": "ရကန"
+      },
+      "name": {
+        "en": "Yan Kin",
+        "mm": "ရန်ကင်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "KxYyjXCcKG9YPMXS",
+      "code": "HMAWBY",
+      "short": {
+        "en": "MaBaNa",
+        "mm": "မဘန"
+      },
+      "name": {
+        "en": "Hmawby",
+        "mm": "မှော်ဘီ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "IgnX35_WOSUU5VDK",
+      "code": "MINGALADON",
+      "short": {
+        "en": "MaGaDa",
+        "mm": "မဂဒ"
+      },
+      "name": {
+        "en": "Min Ga La Don",
+        "mm": "မင်္ဂလာဒုံ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "pwd98xktrwoB9r_p",
+      "code": "SHWEPYITHA",
+      "short": {
+        "en": "YaPaTha",
+        "mm": "ရပသ"
+      },
+      "name": {
+        "en": "Shwe Pyi Tha",
+        "mm": "ရွှေပြည်သာ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "wNDgPSwNpyuw976f",
+      "code": "TAIKKYI",
+      "short": {
+        "en": "TaKaNa",
+        "mm": "တကန"
+      },
+      "name": {
+        "en": "Taikkyi",
+        "mm": "တိုက်ကြီး"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "W-AROOoTuOy-t1s3",
+      "code": "DALA",
+      "short": {
+        "en": "DaLaNa",
+        "mm": "ဒလန"
+      },
+      "name": {
+        "en": "Dala",
+        "mm": "ဒလ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "Rx0yPNNtvqGUrbiu",
+      "code": "KUNGYANGON",
+      "short": {
+        "en": "KaKhaKa",
+        "mm": "ကခက"
+      },
+      "name": {
+        "en": "Kun Gyan Gon",
+        "mm": "ကွမ်းခြံကုန်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "wFAAKH5JvFbJvff2",
+      "code": "THANLYIN",
+      "short": {
+        "en": "ThaLaNa",
+        "mm": "သလန"
+      },
+      "name": {
+        "en": "Than Lyin",
+        "mm": "သန်လျင်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "XG00tDKHHiYtaBk6",
+      "code": "THONGWA",
+      "short": {
+        "en": "ThaKhaNa",
+        "mm": "သခန"
+      },
+      "name": {
+        "en": "Thon Gwa",
+        "mm": "သုံးခွ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "pMXkEkxPi_-0OxUO",
+      "code": "TWANTAY",
+      "short": {
+        "en": "TaTaNa",
+        "mm": "တတန"
+      },
+      "name": {
+        "en": "Twan Tay",
+        "mm": "တွံတေး"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "c-Oxfy5rbPXNudl_",
+      "code": "BAHAN",
+      "short": {
+        "en": "BaHaNa",
+        "mm": "ဗဟန"
+      },
+      "name": {
+        "en": "Bahan",
+        "mm": "ဗဟန်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "8Y7cH7ZIMdDScbKl",
+      "code": "HLAING",
+      "short": {
+        "en": "LaMaNa",
+        "mm": "လမန"
+      },
+      "name": {
+        "en": "Hlaing",
+        "mm": "လှိုင်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "OjJkyZqewximexrE",
+      "code": "KYAUKTADA",
+      "short": {
+        "en": "KaTaTa",
+        "mm": "ကတတ"
+      },
+      "name": {
+        "en": "Kyauk Ta Da",
+        "mm": "ကျောက်တံတား"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "7xuMGxFX_CCYK-J1",
+      "code": "KYIMYINDINE",
+      "short": {
+        "en": "KaMaTa",
+        "mm": "ကမတ"
+      },
+      "name": {
+        "en": "Kyi Myin Dine",
+        "mm": "ကြည့်မြင်တိုင်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "YIiRkpSlTrPj2FT0",
+      "code": "LATHA",
+      "short": {
+        "en": "LaThaNa",
+        "mm": "လသန"
+      },
+      "name": {
+        "en": "Latha",
+        "mm": "လသာ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "gWYtrRsyMtQEzgJK",
+      "code": "MAYANGON",
+      "short": {
+        "en": "MaYaKa",
+        "mm": "မရက"
+      },
+      "name": {
+        "en": "Mayan Gon",
+        "mm": "မရမ်းကုန်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "cVe5VrIN8yHOZW_7",
+      "code": "HTANTABIN",
+      "short": {
+        "en": "HtaTaPa",
+        "mm": "ထတပ"
+      },
+      "name": {
+        "en": "Htan Ta Bin",
+        "mm": "ထန်းတပင်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "64RVmkzB8opdqNWG",
+      "code": "TAMWAY",
+      "short": {
+        "en": "TaMaNa",
+        "mm": "တမန"
+      },
+      "name": {
+        "en": "Ta Mway",
+        "mm": "တာမွေ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "Uk2JoaMQq2mQSzxL",
+      "code": "HLINETHAYA",
+      "short": {
+        "en": "LaThaYa",
+        "mm": "လသယ"
+      },
+      "name": {
+        "en": "Hline Tha Ya",
+        "mm": "လှိုင်သာယာ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "kRhoTjBgXZg1Yiz1",
+      "code": "SANGYOUNG",
+      "short": {
+        "en": "SaKhaNa",
+        "mm": "စခန"
+      },
+      "name": {
+        "en": "San Gyoung",
+        "mm": "စမ်းချောင်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "0EL9r8HLdKldiYAK",
+      "code": "BOTAHTAUNG",
+      "short": {
+        "en": "BaTaHta",
+        "mm": "ဗတထ"
+      },
+      "name": {
+        "en": "Bo Ta Htaung",
+        "mm": "ဗိုလ်တထောင်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "x6CTcduRa3RIQ-UG",
+      "code": "SEIKKYI/KHANAUNGTO",
+      "short": {
+        "en": "SaKaKha",
+        "mm": "ဆကခ"
+      },
+      "name": {
+        "en": "SEIKKYI/KHANAUNGTO",
+        "mm": "ဆိပ်ကြီးခနောင်တို"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "V1hY619qSyGNpqVw",
+      "code": "KAMAYUT",
+      "short": {
+        "en": "KaMaYa",
+        "mm": "ကမရ"
+      },
+      "name": {
+        "en": "Ka Ma Yut",
+        "mm": "ကမာရွတ်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "hTRvooxvhMF95MIX",
+      "code": "COCOGYUN",
+      "short": {
+        "en": "KaKaKa",
+        "mm": "ကကက"
+      },
+      "name": {
+        "en": "Co Co Gyun",
+        "mm": "ကိုကိုးကျွန်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "DYk8ijZlc2dtbGeZ",
+      "code": "DAGON",
+      "short": {
+        "en": "DaGaNa",
+        "mm": "ဒဂန"
+      },
+      "name": {
+        "en": "Dagon",
+        "mm": "ဒဂုံ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "oKLw6WHQSvfdQVgj",
+      "code": "MINGALATAUNGNYUNT",
+      "short": {
+        "en": "MaGaTa",
+        "mm": "မဂတ"
+      },
+      "name": {
+        "en": "Mingala Taung Nyunt",
+        "mm": "မင်္ဂလာ‌တောင်ညွန့်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "oAIpEryyl6pOobUS",
+      "code": "NORTHOKKALAPA",
+      "short": {
+        "en": "OuKaMa",
+        "mm": "ဥကမ"
+      },
+      "name": {
+        "en": "North Okkalapa",
+        "mm": "မြောက်ဥက္ကလာ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "dKFgvJZN0z3Qffve",
+      "code": "KHAYAN",
+      "short": {
+        "en": "KhaYaNa",
+        "mm": "ခရန"
+      },
+      "name": {
+        "en": "Khayan",
+        "mm": "ခရမ်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "PKvlyTQgNvm1kZ2e",
+      "code": "SOUTHDAGON",
+      "short": {
+        "en": "DaGaTa",
+        "mm": "ဒဂတ"
+      },
+      "name": {
+        "en": "South Dagon",
+        "mm": "ဒဂုံမြို့သစ် (တောင်)"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "ZUAjaf3uH78FqtCJ",
+      "code": "NORTHDAGON",
+      "short": {
+        "en": "DaGaMa",
+        "mm": "ဒဂမ"
+      },
+      "name": {
+        "en": "North Dagon",
+        "mm": "ဒဂုံမြို့သစ် (မြောက်)"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "nniwTR3vq2uB9de5",
+      "code": "LANMADAW",
+      "short": {
+        "en": "LaMaTa",
+        "mm": "လမတ"
+      },
+      "name": {
+        "en": "Lan Ma Daw",
+        "mm": "လမ်းမတော်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "ozGRPYKD2UYfSduC",
+      "code": "DAGONMYOTHIT(SEIKKAN)",
+      "short": {
+        "en": "DaGaSa",
+        "mm": "ဒဂဆ"
+      },
+      "name": {
+        "en": "DAGON MYOTHIT(SEIKKAN)",
+        "mm": "ဒဂုံဆိပ်ကမ်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "YuxsuAcI3DHipJaf",
+      "code": "HLEGU",
+      "short": {
+        "en": "LaKaNa",
+        "mm": "လကန"
+      },
+      "name": {
+        "en": "Hlegu",
+        "mm": "လှည်းကူး"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "KZFQuHHRo7fanPlq",
+      "code": "SHWEPAUKKAN",
+      "short": {
+        "en": "OuKaMa",
+        "mm": "ဥကမ"
+      },
+      "name": {
+        "en": "Shwe Pauk Kan",
+        "mm": "ရွှေပေါက်ကံ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "7sTroQM7vfZnm0F9",
+      "code": "SEIKKAN",
+      "short": {
+        "en": "SaKaNa",
+        "mm": "ဆကန"
+      },
+      "name": {
+        "en": "Seikkan",
+        "mm": "ဆိပ်ကမ်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "oeaNIvKbSL7pEy_O",
+      "code": "PABEDAN",
+      "short": {
+        "en": "PaBaTa",
+        "mm": "ပဘတ"
+      },
+      "name": {
+        "en": "Pa Be Dan",
+        "mm": "ပန်းဘဲတန်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "rAJ6wXly9AWfqysi",
+      "code": "PAZUNTAUNG",
+      "short": {
+        "en": "PaZaTa",
+        "mm": "ပဇတ"
+      },
+      "name": {
+        "en": "Pa Zun Taung",
+        "mm": "ပုဇွန်တောင်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "tBH7Joa7ckmBNwpd",
+      "code": "INSEIN",
+      "short": {
+        "en": "AhSaNa",
+        "mm": "အစန"
+      },
+      "name": {
+        "en": "Insein",
+        "mm": "အင်းစိန်"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "p9d5igJorVIy2w8M",
+      "code": "AHLON",
+      "short": {
+        "en": "AhLaNa",
+        "mm": "အလန"
+      },
+      "name": {
+        "en": "Ahlon",
+        "mm": "အလုံ"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "YxyWBsDrCAzgbSAZ",
+      "code": "KAWHMU",
+      "short": {
+        "en": "KaMaNa",
+        "mm": "ကမန"
+      },
+      "name": {
+        "en": "Kaw Hmu",
+        "mm": "ကော့မှူး"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "9zwTEJmARZAq32fK",
+      "code": "KYAUKTAN",
+      "short": {
+        "en": "KaTaNa",
+        "mm": "ကတန"
+      },
+      "name": {
+        "en": "Kyauk Tan",
+        "mm": "ကျောက်တန်း"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "8n9pK6cxtHoVd3_B",
+      "code": "TATAR",
+      "short": {
+        "en": "TaTaHta",
+        "mm": "တတထ"
+      },
+      "name": {
+        "en": "Tatar",
+        "mm": "တံတား"
+      },
+      "stateId": "Zvxm3m8cAwCeDgz1",
+      "stateCode": "12"
+    },
+    {
+      "id": "cGKynSQJAgrRJ6Wn",
+      "code": "PANGLONG",
+      "short": {
+        "en": "PaLaNa",
+        "mm": "ပလန"
+      },
+      "name": {
+        "en": "Pang Long",
+        "mm": "ပင်လုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "6uqpDBxXoMx9EvK0",
+      "code": "MANTON",
+      "short": {
+        "en": "MaTaTa",
+        "mm": "မတတ"
+      },
+      "name": {
+        "en": "Man Ton",
+        "mm": "မန်တုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "HeAxc7XUS8RkGgfu",
+      "code": "MINEYE",
+      "short": {
+        "en": "MaYaNa",
+        "mm": "မရန"
+      },
+      "name": {
+        "en": "Mine Ye",
+        "mm": "မိုင်းရယ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "CiNgv2LY4cV1PIca",
+      "code": "NAPHANG",
+      "short": {
+        "en": "NaPhaNa",
+        "mm": "နဖန"
+      },
+      "name": {
+        "en": "Na Phang",
+        "mm": "နားဖန့်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "QsZfm51DL_syLEhb",
+      "code": "MINEYAN",
+      "short": {
+        "en": "MaYaNa",
+        "mm": "မယန"
+      },
+      "name": {
+        "en": "Mine Yan",
+        "mm": "မိုင်းယန်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "u3caa414o1ouInJM",
+      "code": "PHEKON",
+      "short": {
+        "en": "PhaKhaNa",
+        "mm": "ဖခန"
+      },
+      "name": {
+        "en": "Phe Kon",
+        "mm": "ဖယ်ခုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "yK9qb86bmqL1dR86",
+      "code": "KARLI",
+      "short": {
+        "en": "KaLaDa",
+        "mm": "ကလဒ"
+      },
+      "name": {
+        "en": "Karli",
+        "mm": "ကာလီ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "SR1cgGZhRfE2GxSv",
+      "code": "KYAUKTALONGYI",
+      "short": {
+        "en": "KaTaLa",
+        "mm": "ကတလ"
+      },
+      "name": {
+        "en": "Kyauk Ta Lon Gyi",
+        "mm": "ကျောက်တလုံးကြီး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "-3irfvmlk3QdiNhJ",
+      "code": "MINESAN-MONSAN",
+      "short": {
+        "en": "MaSaTa",
+        "mm": "မစတ"
+      },
+      "name": {
+        "en": "Minesan-Monsan",
+        "mm": "မိုင်းစံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "RwmbIFLuvSjor95X",
+      "code": "MINEPHYAT",
+      "short": {
+        "en": "MaPhaNa",
+        "mm": "မဖန"
+      },
+      "name": {
+        "en": "Mine Phyat",
+        "mm": "မိုင်းဖြတ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "QmrGUfcnaRW06U5b",
+      "code": "TALAY",
+      "short": {
+        "en": "TaLaNa",
+        "mm": "တလန"
+      },
+      "name": {
+        "en": "Ta Lay",
+        "mm": "တာလေ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "lfwo4BHmTvU4am25",
+      "code": "MAUKME",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Mauk Me",
+        "mm": "မောက်မယ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "iNeqXK1Ae-IcMr5Z",
+      "code": "CHINSHWEHAW",
+      "short": {
+        "en": "KhaYaHa",
+        "mm": "ခရဟ"
+      },
+      "name": {
+        "en": "Chin Shwe Haw",
+        "mm": "ချင်းရွှေဟော်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "ccwXdiDxMIYURMFO",
+      "code": "PANYAN",
+      "short": {
+        "en": "PaYaNa",
+        "mm": "တခလ"
+      },
+      "name": {
+        "en": "Panyan",
+        "mm": "တာချီလိတ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "_hqk2Z1PsQM3GQN_",
+      "code": "NYAUNGTAYAR",
+      "short": {
+        "en": "-",
+        "mm": "-"
+      },
+      "name": {
+        "en": "Nyaung Ta Yar",
+        "mm": "ညောင်တရာ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "pwLLM4xGBExqRAWU",
+      "code": "MAWHTIKE",
+      "short": {
+        "en": "MaHtaTa",
+        "mm": "မထတ"
+      },
+      "name": {
+        "en": "Maw Htike",
+        "mm": "မော်ထိုက်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "jyLhxqYbb4Y-wpQF",
+      "code": "MINE KOKE",
+      "short": {
+        "en": "MaKhaTa",
+        "mm": "မခတ"
+      },
+      "name": {
+        "en": "Mine Koke",
+        "mm": "မိုင်းခုတ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "RQcTT-3ZuXn5KgvM",
+      "code": "AUNGPAN",
+      "short": {
+        "en": "AhPaNa",
+        "mm": "အပန"
+      },
+      "name": {
+        "en": "Aung Pan",
+        "mm": "အောင်ပန်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "XkxZbqLH9IZrVC5s",
+      "code": "AYETHARYAR",
+      "short": {
+        "en": "AhThaYa",
+        "mm": "အသယ"
+      },
+      "name": {
+        "en": "Aye Thar Yar",
+        "mm": "အေးသာယာ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "NGK8eW-N-W8yZgK0",
+      "code": "HEHO",
+      "short": {
+        "en": "HaHaNa",
+        "mm": "ဟဟန"
+      },
+      "name": {
+        "en": "Heho",
+        "mm": "ဟဲဟိုး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "bNgbwzIbRiLNQuJg",
+      "code": "KALAW",
+      "short": {
+        "en": "KaLaNa",
+        "mm": "ကလန"
+      },
+      "name": {
+        "en": "Ka Law",
+        "mm": "က‌လော"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "FbIvm68X3U3mB2hb",
+      "code": "MINEPAUK",
+      "short": {
+        "en": "MaPaHta",
+        "mm": "မပထ"
+      },
+      "name": {
+        "en": "Mine Pauk",
+        "mm": "မိုင်းပေါက်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "97Z783GG4y2GmuUf",
+      "code": "KENGTAUNG",
+      "short": {
+        "en": "KaTaTa",
+        "mm": "ကတတ"
+      },
+      "name": {
+        "en": "Keng Taung",
+        "mm": "ကျိုင်းတောင်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "oMS2Q6J4_wa56jPm",
+      "code": "YATSAUK",
+      "short": {
+        "en": "YaSaNa",
+        "mm": "ရစန"
+      },
+      "name": {
+        "en": "Yat Sauk",
+        "mm": "ရက်စောက်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "twRnXz36Lcd2I6ux",
+      "code": "MINESAT",
+      "short": {
+        "en": "MaSaNa",
+        "mm": "မဆန"
+      },
+      "name": {
+        "en": "Mine Sat",
+        "mm": "မိုင်းဆတ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "uSSRQosMmJvIyWPX",
+      "code": "MINETONE",
+      "short": {
+        "en": "MaTaNa",
+        "mm": "မတန"
+      },
+      "name": {
+        "en": "Mine Tone",
+        "mm": "မိုင်းတုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "9HzCkgfxR5QYbZRI",
+      "code": "MYINMU",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Myin Mu",
+        "mm": "မြင်းမူ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "Ethe3bgatSl0-Rnq",
+      "code": "MINE YAL",
+      "short": {
+        "en": "MaRaTa",
+        "mm": "မရတ"
+      },
+      "name": {
+        "en": "Mine Yal",
+        "mm": "မိုင်းရယ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "aPqbSUOOlAklv7io",
+      "code": "MONEKHA",
+      "short": {
+        "en": "-",
+        "mm": "-"
+      },
+      "name": {
+        "en": "Mone Kha",
+        "mm": "မုန်းခ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "Py1oGQov2TsfCGZ6",
+      "code": "SHWENYAUNG",
+      "short": {
+        "en": "YaNyaNa",
+        "mm": "ရညန"
+      },
+      "name": {
+        "en": "Shwe Nyaung",
+        "mm": "ရွှေညောင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "nZLSh5y4NkngUgxb",
+      "code": "NANTIT",
+      "short": {
+        "en": "-",
+        "mm": "-"
+      },
+      "name": {
+        "en": "Nan Tit",
+        "mm": "နန်တစ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "PRG6AMRZ_16upoPY",
+      "code": "KHOLAN",
+      "short": {
+        "en": "KhaLaNa",
+        "mm": "ခလန"
+      },
+      "name": {
+        "en": "Kho Lan",
+        "mm": "ခိုလန်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "jjfOa6t--G_6PzWj",
+      "code": "MINE HTONE",
+      "short": {
+        "en": "MaHtaNa",
+        "mm": "မထန"
+      },
+      "name": {
+        "en": "Mine Htone",
+        "mm": "မိုင်းထုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "lx1vTOGIeFoZCD5a",
+      "code": "PAN LAUNG",
+      "short": {
+        "en": "PaLaHta",
+        "mm": "ပလထ"
+      },
+      "name": {
+        "en": "Pan Long",
+        "mm": "ပန်လုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "eTGyff_a8h-bDxb4",
+      "code": "TONETAR",
+      "short": {
+        "en": "TaTaNa",
+        "mm": "တတန"
+      },
+      "name": {
+        "en": "Tone Tar",
+        "mm": "တုန်တာ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "oECwG4VQz8QTGRPL",
+      "code": "MINE YAUNG",
+      "short": {
+        "en": "MaYaHta",
+        "mm": "မယထ"
+      },
+      "name": {
+        "en": "Mine Yaung",
+        "mm": "မိုင်းယောင်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "nWJTiPaOvya2fdfd",
+      "code": "MANKAN",
+      "short": {
+        "en": "MaKaHta",
+        "mm": "မကထ"
+      },
+      "name": {
+        "en": "Mankan",
+        "mm": "မန္ကန္"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "mooTznEddVE3oyEa",
+      "code": "KUNLON",
+      "short": {
+        "en": "KaLaTa",
+        "mm": "ကလတ"
+      },
+      "name": {
+        "en": "Kun Lon",
+        "mm": "ကွမ်းလုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "MaerUsWhYIwAWyFG",
+      "code": "LAUKINE",
+      "short": {
+        "en": "LaKaNa",
+        "mm": "လကန"
+      },
+      "name": {
+        "en": "Lau Kine",
+        "mm": "လောက်ကိုင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "YgL1aw4MpTPyWVMy",
+      "code": "TACHILEIK",
+      "short": {
+        "en": "TaKhaLa",
+        "mm": "တခလ"
+      },
+      "name": {
+        "en": "Ta Chi Leik",
+        "mm": "တာချီလိတ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "unoGo4FBiB9-Kupc",
+      "code": "KUTKAI",
+      "short": {
+        "en": "KaKhaNa",
+        "mm": "ကခန"
+      },
+      "name": {
+        "en": "Kut Kai",
+        "mm": "ကွက်ခိုင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "rnpk9R0BhAPA9Y-r",
+      "code": "MINEKOKE",
+      "short": {
+        "en": "MaKaNa",
+        "mm": "မကန"
+      },
+      "name": {
+        "en": "Mine Koke",
+        "mm": "မိုင်းကော"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "eZJrP4m1KTo9yOTe",
+      "code": "KEHSI",
+      "short": {
+        "en": "KaThaNa",
+        "mm": "ကသန"
+      },
+      "name": {
+        "en": "Kehsi",
+        "mm": "ကျေးသီ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "nRdydABz957Vidfn",
+      "code": "HOMANE",
+      "short": {
+        "en": "HaMaNa",
+        "mm": "ဟမန"
+      },
+      "name": {
+        "en": "Ho Mane",
+        "mm": "ဟိုမိန်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "Slv-0GjHKCJXG34f",
+      "code": "MONEKOE",
+      "short": {
+        "en": "MaKaTa",
+        "mm": "မကတ"
+      },
+      "name": {
+        "en": "Mone Koe",
+        "mm": "မုန်းကိုး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "3S_I9rN7DzNAADdc",
+      "code": "NANHSAM-NORTH",
+      "short": {
+        "en": "NaHsaNa",
+        "mm": "နဆန"
+      },
+      "name": {
+        "en": "Nanhsam-North",
+        "mm": "နမ့်ဆန်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "pELariH_u43L5iCj",
+      "code": "PINDAYA",
+      "short": {
+        "en": "PaTaYa",
+        "mm": "ပတယ"
+      },
+      "name": {
+        "en": "Pin Da Ya",
+        "mm": "ပင်းတယ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "R3jmS07-FcUCBEgH",
+      "code": "LECHAR",
+      "short": {
+        "en": "LaKhaNa",
+        "mm": "လခန"
+      },
+      "name": {
+        "en": "Le Char",
+        "mm": "လဲချား"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "qL9Y9sl2S86xVVLy",
+      "code": "NAMKHAM",
+      "short": {
+        "en": "NaKhaNa",
+        "mm": "နခန"
+      },
+      "name": {
+        "en": "Nam Kham",
+        "mm": "နန့်ခမ်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "zqy8NN6yZS5tp924",
+      "code": "MINEMAW",
+      "short": {
+        "en": "MaMaHta",
+        "mm": "မမထ"
+      },
+      "name": {
+        "en": "Mine Maw",
+        "mm": "မိုင်းမော"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "2d0Kj2a4ZhRnmwlo",
+      "code": "MINEYAUNG",
+      "short": {
+        "en": "MaYaTa",
+        "mm": "မယတ"
+      },
+      "name": {
+        "en": "Mine Yaung",
+        "mm": "မိုင်းယောင်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "YBcxm7JXP86eKVHD",
+      "code": "HOPAN",
+      "short": {
+        "en": "HaPaTa",
+        "mm": "ဟပတ"
+      },
+      "name": {
+        "en": "Ho Pan",
+        "mm": "ဟိုပန်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "HkXF3uhqwdCB2Hc-",
+      "code": "PANLON",
+      "short": {
+        "en": "PaLaTa",
+        "mm": "ပလတ"
+      },
+      "name": {
+        "en": "Pan Lon",
+        "mm": "ပန်းလောင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "RODwSIYll3IMW1ot",
+      "code": "PANWINE",
+      "short": {
+        "en": "PaWaNa",
+        "mm": "ပဝန"
+      },
+      "name": {
+        "en": "Pan Wine",
+        "mm": "ပန်ဝိုင်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "k2fLF3uERdPmEGzB",
+      "code": "KENGTUNG",
+      "short": {
+        "en": "KaTaNa",
+        "mm": "ကတန"
+      },
+      "name": {
+        "en": "Keng Tung",
+        "mm": "ကျိုင်းတုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "Sqt3pTF5ARckJPHS",
+      "code": "MINEKAT",
+      "short": {
+        "en": "MaKhaNa",
+        "mm": "မခန"
+      },
+      "name": {
+        "en": "Mine Kat",
+        "mm": "မိုင်းခပ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "J4kYY2Is7zc1UE0X",
+      "code": "MINELAR",
+      "short": {
+        "en": "MaLaNa",
+        "mm": "မလန"
+      },
+      "name": {
+        "en": "Mine Lar",
+        "mm": "မိုင်းလား"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "b70YGTl0IGSXlK0H",
+      "code": "HSIPAW",
+      "short": {
+        "en": "ThaPaNa",
+        "mm": "သပန"
+      },
+      "name": {
+        "en": "Hsi Paw",
+        "mm": "သီပေါ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "ra3h1Z2QG3-az8lD",
+      "code": "KYAUKME",
+      "short": {
+        "en": "KaMaNa",
+        "mm": "ကမန"
+      },
+      "name": {
+        "en": "Kyauk Me",
+        "mm": "ကျောက်မဲ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "j1i36EwOuqicUllI",
+      "code": "MABANE",
+      "short": {
+        "en": "MaBaNa",
+        "mm": "မဘန"
+      },
+      "name": {
+        "en": "Ma Bane",
+        "mm": "မဘိန်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "pSlRHT5xmI33LctC",
+      "code": "MINELON",
+      "short": {
+        "en": "MaLaTa",
+        "mm": "မလတ"
+      },
+      "name": {
+        "en": "Mine Lon",
+        "mm": "မိုင်းလုံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "l85EqD3xGZCq01q9",
+      "code": "MINENGAW",
+      "short": {
+        "en": "MaNgaNa",
+        "mm": "မငန"
+      },
+      "name": {
+        "en": "Mine Ngaw",
+        "mm": "မိုင်းငေါ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "ierX9yzC3nDJxnwb",
+      "code": "MOMEIK",
+      "short": {
+        "en": "MaMaTa",
+        "mm": "မမတ"
+      },
+      "name": {
+        "en": "Mo Meik",
+        "mm": "မိုးမိတ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "lzbJIXlZ1qTOz-O4",
+      "code": "NAMTU",
+      "short": {
+        "en": "NaMaTa",
+        "mm": "နမတ"
+      },
+      "name": {
+        "en": "Na M Tu",
+        "mm": "နမ္မတူ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "4rgnjqkaCMYRGt_-",
+      "code": "NAUNGKHIO",
+      "short": {
+        "en": "NaKhaTa",
+        "mm": "နခတ"
+      },
+      "name": {
+        "en": "Naung Khio",
+        "mm": "နောင်ချို"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "nDtuyKgcOizNAEGv",
+      "code": "LASHIO",
+      "short": {
+        "en": "LaYaNa",
+        "mm": "လရန"
+      },
+      "name": {
+        "en": "Lashio",
+        "mm": "လားရှိုး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "Ece5M61rFgFKKXCf",
+      "code": "TANTYAN",
+      "short": {
+        "en": "TaYaNa",
+        "mm": "တယန"
+      },
+      "name": {
+        "en": "Tantyan",
+        "mm": "တန့်ယန်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "QHtZNDsv8GoGNlxF",
+      "code": "THEINNI",
+      "short": {
+        "en": "ThaNaNa",
+        "mm": "သနန"
+      },
+      "name": {
+        "en": "Thein Ni",
+        "mm": "သိန္နီ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "kNzKQzngDxzc_g4n",
+      "code": "KONGYAN",
+      "short": {
+        "en": "KaKaNa",
+        "mm": "ကကန"
+      },
+      "name": {
+        "en": "Kon Gyan",
+        "mm": "ကွမ်းယန်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "dednit0-iOqBoGwN",
+      "code": "LINKHE",
+      "short": {
+        "en": "LaKhaTa",
+        "mm": "လခတ"
+      },
+      "name": {
+        "en": "Lin Khe",
+        "mm": "လင်ခေး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "kcpYBbyP4ahFBikz",
+      "code": "MINEPAN",
+      "short": {
+        "en": "MaPaNa",
+        "mm": "မပန"
+      },
+      "name": {
+        "en": "Minepan",
+        "mm": "မိုင်းပန်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "N9hZ4B1JjHnHU3NM",
+      "code": "MONE",
+      "short": {
+        "en": "MaNaNa",
+        "mm": "မနန"
+      },
+      "name": {
+        "en": "Mone",
+        "mm": "မိုးနဲ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "B1SVY8koTJ_VlCEU",
+      "code": "KUNHING",
+      "short": {
+        "en": "KaHaNa",
+        "mm": "ကဟန"
+      },
+      "name": {
+        "en": "Kun Hing",
+        "mm": "ကွန်ဟိန်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "gjt-eUneXWMpIgQc",
+      "code": "LOILIN",
+      "short": {
+        "en": "LaLaNa",
+        "mm": "လလန"
+      },
+      "name": {
+        "en": "Loilin",
+        "mm": "လွိုင်လင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "aFcAdCmjZ-bKvmVz",
+      "code": "MINENAUNG",
+      "short": {
+        "en": "MaNaTa",
+        "mm": "မနန"
+      },
+      "name": {
+        "en": "Mine Naung",
+        "mm": "မိုင်းနောင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "88OdT1frFeY7_ZUA",
+      "code": "MANKHAN",
+      "short": {
+        "en": "MaKhaNa",
+        "mm": "မခန"
+      },
+      "name": {
+        "en": "Man Khan",
+        "mm": "မန်းခမ်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "U0_ur1lIzWjV2ADv",
+      "code": "MANPHANT",
+      "short": {
+        "en": "MaPhaTa",
+        "mm": "မဖတ"
+      },
+      "name": {
+        "en": "Man Phant",
+        "mm": "မန်ဖန့်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "lqjtOzS5Z4GJ4pa0",
+      "code": "MONGKAI",
+      "short": {
+        "en": "MaKhaNa",
+        "mm": "မခန"
+      },
+      "name": {
+        "en": "Mong Kai",
+        "mm": "မောက်ခိုင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "jpN7zRVJuIl3V541",
+      "code": "NANHSAM-SOUTH",
+      "short": {
+        "en": "NaSaNa",
+        "mm": "နစန"
+      },
+      "name": {
+        "en": "Nanhsam-South",
+        "mm": "နမ့်စန်(တောင်)"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "z1kCmRwK-olJAdV6",
+      "code": "MAKMAN",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Mak Man",
+        "mm": "မက်မန်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "_tjiuRhWdmL-sXgd",
+      "code": "PANSAN-PANKHAM",
+      "short": {
+        "en": "PaSaNa",
+        "mm": "ပဆန"
+      },
+      "name": {
+        "en": "Pansan-Pankham",
+        "mm": "ပန်ဆန်း(PanKham)"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "eHqpnYz0-u1E0vTI",
+      "code": "MINEYU",
+      "short": {
+        "en": "-",
+        "mm": "-"
+      },
+      "name": {
+        "en": "Mine Yu",
+        "mm": "မိုင်းယု"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "AfESFXWJjB9FH6Ot",
+      "code": "MINEPYIN",
+      "short": {
+        "en": "MaPaTa",
+        "mm": "မပတ"
+      },
+      "name": {
+        "en": "Mine Pyin",
+        "mm": "မိုင်းပျင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "KEVqGlyQX-V6w8vd",
+      "code": "PONPARKYIN",
+      "short": {
+        "en": "PaPaKa",
+        "mm": "ပပက"
+      },
+      "name": {
+        "en": "Pon Par Kyin",
+        "mm": "ပုံပါကျင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "O3TrQxAaV4sFFEAT",
+      "code": "MANHERO",
+      "short": {
+        "en": "MaHaYa",
+        "mm": "မဟရ"
+      },
+      "name": {
+        "en": "Man He Ro",
+        "mm": "မဟီရိုး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "B388bH0vLz1CVtdj",
+      "code": "MUSE",
+      "short": {
+        "en": "MaSaTa",
+        "mm": "မဆတ"
+      },
+      "name": {
+        "en": "Muse",
+        "mm": "မူဆယ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "laKI-DMGrxAcWtVc",
+      "code": "PANSAI",
+      "short": {
+        "en": "PaSaTa",
+        "mm": "ပဆတ"
+      },
+      "name": {
+        "en": "PANSAI(KYU KUTE)",
+        "mm": "ပန်ဆိုင်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "aIiMGptnH6-xT3YV",
+      "code": "TAMOENYE",
+      "short": {
+        "en": "TaMaNya",
+        "mm": "တမည"
+      },
+      "name": {
+        "en": "Ta Moe Nye",
+        "mm": "တာမိုးညဲ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "0Xgb-3ZA7UXd5py7",
+      "code": "KENGLAT",
+      "short": {
+        "en": "KaLaHta",
+        "mm": "ကလထ"
+      },
+      "name": {
+        "en": "Keng Lat",
+        "mm": "ကျိုင်းလပ်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "jVEitq7luKsmFbW0",
+      "code": "HOPON",
+      "short": {
+        "en": "HaPaNa",
+        "mm": "ဟပန"
+      },
+      "name": {
+        "en": "Ho Pon",
+        "mm": "ဟိုပုန်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "UIeRzGItYbDwevv2",
+      "code": "HSIHSENG",
+      "short": {
+        "en": "SaSaNa",
+        "mm": "ဆဆန"
+      },
+      "name": {
+        "en": "Hsi Hseng",
+        "mm": "ဆီဆိုင်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "cKrCIIk-xBHBHm9l",
+      "code": "INDAW-SHAN",
+      "short": {
+        "en": "AhTaNa",
+        "mm": "အတန"
+      },
+      "name": {
+        "en": "In Daw-Shan",
+        "mm": "အင်းတော်"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "DIX4SD_4SgwVW5dI",
+      "code": "NAUNGTAYAR",
+      "short": {
+        "en": "NaTaYa",
+        "mm": "နတရ"
+      },
+      "name": {
+        "en": "Naung Ta Yar",
+        "mm": "နောင်တရား"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "pPt0PjH7VcpXEW8V",
+      "code": "NYAUNGSHWE",
+      "short": {
+        "en": "NyaYaNa",
+        "mm": "ညရန"
+      },
+      "name": {
+        "en": "Nyaung Shwe",
+        "mm": "ညောင်ရွှေ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "cyl1wyyPSjVlUYxj",
+      "code": "PINLAUNG",
+      "short": {
+        "en": "PaLaNa",
+        "mm": "ပလန"
+      },
+      "name": {
+        "en": "Pin Laung",
+        "mm": "ပင်လောင်း"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "ryEwHwXSMDy_IdxI",
+      "code": "TAUNGGYI",
+      "short": {
+        "en": "TaKaNa",
+        "mm": "တကန"
+      },
+      "name": {
+        "en": "Taunggyi",
+        "mm": "တောင်ကြီး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "o5Prz-0-THjK0Bdi",
+      "code": "YWARNGAN",
+      "short": {
+        "en": "YaNgaNa",
+        "mm": "ရငန"
+      },
+      "name": {
+        "en": "Ywarngan",
+        "mm": "ရွာငံ"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "kIt1DulFzNwO0yGA",
+      "code": "MINESHU",
+      "short": {
+        "en": "MaYaNa",
+        "mm": "မရန"
+      },
+      "name": {
+        "en": "Mineshu",
+        "mm": "မိုင်းရှူး"
+      },
+      "stateId": "DZ1kOrvrt-7LntG4",
+      "stateCode": "13"
+    },
+    {
+      "id": "Ab7FuIcZfrXWiHGd",
+      "code": "KYONPYAW",
+      "short": {
+        "en": "KaPaNa",
+        "mm": "ကပန"
+      },
+      "name": {
+        "en": "Kyon Pyaw",
+        "mm": "ကျုံပျော်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "K0N4SNKcHRXDqv3W",
+      "code": "PHYAPON",
+      "short": {
+        "en": "PhaPaNa",
+        "mm": "ဖပန"
+      },
+      "name": {
+        "en": "Phya Pon",
+        "mm": "ဖျာပုံ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "UbriNmK5yZsZbYQ4",
+      "code": "PANTANAW",
+      "short": {
+        "en": "PaTaNa",
+        "mm": "ပတန"
+      },
+      "name": {
+        "en": "Pan Ta Naw",
+        "mm": "ပန်းတနော်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "ZQe21g4ADRB6MaKe",
+      "code": "EINME",
+      "short": {
+        "en": "AhMaNa",
+        "mm": "အမန"
+      },
+      "name": {
+        "en": "Ein Me",
+        "mm": "အိမ်မဲ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "wvzMEKQOxq50JY1l",
+      "code": "MYANAUNG",
+      "short": {
+        "en": "MaAhNa",
+        "mm": "မအန"
+      },
+      "name": {
+        "en": "Myan Aung",
+        "mm": "မြန်အောင်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "7JX4ZccciV6zDWkR",
+      "code": "NYAUNGDON",
+      "short": {
+        "en": "NyaTaNa",
+        "mm": "ညတန"
+      },
+      "name": {
+        "en": "Nyaung Don",
+        "mm": "ညောင်တုန်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "a8wWxb40G5ZDA-VC",
+      "code": "HAINGGYIKYUN",
+      "short": {
+        "en": "HaKaKa",
+        "mm": "ဟကက"
+      },
+      "name": {
+        "en": "Haing Gyi Kyun",
+        "mm": "ဟိုင်းကြီးကျွန်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "rH7Ghi6WK5zoqttp",
+      "code": "SHWETHAUNGYAN",
+      "short": {
+        "en": "YaThaYa",
+        "mm": "ယသရ"
+      },
+      "name": {
+        "en": "Shwe Thaung Yan",
+        "mm": "ရွှေသောင်ရံ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "WmmhEU1dRkL3pQxt",
+      "code": "NGATHAINGCHAUNG",
+      "short": {
+        "en": "NgaThaKha",
+        "mm": "ငသခ"
+      },
+      "name": {
+        "en": "Nga Thaing Chaung",
+        "mm": "ငါးသိုင်းချောင်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "aDlGvhYqduAkruBx",
+      "code": "PATHEIN-EAST",
+      "short": {
+        "en": "PaThaYa",
+        "mm": "ပသရ"
+      },
+      "name": {
+        "en": "Pathein-East",
+        "mm": "ပုသိမ် (ရှေ)"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "aIaA4eYkpE1ecbGP",
+      "code": "THAPAUNG",
+      "short": {
+        "en": "ThaPaNa",
+        "mm": "သပန"
+      },
+      "name": {
+        "en": "Tha Paung",
+        "mm": "သာပေါင်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "iz2PhBsjJYP6xaHv",
+      "code": "BOGALE",
+      "short": {
+        "en": "BaKaLa",
+        "mm": "ဘကလ"
+      },
+      "name": {
+        "en": "Bo Ga Le",
+        "mm": "ဘိုကလေး"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "AQH3JPy1jpI9TGmf",
+      "code": "DANUBYU",
+      "short": {
+        "en": "DaNaPha",
+        "mm": "ဓနဖ"
+      },
+      "name": {
+        "en": "Da Nu Byu",
+        "mm": "ဓနုဖြူ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "D70HlmKCJbNik2t-",
+      "code": "PYINSALU",
+      "short": {
+        "en": "PaSaLa",
+        "mm": "ပစလ"
+      },
+      "name": {
+        "en": "Pyin Sa Lu",
+        "mm": "ပြင်စလူ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "NwuSiiRdMeQBNoSd",
+      "code": "LAYMYETHNA",
+      "short": {
+        "en": "LaMaNa",
+        "mm": "လမန"
+      },
+      "name": {
+        "en": "Lay Myeth Na",
+        "mm": "လေးမျက်နှာ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "BNwktzJgqsYgE-EX",
+      "code": "INGAPU",
+      "short": {
+        "en": "AhGaPa",
+        "mm": "အဂပ"
+      },
+      "name": {
+        "en": "In Ga Pu",
+        "mm": "အင်္ဂပူ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "jTbmp8sDBAaWcPK8",
+      "code": "NGAYOKAUNG",
+      "short": {
+        "en": "NgaYaKa",
+        "mm": "ငရက"
+      },
+      "name": {
+        "en": "Ngayokaung",
+        "mm": "ငရုတ်ကောင်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "64Zu79fXerHjTxd3",
+      "code": "NGWEHSAUNG",
+      "short": {
+        "en": "NgaSaNa",
+        "mm": "ငဆန"
+      },
+      "name": {
+        "en": "Ngwe Hsaung",
+        "mm": "ငွေဆောင်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "qkzTGwQT2rfAQQOD",
+      "code": "LABUTTA",
+      "short": {
+        "en": "LaPaTa",
+        "mm": "လပတ"
+      },
+      "name": {
+        "en": "La But Ta",
+        "mm": "လပတ္တာ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "KPXskF8LqhGQyuKS",
+      "code": "MYAUNGMYA",
+      "short": {
+        "en": "MaMaNa",
+        "mm": "မမန"
+      },
+      "name": {
+        "en": "Myaungmya",
+        "mm": "မြောင်းမြ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "HOTw3HGTLPJTjqFF",
+      "code": "PATHEIN",
+      "short": {
+        "en": "PaThaAh",
+        "mm": "ပသအ"
+      },
+      "name": {
+        "en": "PA THEIN (WEST)",
+        "mm": "ပုသိမ် (နောက်)"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "WjP5qEs2AU2jA0CZ",
+      "code": "PA THEIN",
+      "short": {
+        "en": "PaThaNa",
+        "mm": "ပသန"
+      },
+      "name": {
+        "en": "PATHEIN (WEST)",
+        "mm": "ပုသိမ် (နောက်)"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "7sqTxJkg-TkWPFLs",
+      "code": "MAWLAMYINEGYUN",
+      "short": {
+        "en": "MaMaKa",
+        "mm": "မမက"
+      },
+      "name": {
+        "en": "Mawlamyinegyun",
+        "mm": "မော်လမြိုင်ကျွန်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "swkP4WRf5tybANvo",
+      "code": "KYANGIN",
+      "short": {
+        "en": "KaKhaNa",
+        "mm": "ကခန"
+      },
+      "name": {
+        "en": "Kyangin",
+        "mm": "ကြံခင်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "LLpvarQOCUThEvfM",
+      "code": "KANGYIDAUNT",
+      "short": {
+        "en": "KaKaHta",
+        "mm": "ကကထ"
+      },
+      "name": {
+        "en": "Kan Gyi Daunt",
+        "mm": "ကန်ကြီးထောင့်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "TUcHyp5hpaPKO1gt",
+      "code": "KYAIKLATT",
+      "short": {
+        "en": "KaLaNa",
+        "mm": "ကလန"
+      },
+      "name": {
+        "en": "Kyaik Latt",
+        "mm": "ကျိုက်လတ်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "ZBs1WX30e9AKSsKJ",
+      "code": "NGAPUTAW",
+      "short": {
+        "en": "NgaPaTa",
+        "mm": "ငပတ"
+      },
+      "name": {
+        "en": "Nga Pu Taw",
+        "mm": "ငပုတော"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "GTsWmvoHBV1h85ze",
+      "code": "MAUBIN",
+      "short": {
+        "en": "MaAhPa",
+        "mm": "မအပ"
+      },
+      "name": {
+        "en": "Ma U Bin",
+        "mm": "မအူပင်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "0Xv6T6JQvZ-4b2FO",
+      "code": "AHMAR",
+      "short": {
+        "en": "AhMaTa",
+        "mm": "အမတ"
+      },
+      "name": {
+        "en": "Ahmar",
+        "mm": "အမာ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "-K5Ef1xBBAT-Bd2w",
+      "code": "HINTHADA",
+      "short": {
+        "en": "HaThaTa",
+        "mm": "ဟသတ"
+      },
+      "name": {
+        "en": "Hin Tha Da",
+        "mm": "ဟင်္သာတ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "g2Dh7U-i282vKhhP",
+      "code": "YEKYI",
+      "short": {
+        "en": "YaKaNa",
+        "mm": "ရကန"
+      },
+      "name": {
+        "en": "Ye Kyi",
+        "mm": "ရေကြည်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "a_ok3tGqSgyQkgNS",
+      "code": "KYAUNGON",
+      "short": {
+        "en": "KaKaNa",
+        "mm": "ကကန"
+      },
+      "name": {
+        "en": "Kyaun Gon",
+        "mm": "ကျောင်းကုန်း"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "hGg3Ri7H8khZhbFA",
+      "code": "DAYDAYE",
+      "short": {
+        "en": "DaDaYa",
+        "mm": "ဒဒရ"
+      },
+      "name": {
+        "en": "Day Da Ye",
+        "mm": "ဒေးဒရဲ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "Ak5C9FdDqxK6mgcO",
+      "code": "WAKEMA",
+      "short": {
+        "en": "WaKhaMa",
+        "mm": "ဝခမ"
+      },
+      "name": {
+        "en": "Wa Ke Ma",
+        "mm": "ဝါးခယ်မ"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "TAXjsCe80RKje4sL",
+      "code": "ZALUN",
+      "short": {
+        "en": "ZaLaNa",
+        "mm": "ဇလန"
+      },
+      "name": {
+        "en": "Za Lun",
+        "mm": "ဇလွန်"
+      },
+      "stateId": "tY793VdREy9r5xsl",
+      "stateCode": "14"
+    },
+    {
+      "id": "XwJyeh9PqfqFUWph",
+      "code": "ZABUTHIRI",
+      "short": {
+        "en": "ZaBaTha",
+        "mm": "ဇဗသ"
+      },
+      "name": {
+        "en": "Za Bu Thiri",
+        "mm": "ဇမ္ဗူသီရိ"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    },
+    {
+      "id": "eemLfSEjOBUT4vDW",
+      "code": "OTTARATHIRI",
+      "short": {
+        "en": "AuTaTha",
+        "mm": "ဥတသ"
+      },
+      "name": {
+        "en": "Ot Ta Ra Thiri",
+        "mm": "ဥတ္တရသီရိ"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    },
+    {
+      "id": "SJ7t8nydl2BLXCcj",
+      "code": "POBBATHIRI",
+      "short": {
+        "en": "PaBaTha",
+        "mm": "ပဗသ"
+      },
+      "name": {
+        "en": "Pob Ba Thiri",
+        "mm": "ပုဗ္ဗသီရိ"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    },
+    {
+      "id": "EumzaX6wjlH3WIOw",
+      "code": "TATKON",
+      "short": {
+        "en": "TaKaNa",
+        "mm": "တကန"
+      },
+      "name": {
+        "en": "Tatkon",
+        "mm": "တပ်ကုန်း"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    },
+    {
+      "id": "iX6euzn6oYZnxucC",
+      "code": "DEKKHINATHIRI",
+      "short": {
+        "en": "DaKhaTha",
+        "mm": "ဒခသ"
+      },
+      "name": {
+        "en": "Dek Khi Na Thiri",
+        "mm": "ဒက္ခိဏသီရိ"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    },
+    {
+      "id": "UcyG-TtduU0p1TNY",
+      "code": "LEWE",
+      "short": {
+        "en": "LaWaNa",
+        "mm": "လဝန"
+      },
+      "name": {
+        "en": "Lewe",
+        "mm": "လယ်ဝေး"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    },
+    {
+      "id": "mhOAOvw2SqGAycTf",
+      "code": "PYINMANA",
+      "short": {
+        "en": "PaMaNa",
+        "mm": "ပမန"
+      },
+      "name": {
+        "en": "Pyin Ma Na",
+        "mm": "ပျဉ်းမနား"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    },
+    {
+      "id": "AEdvbbm5rI4jOAoi",
+      "code": "ZEYARTHIRI",
+      "short": {
+        "en": "ZaYaTha",
+        "mm": "ဇယသ"
+      },
+      "name": {
+        "en": "Ze Yar Thiri",
+        "mm": "ဇေယျာသီရိ"
+      },
+      "stateId": "sH0ybsmxNuxmeOT_",
+      "stateCode": "9*"
+    }
+  ]
+}

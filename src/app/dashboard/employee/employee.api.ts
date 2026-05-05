@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { API_BASE_PATH } from '../../core/api/api-base-path';
 import { ApiClientService } from '../../core/api/api-client.service';
-import type { EmployeeDto, EmployeeRequest } from './employee.model';
+import type { EmployeeDto, EmployeeListRequest, EmployeeListResponse, EmployeeRequest } from './employee.model';
 
 @Injectable({ providedIn: 'root' })
 export class EmployeeApiService {
@@ -13,8 +13,8 @@ export class EmployeeApiService {
     return firstValueFrom(this.api.post<EmployeeDto>(this.baseUrl, payload, { withCredentials: true }));
   }
 
-  getAll(): Promise<EmployeeDto[]> {
-    return firstValueFrom(this.api.get<EmployeeDto[]>(this.baseUrl, { withCredentials: true }));
+  list(req: EmployeeListRequest): Promise<EmployeeListResponse> {
+    return firstValueFrom(this.api.getPaginated<EmployeeDto>(this.baseUrl, req, { withCredentials: true }));
   }
 
   getById(id: number): Promise<EmployeeDto> {

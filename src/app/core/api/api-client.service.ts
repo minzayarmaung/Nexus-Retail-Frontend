@@ -42,9 +42,13 @@ export class ApiClientService {
       .pipe(map((res) => this.unwrap(res)));
   }
 
-  getPaginated<T>(url: string, req: PaginationRequest): Observable<PaginatedApiResponse<T>> {
+  getPaginated<T>(
+    url: string,
+    req: PaginationRequest,
+    options?: { withCredentials?: boolean },
+  ): Observable<PaginatedApiResponse<T>> {
     const params = this.paginationParams(req);
-    return this.http.get<PaginatedApiResponse<T>>(url, { params }).pipe(
+    return this.http.get<PaginatedApiResponse<T>>(url, { params, withCredentials: options?.withCredentials ?? false }).pipe(
       map((res) => {
         if (!res || res.success !== 1) {
           throw new Error(res?.message ?? 'Request failed');
