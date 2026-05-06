@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ToastService } from '../../core/toast/toast.service';
 import { SessionService } from '../../core/user/session.service';
 import { TranslatePipe } from '../../core/i18n/translate.pipe';
+import { ImageUploadService } from '../../core/image-upload/image-upload.service';
 import { EmployeeApiService } from './employee.api';
 import type { EmployeeDto, EmployeeRequest } from './employee.model';
 import nrcData from '../../data/nrc_data.json';
@@ -604,6 +605,7 @@ export class EmployeeManagementComponent {
   private readonly api = inject(EmployeeApiService);
   private readonly session = inject(SessionService);
   private readonly toast = inject(ToastService);
+  private readonly imageUpload = inject(ImageUploadService);
 
   /* ── State ──────────────────────────────────────────────────────────── */
   readonly employees = signal<EmployeeDto[]>([]);
@@ -906,20 +908,22 @@ export class EmployeeManagementComponent {
     const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
     this.setProfilePreviewUrl(URL.createObjectURL(file));
+    this.draft.profilePicUrl = '';
     this.imageProcessing.set(true);
-    void this.compressImageFile(file).then(dataUrl => {
-      this.draft.profilePicUrl = dataUrl;
-    }).catch(() => {
-      // Fallback for unsupported browsers or decode errors.
-      const reader = new FileReader();
-      reader.onload = () => {
-        const result = reader.result;
-        if (typeof result === 'string') this.draft.profilePicUrl = result;
-      };
-      reader.readAsDataURL(file);
-    }).finally(() => {
-      this.imageProcessing.set(false);
-    });
+    void this.imageUpload
+      .uploadPublicImage(file)
+      .then(url => {
+        this.draft.profilePicUrl = url;
+        this.revokeProfilePreviewUrl();
+      })
+      .catch(e => {
+        this.toast.error(this.errMsg(e));
+        this.revokeProfilePreviewUrl();
+        this.draft.profilePicUrl = '';
+      })
+      .finally(() => {
+        this.imageProcessing.set(false);
+      });
     (event.target as HTMLInputElement).value = '';
   }
 
@@ -978,26 +982,6 @@ export class EmployeeManagementComponent {
       URL.revokeObjectURL(this.profilePicPreviewUrl);
     }
     this.profilePicPreviewUrl = '';
-  }
-
-  private async compressImageFile(file: File): Promise<string> {
-    const bitmap = await createImageBitmap(file);
-    const maxSize = 1024;
-    const scale = Math.min(1, maxSize / Math.max(bitmap.width, bitmap.height));
-    const targetWidth = Math.max(1, Math.round(bitmap.width * scale));
-    const targetHeight = Math.max(1, Math.round(bitmap.height * scale));
-
-    const canvas = document.createElement('canvas');
-    canvas.width = targetWidth;
-    canvas.height = targetHeight;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) throw new Error('Canvas 2D context is not available');
-    ctx.drawImage(bitmap, 0, 0, targetWidth, targetHeight);
-    bitmap.close();
-
-    const compressed = canvas.toDataURL('image/webp', 0.82);
-    return compressed.startsWith('data:') ? compressed : canvas.toDataURL('image/jpeg', 0.85);
   }
 }
 
