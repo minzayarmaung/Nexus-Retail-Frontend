@@ -7,8 +7,9 @@ import type { CreateShopOwnerRequest, ShopOption, UserListItem } from './shop-ow
 @Injectable({ providedIn: 'root' })
 export class ShopOwnerApiService {
   private readonly api = inject(ApiClientService);
+  private readonly defaultProfileUrl = 'https://ui-avatars.com/api/?name=User&background=e2e8f0&color=334155&rounded=true&size=64';
   private readonly usersBaseUrl = `${API_BASE_PATH}/users`;
-  private readonly shopsBaseUrl = `${API_BASE_PATH}/merchants`;
+  private readonly shopsBaseUrl = `${API_BASE_PATH}/shops`;
   private readonly merchantsBaseUrl = `${API_BASE_PATH}/merchants`;
 
   async listUsers(): Promise<UserListItem[]> {
@@ -33,6 +34,10 @@ export class ShopOwnerApiService {
 
   createOwner(payload: CreateShopOwnerRequest): Promise<void> {
     return firstValueFrom(this.api.post<void>(`${this.merchantsBaseUrl}/owner`, payload, { withCredentials: true }));
+  }
+
+  updateUser(id: number, payload: Partial<CreateShopOwnerRequest> & { role?: string }): Promise<void> {
+    return firstValueFrom(this.api.put<void>(`${this.usersBaseUrl}/${id}`, payload, { withCredentials: true }));
   }
 
   private toShopOptions(raw: unknown): ShopOption[] {
@@ -71,16 +76,17 @@ export class ShopOwnerApiService {
         const id = Number(item?.id ?? item?.userId);
         const username = String(item?.username ?? '').trim();
         const name = String(item?.name ?? item?.displayName ?? '').trim();
-        if (!Number.isFinite(id) || !username || !name) return null;
+        if (!Number.isFinite(id) || !username) return null;
         return {
           id,
           username,
-          name,
-          profileUrl: item?.profileUrl ? String(item.profileUrl) : undefined,
+          name: name || undefined,
+          profileUrl: item?.profileUrl ? String(item.profileUrl) : (item?.profilePhotoUrl ? String(item.profilePhotoUrl) : this.defaultProfileUrl),
           email: item?.email ? String(item.email) : undefined,
           phoneNo: item?.phoneNo ? String(item.phoneNo) : undefined,
-          shopId: item?.shopId != null ? Number(item.shopId) : undefined,
-          shopName: item?.shopName ? String(item.shopName) : undefined,
+          role: item?.role ? String(item.role) : undefined,
+          shopId: item?.shopId != null ? Number(item.shopId) : (item?.shop?.id != null ? Number(item.shop.id) : undefined),
+          shopName: item?.shopName ? String(item.shopName) : (item?.shop?.name ? String(item.shop.name) : undefined),
         };
       })
       .filter((item): item is UserListItem => !!item);

@@ -16,10 +16,11 @@ export interface ShopOption {
 export interface UserListItem {
   id: number;
   username: string;
-  name: string;
+  name?: string;
   profileUrl?: string;
   email?: string;
   phoneNo?: string;
+  role?: string;
   shopId?: number;
   shopName?: string;
 }

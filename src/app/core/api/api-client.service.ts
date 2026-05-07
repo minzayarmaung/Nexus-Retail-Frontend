@@ -69,7 +69,8 @@ export class ApiClientService {
   }
 
   private unwrap<T>(res: ApiResponse<T>): T {
-    if (!res || res.success !== 1) {
+    const isSuccess = !!res && (res.success === 1 || res.code === 0);
+    if (!isSuccess) {
       throw new Error(res?.message ?? 'Request failed');
     }
     return res.data;
