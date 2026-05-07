@@ -49,7 +49,7 @@
   },
   "menu": {
     "dashboard": "Dashboard",
-    "users": "Users & access",
+    "users": "Users",
     "companies": "Companies",
     "audit": "Audit log",
     "settings": "Configurations",

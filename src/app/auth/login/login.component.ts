@@ -2,13 +2,14 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { TranslatePipe } from '../../core/i18n/translate.pipe';
+import { PasswordInputComponent } from '../../shared/form/password-input.component';
 import { ToastService } from '../../core/toast/toast.service';
 import { SessionService } from '../../core/user/session.service';
 import type { UserRole } from '../../core/user/user.model';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, RouterLink, TranslatePipe],
+  imports: [FormsModule, RouterLink, TranslatePipe, PasswordInputComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

@@ -9,7 +9,9 @@ import { ConfigurationComponent } from './dashboard/configuration/configuration.
 import { DashboardLayoutComponent } from './dashboard/dashboard-layout.component';
 import { EmployeeManagementComponent } from './dashboard/employee/employee-management.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
-import { ShopOwnerManagementComponent } from './dashboard/shop-owner/shop-owner-management.component';
+import { ShopDetailComponent } from './dashboard/shop/shop-detail.component';
+import { ShopManagementComponent } from './dashboard/shop/shop-management.component';
+import { UsersManagementComponent } from './dashboard/users/users-management.component';
 import { SectionPlaceholderComponent } from './dashboard/section-placeholder.component';
 
 export const routes: Routes = [
@@ -35,18 +37,37 @@ export const routes: Routes = [
     children: [
       { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
       {
+        path: 'users',
+        component: UsersManagementComponent,
+        title: 'Users',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] }
+      },
+      {
         path: 'employees',
         component: EmployeeManagementComponent,
         title: 'Employees',
         canActivate: [roleGuard],
-        data: { roles: ['system_admin', 'company_admin'] }
+        data: { roles: ['company_admin'] }
+      },
+      {
+        path: 'shops',
+        component: ShopManagementComponent,
+        title: 'Shops',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] }
+      },
+      {
+        path: 'shops/:shopId',
+        component: ShopDetailComponent,
+        title: 'Shop Detail',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] }
       },
       {
         path: 'shop-owners',
-        component: ShopOwnerManagementComponent,
-        title: 'Shop Owners',
-        canActivate: [roleGuard],
-        data: { roles: ['system_admin'] }
+        pathMatch: 'full',
+        redirectTo: 'shops'
       },
       { path: 'configurations', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
       { path: 'configurations/manage-codes', component: ConfigurationComponent, title: 'Manage Codes' },

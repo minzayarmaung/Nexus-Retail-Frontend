@@ -42,14 +42,12 @@
           {{ 'login.forgotPassword' | translate }}
         </a>
       </div>
-      <input
-        id="login-password"
+      <app-password-input
         name="password"
-        type="password"
         autocomplete="current-password"
         [(ngModel)]="password"
         placeholder="••••••••"
-        class="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-[16px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-900/10 dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:bg-slate-950/70 dark:focus:ring-white/10"
+        [inputClass]="'w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3.5 py-3 text-[16px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white focus:ring-2 focus:ring-slate-900/10 dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-500 dark:focus:bg-slate-950/70 dark:focus:ring-white/10 pr-10'"
       />
     </div>
 

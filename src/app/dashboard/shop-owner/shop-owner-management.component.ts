@@ -1,20 +1,22 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { ImageUploadService } from '../../core/image-upload/image-upload.service';
+import { PasswordInputComponent } from '../../shared/form/password-input.component';
 import { ToastService } from '../../core/toast/toast.service';
 import { SessionService } from '../../core/user/session.service';
 import { ShopOwnerApiService } from './shop-owner.api';
-import type { CreateShopOwnerRequest, ShopOption } from './shop-owner.model';
+import type { CreateShopOwnerRequest } from './shop-owner.model';
 
 @Component({
   selector: 'app-shop-owner-management',
-  imports: [FormsModule],
+  imports: [FormsModule, PasswordInputComponent],
   template: `
     <div class="space-y-6">
       <div>
         <h1 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Create Shop Owner</h1>
         <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
-          SYSTEM_ADMIN only: create owner user and assign a shop.
+          SYSTEM_ADMIN only: create owner user inside one shop context.
         </p>
       </div>
 
@@ -55,25 +57,16 @@ import type { CreateShopOwnerRequest, ShopOption } from './shop-owner.model';
               [(ngModel)]="draft.name" name="name" placeholder="Name" />
             <input class="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-950/40"
               [(ngModel)]="draft.email" name="email" placeholder="Email" type="email" />
-            <input class="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-950/40"
-              [(ngModel)]="draft.password" name="password" placeholder="Password" type="password" />
+            <app-password-input
+              [(ngModel)]="draft.password"
+              name="password"
+              placeholder="Password"
+              autocomplete="new-password"
+              [inputClass]="'rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm pr-10 dark:border-slate-700 dark:bg-slate-950/40'" />
             <input class="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-950/40"
               [(ngModel)]="draft.phoneNo" name="phoneNo" placeholder="Phone number" />
-            <div class="sm:col-span-2 grid gap-2">
-              <input class="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-950/40"
-                [(ngModel)]="shopSearchQuery" (ngModelChange)="onShopSearchChanged()"
-                name="shopSearchQuery" placeholder="Search shop by name" />
-              <select class="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-950/40"
-                [(ngModel)]="draft.shopId" name="shopId">
-                <option [ngValue]="undefined">Select shop</option>
-                @for (shop of availableShops(); track shop.id) {
-                  <option [ngValue]="shop.id">{{ shop.name }} (ID: {{ shop.id }})</option>
-                }
-              </select>
-              @if (loadingShops()) {
-                <p class="text-xs text-indigo-600 dark:text-indigo-400">Loading shops...</p>
-              }
-            </div>
+            <input class="rounded-lg border border-slate-200 bg-slate-100 px-3 py-2.5 text-sm text-slate-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 sm:col-span-2"
+              [ngModel]="draft.shopId" name="shopId" placeholder="Shop ID" readonly />
           </div>
           <div class="mt-4 flex gap-2">
             <button type="button" (click)="create()" [disabled]="saving() || !isValid()"
@@ -91,6 +84,7 @@ import type { CreateShopOwnerRequest, ShopOption } from './shop-owner.model';
   `
 })
 export class ShopOwnerManagementComponent {
+  private readonly route = inject(ActivatedRoute);
   private readonly api = inject(ShopOwnerApiService);
   private readonly session = inject(SessionService);
   private readonly toast = inject(ToastService);
@@ -98,11 +92,8 @@ export class ShopOwnerManagementComponent {
 
   readonly saving = signal(false);
   readonly imageProcessing = signal(false);
-  readonly loadingShops = signal(false);
   readonly isSystemAdmin = computed(() => this.session.user()?.role === 'system_admin');
-  readonly availableShops = signal<ShopOption[]>([]);
   photoPreviewUrl = '';
-  shopSearchQuery = '';
 
   draft: Partial<CreateShopOwnerRequest> = {
     username: '',
@@ -115,7 +106,8 @@ export class ShopOwnerManagementComponent {
   };
 
   constructor() {
-    void this.loadShops();
+    const routeShopId = Number(this.route.snapshot.queryParamMap.get('shopId') || this.route.snapshot.paramMap.get('shopId'));
+    this.draft.shopId = Number.isFinite(routeShopId) && routeShopId > 0 ? routeShopId : undefined;
   }
 
   isValid(): boolean {
@@ -163,10 +155,6 @@ export class ShopOwnerManagementComponent {
     }
   }
 
-  async onShopSearchChanged(): Promise<void> {
-    await this.loadShops(this.shopSearchQuery);
-  }
-
   onShopPhotoSelected(event: Event): void {
     const file = (event.target as HTMLInputElement).files?.[0];
     if (!file) return;
@@ -200,27 +188,6 @@ export class ShopOwnerManagementComponent {
       URL.revokeObjectURL(this.photoPreviewUrl);
     }
     this.photoPreviewUrl = '';
-  }
-
-  private async loadShops(query?: string): Promise<void> {
-    if (!this.isSystemAdmin()) return;
-    this.loadingShops.set(true);
-    try {
-      const list = query?.trim()
-        ? await this.api.searchShops(query)
-        : await this.api.listShops();
-      this.availableShops.set(list);
-
-      const selectedShopId = Number(this.draft.shopId);
-      if (!Number.isFinite(selectedShopId) || !list.some(s => s.id === selectedShopId)) {
-        this.draft.shopId = undefined;
-      }
-    } catch (e) {
-      this.availableShops.set([]);
-      this.toast.error(e instanceof Error ? e.message : 'Failed to load shops');
-    } finally {
-      this.loadingShops.set(false);
-    }
   }
 }
 
