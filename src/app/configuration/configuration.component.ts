@@ -1,6 +1,6 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TranslatePipe } from '../core/i18n/translate.pipe';
+import { TranslatePipe } from '../i18n/translate.pipe';
 import { ToastService } from '../core/toast/toast.service';
 import type {
   CodeDto,

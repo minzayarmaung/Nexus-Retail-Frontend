@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ChartComponent } from 'ng-apexcharts';
-import type { StockStatusSummary } from '../../../core/dashboard/dashboard.models';
+import type { StockStatusSummary } from '../../../../core/dashboard/dashboard.models';
 
 @Component({
   selector: 'app-stock-status-widget',

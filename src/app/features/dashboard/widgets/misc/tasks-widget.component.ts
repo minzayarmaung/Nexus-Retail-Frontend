@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import type { TaskItem } from '../../../core/dashboard/dashboard.models';
+import type { TaskItem } from '../../../../core/dashboard/dashboard.models';
 
 @Component({
   selector: 'app-tasks-widget',

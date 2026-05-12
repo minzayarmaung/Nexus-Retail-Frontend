@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ChartComponent } from 'ng-apexcharts';
-import type { TopProductItem } from '../../../core/dashboard/dashboard.models';
+import type { TopProductItem } from '../../../../core/dashboard/dashboard.models';
 
 @Component({
   selector: 'app-top-products-widget',

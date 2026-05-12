@@ -1,5 +1,5 @@
-import type { UserRole } from '../../core/user/user.model';
-import type { DashboardWidgetId } from '../../core/dashboard/dashboard-layout.models';
+import type { UserRole } from '../../../core/user/user.model';
+import type { DashboardWidgetId } from '../../../core/dashboard/dashboard-layout.models';
 
 export interface DashboardWidgetDefinition {
   id: DashboardWidgetId;

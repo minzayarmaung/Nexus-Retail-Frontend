@@ -1,10 +1,10 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { LanguageSwitcherComponent } from '../core/i18n/language-switcher.component';
-import { TranslatePipe } from '../core/i18n/translate.pipe';
-import { NAV_BY_ROLE, type NavItem } from '../core/navigation/nav.config';
-import { avatarDataUrl, resolveAvatarId } from '../core/user/avatars';
-import { SessionService } from '../core/user/session.service';
+import { LanguageSwitcherComponent } from '../../i18n/language-switcher.component';
+import { TranslatePipe } from '../../i18n/translate.pipe';
+import { NAV_BY_ROLE, type NavItem } from '../../core/navigation/nav.config';
+import { avatarDataUrl, resolveAvatarId } from '../../core/user/avatars';
+import { SessionService } from '../../core/user/session.service';
 import { NavIconComponent } from './nav-icon.component';
 
 @Component({

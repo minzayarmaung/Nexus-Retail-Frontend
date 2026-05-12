@@ -10,7 +10,7 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { authRefreshInterceptor } from './core/auth/auth-refresh.interceptor';
-import { TranslateService } from './core/i18n/translate.service';
+import { TranslateService } from './i18n/translate.service';
 import { ThemeService } from './core/theme/theme.service';
 
 export const appConfig: ApplicationConfig = {

@@ -2,8 +2,8 @@ import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
-import { TranslatePipe } from '../core/i18n/translate.pipe';
-import { SECTION_SLUG_TO_LABEL_KEY } from '../core/navigation/section-slugs';
+import { TranslatePipe } from '../../i18n/translate.pipe';
+import { SECTION_SLUG_TO_LABEL_KEY } from '../../core/navigation/section-slugs';
 
 @Component({
   selector: 'app-section-placeholder',

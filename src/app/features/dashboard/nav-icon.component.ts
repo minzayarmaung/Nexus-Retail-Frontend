@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import type { NavIcon } from '../core/navigation/nav.config';
+import type { NavIcon } from '../../core/navigation/nav.config';
 
 @Component({
   selector: 'app-nav-icon',

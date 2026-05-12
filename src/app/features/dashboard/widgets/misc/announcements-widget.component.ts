@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import type { AnnouncementItem } from '../../../core/dashboard/dashboard.models';
+import type { AnnouncementItem } from '../../../../core/dashboard/dashboard.models';
 
 @Component({
   selector: 'app-announcements-widget',

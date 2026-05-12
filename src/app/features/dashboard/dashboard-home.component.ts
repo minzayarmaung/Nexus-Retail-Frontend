@@ -1,11 +1,11 @@
 import { Component, computed, effect, ElementRef, inject, OnDestroy, OnInit, signal, ViewChild } from '@angular/core';
 import { GridStack } from 'gridstack';
-import { TranslatePipe } from '../core/i18n/translate.pipe';
-import { DashboardDataService } from '../core/dashboard/dashboard-data.service';
-import type { DashboardLayoutState, DashboardWidgetId } from '../core/dashboard/dashboard-layout.models';
-import { SessionService } from '../core/user/session.service';
-import { DashboardLayoutService } from '../core/dashboard/dashboard-layout.service';
-import { ThemeService } from '../core/theme/theme.service';
+import { TranslatePipe } from '../../i18n/translate.pipe';
+import { DashboardDataService } from '../../core/dashboard/dashboard-data.service';
+import type { DashboardLayoutState, DashboardWidgetId } from '../../core/dashboard/dashboard-layout.models';
+import { SessionService } from '../../core/user/session.service';
+import { DashboardLayoutService } from '../../core/dashboard/dashboard-layout.service';
+import { ThemeService } from '../../core/theme/theme.service';
 import { DashboardCustomizeBarComponent } from './widgets/dashboard-customize-bar.component';
 import { DashboardWidgetShellComponent } from './widgets/dashboard-widget-shell.component';
 import { widgetDef } from './widgets/widgets.registry';
@@ -15,7 +15,7 @@ import { TopProductsWidgetComponent } from './widgets/charts/top-products-widget
 import { StockStatusWidgetComponent } from './widgets/charts/stock-status-widget.component';
 import { TasksWidgetComponent } from './widgets/misc/tasks-widget.component';
 import { AnnouncementsWidgetComponent } from './widgets/misc/announcements-widget.component';
-import type { AnnouncementItem, RevenueByStoreItem, SalesTrendPoint, StockStatusSummary, TaskItem, TopProductItem } from '../core/dashboard/dashboard.models';
+import type { AnnouncementItem, RevenueByStoreItem, SalesTrendPoint, StockStatusSummary, TaskItem, TopProductItem } from '../../core/dashboard/dashboard.models';
 
 @Component({
   selector: 'app-dashboard-home',

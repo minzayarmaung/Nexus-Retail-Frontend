@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { TranslatePipe } from '../../core/i18n/translate.pipe';
+import { TranslatePipe } from '../../i18n/translate.pipe';
 import { PasswordInputComponent } from '../../shared/form/password-input.component';
 import { ToastService } from '../../core/toast/toast.service';
 import { SessionService } from '../../core/user/session.service';
