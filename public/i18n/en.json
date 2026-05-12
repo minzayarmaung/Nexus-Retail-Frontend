@@ -49,12 +49,9 @@
   },
   "menu": {
     "dashboard": "Dashboard",
-    "users": "Users",
     "companies": "Companies",
-    "audit": "Audit log",
     "settings": "Configurations",
     "manageCodes": "Manage Codes",
-    "stores": "Stores",
     "staff": "Staff",
     "reports": "Reports",
     "inventory": "Inventory",

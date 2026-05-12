@@ -1,7 +1,7 @@
 import { firstValueFrom } from 'rxjs';
 import { inject, Injectable } from '@angular/core';
-import { ApiClientService } from '../../core/api/api-client.service';
-import { API_BASE_PATH } from '../../core/api/api-base-path';
+import { ApiClientService } from '../core/api/api-client.service';
+import { API_BASE_PATH } from '../core/api/api-base-path';
 import type { CodeDto, CodeRequest, CodeValueDto, CodeValueRequest } from './configuration.model';
 
 @Injectable({ providedIn: 'root' })

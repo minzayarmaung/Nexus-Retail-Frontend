@@ -33,24 +33,6 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionMain'
     },
     {
-      path: ['shops'],
-      labelKey: 'menu.stores',
-      icon: 'building',
-      sectionKey: 'sidebar.sectionAdmin'
-    },
-    {
-      path: ['users'],
-      labelKey: 'menu.users',
-      icon: 'users',
-      sectionKey: 'sidebar.sectionAdmin'
-    },
-    {
-      path: ['section', 'audit'],
-      labelKey: 'menu.audit',
-      icon: 'shield',
-      sectionKey: 'sidebar.sectionAdmin'
-    },
-    {
       path: ['configurations'],
       labelKey: 'menu.settings',
       icon: 'cog',
