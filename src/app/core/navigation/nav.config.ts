@@ -19,6 +19,8 @@ export interface NavItem {
   /** Router link segments under `/dashboard` */
   path: string[];
   labelKey: string;
+  /** If set, sidebar shows this text instead of translating `labelKey` (no i18n entry needed). */
+  plainLabel?: string;
   icon: NavIcon;
   sectionKey: 'sidebar.sectionMain' | 'sidebar.sectionAdmin' | 'sidebar.sectionStore' | 'sidebar.sectionMe';
   children?: NavItem[];
@@ -42,6 +44,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
           path: ['configurations', 'manage-codes'],
           labelKey: 'menu.manageCodes',
           icon: 'cog',
+          sectionKey: 'sidebar.sectionAdmin'
+        },
+        {
+          path: ['configurations', 'roles'],
+          labelKey: 'menu.rolesPermissions',
+          plainLabel: 'Roles & Permissions',
+          icon: 'shield',
           sectionKey: 'sidebar.sectionAdmin'
         }
       ]
@@ -70,6 +79,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
           path: ['configurations', 'manage-codes'],
           labelKey: 'menu.manageCodes',
           icon: 'cog',
+          sectionKey: 'sidebar.sectionAdmin'
+        },
+        {
+          path: ['configurations', 'roles'],
+          labelKey: 'menu.rolesPermissions',
+          plainLabel: 'Roles & Permissions',
+          icon: 'shield',
           sectionKey: 'sidebar.sectionAdmin'
         }
       ]
@@ -111,6 +127,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
           labelKey: 'menu.manageCodes',
           icon: 'cog',
           sectionKey: 'sidebar.sectionAdmin'
+        },
+        {
+          path: ['configurations', 'roles'],
+          labelKey: 'menu.rolesPermissions',
+          plainLabel: 'Roles & Permissions',
+          icon: 'shield',
+          sectionKey: 'sidebar.sectionAdmin'
         }
       ]
     }
@@ -144,6 +167,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
           path: ['configurations', 'manage-codes'],
           labelKey: 'menu.manageCodes',
           icon: 'cog',
+          sectionKey: 'sidebar.sectionAdmin'
+        },
+        {
+          path: ['configurations', 'roles'],
+          labelKey: 'menu.rolesPermissions',
+          plainLabel: 'Roles & Permissions',
+          icon: 'shield',
           sectionKey: 'sidebar.sectionAdmin'
         }
       ]

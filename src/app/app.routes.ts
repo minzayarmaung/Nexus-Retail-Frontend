@@ -6,6 +6,8 @@ import { authGuard, guestGuard } from './core/auth/auth.guard';
 import { DashboardHomeComponent } from './features/dashboard/dashboard-home.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { DashboardLayoutComponent } from './features/dashboard/dashboard-layout.component';
+import { RolesListComponent } from './configuration/roles/roles-list.component';
+import { RolePermissionsComponent } from './configuration/roles/role-permissions.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
@@ -31,6 +33,12 @@ export const routes: Routes = [
       { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
       { path: 'configurations', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
       { path: 'configurations/manage-codes', component: ConfigurationComponent, title: 'Manage Codes' },
+      { path: 'configurations/roles', component: RolesListComponent, title: 'Roles' },
+      {
+        path: 'configurations/roles/:roleId/permissions',
+        component: RolePermissionsComponent,
+        title: 'Role permissions'
+      },
 
       // Backward-compatible redirects
       { path: 'configuration', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },

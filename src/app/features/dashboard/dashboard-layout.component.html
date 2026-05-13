@@ -55,14 +55,18 @@
                 </button>
                 @if (isGroupExpanded(item.labelKey)) {
                   <div class="ml-7 mt-1 space-y-1 border-l border-slate-200 pl-3 dark:border-slate-700">
-                    @for (child of item.children!; track child.labelKey) {
+                    @for (child of item.children!; track child.path.join('/')) {
                       <a
                         [routerLink]="linkFor(child)"
                         routerLinkActive="bg-slate-100 text-slate-900 dark:bg-white/10 dark:text-white"
                         (click)="closeSidebar()"
                         class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 no-underline transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
                       >
-                        {{ child.labelKey | translate }}
+                        @if (child.plainLabel) {
+                          {{ child.plainLabel }}
+                        } @else {
+                          {{ child.labelKey | translate }}
+                        }
                       </a>
                     }
                   </div>
