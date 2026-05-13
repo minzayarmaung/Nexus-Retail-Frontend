@@ -1,5 +1,7 @@
-import { Injectable, signal } from '@angular/core';
-import type { PermissionGroup, Role, RoleStatus } from './roles.model';
+import { inject, Injectable, signal } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
+import type { PermissionGroup, Role, RoleApiDto, RoleStatus } from './roles.model';
+import { RolesApiService } from './roles.api';
 
 const PERMISSION_GROUPS: PermissionGroup[] = [
   {
@@ -42,31 +44,28 @@ const PERMISSION_GROUPS: PermissionGroup[] = [
   }
 ];
 
-const initialRoles: Role[] = [
-  {
-    id: 'r-1',
-    name: 'Self Service User',
-    description: 'Limited self-service access for clients.',
-    status: 'active',
-    permissionIds: ['p-user-read', 'p-loan-read']
-  },
-  {
-    id: 'r-2',
-    name: 'Loan Officer',
-    description: 'Origination and servicing for assigned portfolio.',
-    status: 'active',
-    permissionIds: ['p-loan-read', 'p-loan-approve', 'p-user-read']
-  }
-];
+function mapApiRoleToRole(dto: RoleApiDto): Role {
+  return {
+    id: String(dto.id),
+    name: dto.name,
+    description: dto.description ?? '',
+    status: dto.is_disabled ? 'disabled' : 'active',
+    permissionIds: []
+  };
+}
 
 @Injectable({ providedIn: 'root' })
 export class RolesService {
-  private readonly roles = signal<Role[]>([...initialRoles]);
-  private nextId = 3;
+  private readonly rolesApi = inject(RolesApiService);
+
+  private readonly roles = signal<Role[]>([]);
+  private localRoleSeq = 0;
 
   readonly permissionGroups = PERMISSION_GROUPS;
-  /** Read-only signal of all roles (reactive). */
   readonly rolesReadonly = this.roles.asReadonly();
+  /** Reflects last GET /roles attempt (permissions screen waits on `ready`). */
+  readonly rolesLoadState = signal<'idle' | 'loading' | 'ready' | 'error'>('idle');
+  readonly rolesLoadError = signal<string | null>(null);
 
   listRoles(): Role[] {
     return this.roles();
@@ -76,9 +75,23 @@ export class RolesService {
     return this.roles().find((r) => r.id === id);
   }
 
+  async loadRoles(): Promise<void> {
+    this.rolesLoadState.set('loading');
+    this.rolesLoadError.set(null);
+    try {
+      const dtos = await firstValueFrom(this.rolesApi.getRoles());
+      this.roles.set(dtos.map(mapApiRoleToRole));
+      this.rolesLoadState.set('ready');
+    } catch (e) {
+      this.rolesLoadError.set(e instanceof Error ? e.message : 'Failed to load roles');
+      this.rolesLoadState.set('error');
+      this.roles.set([]);
+    }
+  }
+
   createRole(name: string, description: string): Role {
     const role: Role = {
-      id: `r-${this.nextId++}`,
+      id: `local-${++this.localRoleSeq}`,
       name: name.trim(),
       description: description.trim(),
       status: 'active',
@@ -118,7 +131,6 @@ export class RolesService {
     );
   }
 
-  /** Grant or revoke every permission in the given group for the role (single update). */
   setGroupPermissions(roleId: string, group: PermissionGroup, grant: boolean): void {
     const idsInGroup = new Set(group.permissions.map((p) => p.id));
     this.roles.update((list) =>

@@ -9,6 +9,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
+import { authRequestInterceptor } from './core/auth/auth-request.interceptor';
 import { authRefreshInterceptor } from './core/auth/auth-refresh.interceptor';
 import { TranslateService } from './i18n/translate.service';
 import { ThemeService } from './core/theme/theme.service';
@@ -18,7 +19,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
-    provideHttpClient(withFetch(), withInterceptors([authRefreshInterceptor])),
+    provideHttpClient(withFetch(), withInterceptors([authRequestInterceptor, authRefreshInterceptor])),
     provideAppInitializer(() => {
       const translate = inject(TranslateService);
       return translate.init();

@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal, type OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import type { Role } from './roles.model';
@@ -26,6 +26,21 @@ import { RolesService } from './roles.service';
       </div>
 
       <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm dark:border-slate-700/60 dark:bg-slate-900 dark:shadow-none">
+        @if (rolesService.rolesLoadState() === 'loading' || rolesService.rolesLoadState() === 'idle') {
+          <p class="py-10 text-center text-sm text-slate-600 dark:text-slate-400">Loading roles…</p>
+        } @else if (rolesService.rolesLoadState() === 'error') {
+          <div class="rounded-lg border border-red-200 bg-red-50/80 p-4 text-sm text-red-800 dark:border-red-900/50 dark:bg-red-950/30 dark:text-red-200">
+            <p class="font-medium">Could not load roles</p>
+            <p class="mt-1 opacity-90">{{ rolesService.rolesLoadError() }}</p>
+            <button
+              type="button"
+              class="mt-3 rounded-lg border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-900 hover:bg-red-50 dark:border-red-800 dark:bg-red-950/50 dark:text-red-100 dark:hover:bg-red-900/40"
+              (click)="retryLoad()"
+            >
+              Retry
+            </button>
+          </div>
+        } @else {
         <input
           class="w-full max-w-md rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none transition focus:border-slate-400 focus:ring-2 focus:ring-slate-900/10 dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 dark:focus:border-slate-500 dark:focus:ring-white/10"
           [ngModel]="searchSig()"
@@ -72,13 +87,22 @@ import { RolesService } from './roles.service';
                     </span>
                   </td>
                   <td class="py-3 text-right">
-                    <button
-                      type="button"
-                      class="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800/60"
-                      (click)="openPermissions(r); $event.stopPropagation()"
-                    >
-                      Permissions
-                    </button>
+                    <div class="flex justify-end gap-2">
+                      <button
+                        type="button"
+                        class="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800/60"
+                        (click)="openEditModal(r); $event.stopPropagation()"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        type="button"
+                        class="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800/60"
+                        (click)="openPermissions(r); $event.stopPropagation()"
+                      >
+                        Permissions
+                      </button>
+                    </div>
                   </td>
                 </tr>
               } @empty {
@@ -89,6 +113,7 @@ import { RolesService } from './roles.service';
             </tbody>
           </table>
         </div>
+        }
       </div>
     </div>
 
@@ -104,7 +129,9 @@ import { RolesService } from './roles.service';
           class="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-xl dark:border-slate-700 dark:bg-slate-900"
           (click)="$event.stopPropagation()"
         >
-          <h2 id="add-role-title" class="text-lg font-semibold text-slate-900 dark:text-slate-100">Add Role</h2>
+          <h2 id="add-role-title" class="text-lg font-semibold text-slate-900 dark:text-slate-100">
+            {{ editingRoleId ? 'Edit Role' : 'Add Role' }}
+          </h2>
           <div class="mt-4 space-y-4">
             <div class="space-y-1.5">
               <label class="block text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">Name</label>
@@ -137,9 +164,9 @@ import { RolesService } from './roles.service';
               type="button"
               class="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-50 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
               [disabled]="!draftName.trim()"
-              (click)="submitAdd()"
+              (click)="submitRole()"
             >
-              Create
+              {{ editingRoleId ? 'Save Changes' : 'Create' }}
             </button>
           </div>
         </div>
@@ -147,13 +174,14 @@ import { RolesService } from './roles.service';
     }
   `
 })
-export class RolesListComponent {
-  private readonly rolesService = inject(RolesService);
+export class RolesListComponent implements OnInit {
+  readonly rolesService = inject(RolesService);
   private readonly router = inject(Router);
 
   protected readonly addOpen = signal(false);
   protected draftName = '';
   protected draftDescription = '';
+  protected editingRoleId: string | null = null;
 
   protected readonly searchSig = signal('');
 
@@ -168,20 +196,41 @@ export class RolesListComponent {
     );
   });
 
+  ngOnInit(): void {
+    void this.rolesService.loadRoles();
+  }
+
+  protected retryLoad(): void {
+    void this.rolesService.loadRoles();
+  }
+
   protected openAddModal(): void {
     this.draftName = '';
     this.draftDescription = '';
+    this.editingRoleId = null;
     this.addOpen.set(true);
   }
 
   protected closeAddModal(): void {
+    this.editingRoleId = null;
     this.addOpen.set(false);
   }
 
-  protected submitAdd(): void {
+  protected openEditModal(role: Role): void {
+    this.editingRoleId = role.id;
+    this.draftName = role.name;
+    this.draftDescription = role.description;
+    this.addOpen.set(true);
+  }
+
+  protected submitRole(): void {
     const name = this.draftName.trim();
     if (!name) return;
-    this.rolesService.createRole(name, this.draftDescription);
+    if (this.editingRoleId) {
+      this.rolesService.updateRoleMeta(this.editingRoleId, name, this.draftDescription);
+    } else {
+      this.rolesService.createRole(name, this.draftDescription);
+    }
     this.closeAddModal();
   }
 

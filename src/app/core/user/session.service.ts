@@ -8,6 +8,7 @@ import {
   signal
 } from '@angular/core';
 import { AuthApiService } from '../auth/auth.api';
+import { AuthTokenStore } from '../auth/auth-token.store';
 import { normalizeRole } from '../auth/auth.model';
 import type { SessionUser, UserRole } from './user.model';
 import { DEFAULT_AVATAR_ID, type AvatarId } from './avatars';
@@ -58,6 +59,7 @@ const DEMO_PRESETS: Record<
 export class SessionService {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly authApi = inject(AuthApiService);
+  private readonly authTokenStore = inject(AuthTokenStore);
 
   private readonly _user = signal<SessionUser | null>(null);
   readonly user = this._user.asReadonly();
@@ -92,6 +94,7 @@ export class SessionService {
   }
 
   enterDemo(role: UserRole): void {
+    this.authTokenStore.clear();
     const p = DEMO_PRESETS[role];
     this._user.set({
       id: p.id,
@@ -118,6 +121,7 @@ export class SessionService {
       : { username: identity, password };
 
     const res = await this.authApi.login(payload);
+    this.authTokenStore.setAccessToken(res.token ?? null);
     this._user.set({
       id: String(res.userId),
       username: res.username || identity,
@@ -132,11 +136,13 @@ export class SessionService {
     try {
       await this.authApi.logout();
     } finally {
+      this.authTokenStore.clear();
       this._user.set(null);
     }
   }
 
   logoutLocal(): void {
+    this.authTokenStore.clear();
     this._user.set(null);
   }
 

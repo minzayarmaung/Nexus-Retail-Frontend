@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { TranslatePipe } from '../../i18n/translate.pipe';
 import { PasswordInputComponent } from '../../shared/form/password-input.component';
 import { ToastService } from '../../core/toast/toast.service';
 import { SessionService } from '../../core/user/session.service';
+import { validateInternalReturnUrl } from '../../core/auth/auth-return-url';
 import type { UserRole } from '../../core/user/user.model';
 
 @Component({
@@ -16,6 +17,7 @@ import type { UserRole } from '../../core/user/user.model';
 export class LoginComponent {
   private readonly session = inject(SessionService);
   private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
   private readonly toast = inject(ToastService);
 
   identity = '';
@@ -39,7 +41,7 @@ export class LoginComponent {
     try {
       await this.session.login({ identity, password });
       this.toast.success('Login successful');
-      await this.router.navigate(['/dashboard']);
+      await this.navigateAfterAuth();
     } catch (e) {
       const msg = e instanceof Error ? e.message : 'Login failed';
       this.toast.error(msg);
@@ -50,6 +52,12 @@ export class LoginComponent {
 
   enterDemo(role: UserRole): void {
     this.session.enterDemo(role);
-    void this.router.navigate(['/dashboard']);
+    void this.navigateAfterAuth();
+  }
+
+  private async navigateAfterAuth(): Promise<void> {
+    const raw = this.route.snapshot.queryParamMap.get('returnUrl');
+    const url = validateInternalReturnUrl(raw);
+    await this.router.navigateByUrl(url ?? '/dashboard');
   }
 }

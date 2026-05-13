@@ -10,7 +10,25 @@ import { RolesService } from './roles.service';
   imports: [RouterLink],
   template: `
     <div class="mx-auto max-w-7xl space-y-6">
-      @if (role(); as r) {
+      @if (rolesService.rolesLoadState() === 'error') {
+        <div class="rounded-lg border border-red-200 bg-red-50/80 p-4 text-sm text-red-800 dark:border-red-900/50 dark:bg-red-950/30 dark:text-red-200">
+          <p class="font-medium">Could not load role</p>
+          <p class="mt-1 opacity-90">{{ rolesService.rolesLoadError() }}</p>
+          <button
+            type="button"
+            class="mt-3 rounded-lg border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-900 hover:bg-red-50 dark:border-red-800 dark:bg-red-950/50 dark:text-red-100 dark:hover:bg-red-900/40"
+            (click)="retryLoad()"
+          >
+            Retry
+          </button>
+          <a
+            routerLink="/dashboard/configurations/roles"
+            class="ml-3 text-xs font-medium text-red-900 underline dark:text-red-200"
+            >Back to roles</a>
+        </div>
+      } @else if (rolesService.rolesLoadState() !== 'ready') {
+        <p class="py-10 text-center text-sm text-slate-600 dark:text-slate-400">Loading role…</p>
+      } @else if (role(); as r) {
         <div class="flex flex-wrap items-start justify-between gap-4">
           <div class="min-w-0">
             <a
@@ -156,7 +174,13 @@ import { RolesService } from './roles.service';
           </div>
         </div>
       } @else {
-        <p class="text-slate-600 dark:text-slate-400">Loading…</p>
+        <p class="py-10 text-center text-sm text-slate-600 dark:text-slate-400">
+          Role not found.
+          <a
+            routerLink="/dashboard/configurations/roles"
+            class="ml-2 font-medium text-slate-900 underline dark:text-slate-200"
+            >Back to roles</a>
+        </p>
       }
     </div>
   `
@@ -164,7 +188,7 @@ import { RolesService } from './roles.service';
 export class RolePermissionsComponent {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
-  private readonly rolesService = inject(RolesService);
+  readonly rolesService = inject(RolesService);
 
   protected readonly groups: PermissionGroup[] = this.rolesService.permissionGroups;
   protected readonly selectedGroupId = signal(this.groups[0]?.id ?? '');
@@ -177,6 +201,9 @@ export class RolePermissionsComponent {
   });
 
   protected readonly role = computed(() => {
+    if (this.rolesService.rolesLoadState() !== 'ready') {
+      return undefined;
+    }
     const id = this.roleId();
     if (!id) return undefined;
     return this.rolesService.getRole(id);
@@ -188,10 +215,13 @@ export class RolePermissionsComponent {
   });
 
   constructor() {
+    void this.rolesService.loadRoles();
+
     effect(() => {
+      if (this.rolesService.rolesLoadState() !== 'ready') return;
       const id = this.roleId();
+      if (!id) return;
       untracked(() => {
-        if (!id) return;
         if (!this.rolesService.getRole(id)) {
           void this.router.navigate(['/dashboard', 'configurations', 'roles']);
         }
@@ -205,6 +235,10 @@ export class RolePermissionsComponent {
         this.draftPermissionIds.set([]);
       });
     });
+  }
+
+  protected retryLoad(): void {
+    void this.rolesService.loadRoles();
   }
 
   protected isPermissionChecked(r: { permissionIds: string[] }, permissionId: string): boolean {
