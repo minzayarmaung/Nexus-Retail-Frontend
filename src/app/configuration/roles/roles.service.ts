@@ -1,50 +1,9 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import type { PermissionGroup, Role, RoleApiDto, RoleStatus } from './roles.model';
+import type { Role, RoleApiDto, RoleDetailApiDto } from './roles.model';
 import { RolesApiService } from './roles.api';
 
-const PERMISSION_GROUPS: PermissionGroup[] = [
-  {
-    id: 'user',
-    name: 'User management',
-    permissions: [
-      { id: 'p-user-read', code: 'READ_USER', label: 'View users' },
-      { id: 'p-user-create', code: 'CREATE_USER', label: 'Create user' },
-      { id: 'p-user-update', code: 'UPDATE_USER', label: 'Edit user' },
-      { id: 'p-user-delete', code: 'DELETE_USER', label: 'Delete user' }
-    ]
-  },
-  {
-    id: 'loan',
-    name: 'Loan',
-    permissions: [
-      { id: 'p-loan-read', code: 'READ_LOAN', label: 'View loans' },
-      { id: 'p-loan-approve', code: 'APPROVE_LOAN', label: 'Approve loan' },
-      { id: 'p-loan-disburse', code: 'DISBURSE_LOAN', label: 'Disburse loan' },
-      { id: 'p-loan-repay', code: 'REPAY_LOAN', label: 'Record repayment' }
-    ]
-  },
-  {
-    id: 'accounting',
-    name: 'Accounting',
-    permissions: [
-      { id: 'p-gl-read', code: 'READ_GL', label: 'View GL' },
-      { id: 'p-gl-post', code: 'POST_JOURNAL', label: 'Post journal' },
-      { id: 'p-gl-reverse', code: 'REVERSE_ENTRY', label: 'Reverse entry' }
-    ]
-  },
-  {
-    id: 'org',
-    name: 'Organization',
-    permissions: [
-      { id: 'p-org-read', code: 'READ_OFFICE', label: 'View offices' },
-      { id: 'p-org-config', code: 'CONFIGURE_SYSTEM', label: 'Configure system' },
-      { id: 'p-org-role', code: 'MANAGE_ROLES', label: 'Manage roles' }
-    ]
-  }
-];
-
-function mapApiRoleToRole(dto: RoleApiDto): Role {
+function mapListDto(dto: RoleApiDto): Role {
   return {
     id: String(dto.id),
     name: dto.name,
@@ -54,15 +13,25 @@ function mapApiRoleToRole(dto: RoleApiDto): Role {
   };
 }
 
+function mapDetailToRole(dto: RoleDetailApiDto): Role {
+  const usage = dto.permissionUsageData ? dto.permissionUsageData.map((u) => ({ ...u })) : undefined;
+  return {
+    id: String(dto.id),
+    name: dto.name,
+    description: dto.description ?? '',
+    status: dto.is_disabled ? 'disabled' : 'active',
+    permissionIds: (usage ?? []).filter((p) => p.selected).map((p) => p.code),
+    permissionUsageData: usage
+  };
+}
+
 @Injectable({ providedIn: 'root' })
 export class RolesService {
   private readonly rolesApi = inject(RolesApiService);
 
   private readonly roles = signal<Role[]>([]);
 
-  readonly permissionGroups = PERMISSION_GROUPS;
   readonly rolesReadonly = this.roles.asReadonly();
-  /** Reflects last GET /roles attempt (permissions screen waits on `ready`). */
   readonly rolesLoadState = signal<'idle' | 'loading' | 'ready' | 'error'>('idle');
   readonly rolesLoadError = signal<string | null>(null);
 
@@ -79,7 +48,7 @@ export class RolesService {
     this.rolesLoadError.set(null);
     try {
       const dtos = await firstValueFrom(this.rolesApi.getRoles());
-      this.roles.set(dtos.map(mapApiRoleToRole));
+      this.roles.set(dtos.map(mapListDto));
       this.rolesLoadState.set('ready');
     } catch (e) {
       this.rolesLoadError.set(e instanceof Error ? e.message : 'Failed to load roles');
@@ -88,35 +57,43 @@ export class RolesService {
     }
   }
 
-  async getRoleById(id: string): Promise<Role | undefined> {
-    const existing = this.roles().find((r) => r.id === id);
-    if (existing) {
-      return existing;
-    }
+  /** GET /roles/{id} — full role including permissionUsageData */
+  async loadRoleDetail(id: string): Promise<Role | undefined> {
     const numericId = Number(id);
     if (!Number.isFinite(numericId)) {
       return undefined;
     }
     const dto = await firstValueFrom(this.rolesApi.getRoleById(numericId));
-    const mapped = mapApiRoleToRole(dto);
+    const mapped = mapDetailToRole(dto);
     this.roles.update((list) => {
       const idx = list.findIndex((r) => r.id === mapped.id);
       if (idx === -1) return [...list, mapped];
       const copy = [...list];
-      copy[idx] = { ...copy[idx], ...mapped };
+      copy[idx] = mapped;
       return copy;
     });
     return mapped;
+  }
+
+  /** Used when opening permissions from the table (must hit GET /roles/{id}). */
+  async ensureRoleDetailLoaded(id: string): Promise<boolean> {
+    try {
+      await this.loadRoleDetail(id);
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   async createRole(name: string, description: string): Promise<Role> {
     const dto = await firstValueFrom(
       this.rolesApi.createRole({
         name: name.trim(),
-        description: description.trim() || null
+        description: description.trim() || null,
+        is_disabled: false
       })
     );
-    const role = mapApiRoleToRole(dto);
+    const role = mapDetailToRole(dto);
     this.roles.update((list) => [...list, role]);
     return role;
   }
@@ -126,52 +103,80 @@ export class RolesService {
     if (!Number.isFinite(numericId)) {
       throw new Error('Invalid role id');
     }
+    const cur = this.getRole(id);
     const dto = await firstValueFrom(
-      this.rolesApi.updateRole({
-        id: numericId,
+      this.rolesApi.updateRole(numericId, {
         name: name.trim(),
-        description: description.trim() || null
+        description: description.trim() || null,
+        is_disabled: cur?.status === 'disabled'
       })
     );
-    const updated = mapApiRoleToRole(dto);
+    const updated = mapDetailToRole(dto);
     this.roles.update((list) =>
-      list.map((r) => (r.id === id ? { ...r, ...updated, permissionIds: r.permissionIds } : r))
+      list.map((r) =>
+        r.id === id
+          ? {
+              ...updated,
+              permissionUsageData:
+                (updated.permissionUsageData?.length ?? 0) > 0
+                  ? updated.permissionUsageData
+                  : r.permissionUsageData
+            }
+          : r
+      )
     );
   }
 
-  setRoleStatus(id: string, status: RoleStatus): void {
-    this.roles.update((list) => list.map((r) => (r.id === id ? { ...r, status } : r)));
-  }
-
-  setRolePermissions(id: string, permissionIds: string[]): void {
+  /** PATCH /roles/{id} with current name/description and new disabled flag */
+  async setRoleDisabled(id: string, disabled: boolean): Promise<void> {
+    const numericId = Number(id);
+    if (!Number.isFinite(numericId)) {
+      throw new Error('Invalid role id');
+    }
+    const r = this.getRole(id);
+    if (!r) {
+      throw new Error('Role not found');
+    }
+    const dto = await firstValueFrom(
+      this.rolesApi.updateRole(numericId, {
+        name: r.name,
+        description: r.description || null,
+        is_disabled: disabled
+      })
+    );
+    const updated = mapDetailToRole(dto);
     this.roles.update((list) =>
-      list.map((r) => (r.id === id ? { ...r, permissionIds: [...permissionIds] } : r))
+      list.map((role) =>
+        role.id === id
+          ? {
+              ...updated,
+              permissionUsageData:
+                (updated.permissionUsageData?.length ?? 0) > 0
+                  ? updated.permissionUsageData
+                  : role.permissionUsageData
+            }
+          : role
+      )
     );
   }
 
-  togglePermission(roleId: string, permissionId: string, granted: boolean): void {
+  applyPermissionDraft(roleId: string, selectedCodes: string[]): void {
+    const set = new Set(selectedCodes);
     this.roles.update((list) =>
       list.map((r) => {
         if (r.id !== roleId) return r;
-        const set = new Set(r.permissionIds);
-        if (granted) set.add(permissionId);
-        else set.delete(permissionId);
-        return { ...r, permissionIds: [...set] };
-      })
-    );
-  }
-
-  setGroupPermissions(roleId: string, group: PermissionGroup, grant: boolean): void {
-    const idsInGroup = new Set(group.permissions.map((p) => p.id));
-    this.roles.update((list) =>
-      list.map((r) => {
-        if (r.id !== roleId) return r;
-        const next = new Set(r.permissionIds);
-        for (const pid of idsInGroup) {
-          if (grant) next.add(pid);
-          else next.delete(pid);
+        if (!r.permissionUsageData?.length) {
+          return { ...r, permissionIds: [...selectedCodes] };
         }
-        return { ...r, permissionIds: [...next] };
+        const permissionUsageData = r.permissionUsageData.map((item) => ({
+          ...item,
+          selected: set.has(item.code)
+        }));
+        return {
+          ...r,
+          permissionUsageData,
+          permissionIds: permissionUsageData.filter((p) => p.selected).map((p) => p.code)
+        };
       })
     );
   }

@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { map, type Observable } from 'rxjs';
 import { API_BASE_PATH } from '../../core/api/api-base-path';
 import type { ApiResponse } from '../../core/api/api-response';
-import type { CreateRoleRequest, RoleApiDto, UpdateRoleRequest } from './roles.model';
+import type { CreateRoleRequest, RoleApiDto, RoleDetailApiDto, UpdateRoleBodyRequest } from './roles.model';
 
 @Injectable({ providedIn: 'root' })
 export class RolesApiService {
@@ -28,26 +28,26 @@ export class RolesApiService {
     );
   }
 
-  createRole(payload: CreateRoleRequest): Observable<RoleApiDto> {
+  createRole(payload: CreateRoleRequest): Observable<RoleDetailApiDto> {
     return this.http
-      .post<RoleApiDto | ApiResponse<RoleApiDto>>(this.rolesUrl, payload)
-      .pipe(map((body) => this.unwrapOne(body)));
+      .post<RoleDetailApiDto | ApiResponse<RoleDetailApiDto>>(this.rolesUrl, payload)
+      .pipe(map((body) => this.unwrapRoleDetail(body)));
   }
 
-  updateRole(payload: UpdateRoleRequest): Observable<RoleApiDto> {
+  updateRole(id: number, payload: UpdateRoleBodyRequest): Observable<RoleDetailApiDto> {
     return this.http
-      .patch<RoleApiDto | ApiResponse<RoleApiDto>>(this.rolesUrl, payload)
-      .pipe(map((body) => this.unwrapOne(body)));
+      .patch<RoleDetailApiDto | ApiResponse<RoleDetailApiDto>>(`${this.rolesUrl}/${id}`, payload)
+      .pipe(map((body) => this.unwrapRoleDetail(body)));
   }
 
-  getRoleById(id: number): Observable<RoleApiDto> {
+  getRoleById(id: number): Observable<RoleDetailApiDto> {
     return this.http
-      .post<RoleApiDto | ApiResponse<RoleApiDto>>(`${this.rolesUrl}/${id}`, {})
-      .pipe(map((body) => this.unwrapOne(body)));
+      .get<RoleDetailApiDto | ApiResponse<RoleDetailApiDto>>(`${this.rolesUrl}/${id}`)
+      .pipe(map((body) => this.unwrapRoleDetail(body)));
   }
 
-  private unwrapOne(body: RoleApiDto | ApiResponse<RoleApiDto>): RoleApiDto {
-    if (this.isRoleDto(body)) {
+  private unwrapRoleDetail(body: RoleDetailApiDto | ApiResponse<RoleDetailApiDto>): RoleDetailApiDto {
+    if (this.isRoleDetailDto(body)) {
       return body;
     }
     const isSuccess = !!body && (body.success === 1 || body.code === 0);
@@ -55,15 +55,15 @@ export class RolesApiService {
       throw new Error(body?.message ?? 'Request failed');
     }
     const data = body.data;
-    if (!this.isRoleDto(data)) {
+    if (!this.isRoleDetailDto(data)) {
       throw new Error('Invalid role response');
     }
     return data;
   }
 
-  private isRoleDto(value: unknown): value is RoleApiDto {
+  private isRoleDetailDto(value: unknown): value is RoleDetailApiDto {
     if (!value || typeof value !== 'object') return false;
-    const v = value as Partial<RoleApiDto>;
+    const v = value as Partial<RoleDetailApiDto>;
     return (
       typeof v.id === 'number' &&
       typeof v.name === 'string' &&

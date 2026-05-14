@@ -249,7 +249,12 @@ export class RolesListComponent implements OnInit {
     }
   }
 
-  protected openPermissions(r: Role): void {
+  protected async openPermissions(r: Role): Promise<void> {
+    const ok = await this.rolesService.ensureRoleDetailLoaded(r.id);
+    if (!ok) {
+      this.toast.error('Could not load role details');
+      return;
+    }
     void this.router.navigate(['/dashboard', 'configurations', 'roles', r.id, 'permissions']);
   }
 }
