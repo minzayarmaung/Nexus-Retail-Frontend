@@ -222,9 +222,19 @@ export class RolePermissionsComponent {
       const id = this.roleId();
       if (!id) return;
       untracked(() => {
-        if (!this.rolesService.getRole(id)) {
-          void this.router.navigate(['/dashboard', 'configurations', 'roles']);
+        if (this.rolesService.getRole(id)) {
+          return;
         }
+        void (async () => {
+          try {
+            const role = await this.rolesService.getRoleById(id);
+            if (!role) {
+              void this.router.navigate(['/dashboard', 'configurations', 'roles']);
+            }
+          } catch {
+            void this.router.navigate(['/dashboard', 'configurations', 'roles']);
+          }
+        })();
       });
     });
 

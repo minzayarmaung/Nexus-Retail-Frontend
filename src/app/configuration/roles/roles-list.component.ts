@@ -1,6 +1,7 @@
 import { Component, computed, inject, signal, type OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastService } from '../../core/toast/toast.service';
 import type { Role } from './roles.model';
 import { RolesService } from './roles.service';
 
@@ -157,16 +158,17 @@ import { RolesService } from './roles.service';
               type="button"
               class="rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800/60"
               (click)="closeAddModal()"
+              [disabled]="submitting"
             >
               Cancel
             </button>
             <button
               type="button"
               class="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-50 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
-              [disabled]="!draftName.trim()"
+              [disabled]="!draftName.trim() || submitting"
               (click)="submitRole()"
             >
-              {{ editingRoleId ? 'Save Changes' : 'Create' }}
+              {{ submitting ? 'Saving...' : editingRoleId ? 'Save Changes' : 'Create' }}
             </button>
           </div>
         </div>
@@ -177,11 +179,13 @@ import { RolesService } from './roles.service';
 export class RolesListComponent implements OnInit {
   readonly rolesService = inject(RolesService);
   private readonly router = inject(Router);
+  private readonly toast = inject(ToastService);
 
   protected readonly addOpen = signal(false);
   protected draftName = '';
   protected draftDescription = '';
   protected editingRoleId: string | null = null;
+  protected submitting = false;
 
   protected readonly searchSig = signal('');
 
@@ -223,15 +227,26 @@ export class RolesListComponent implements OnInit {
     this.addOpen.set(true);
   }
 
-  protected submitRole(): void {
+  protected async submitRole(): Promise<void> {
     const name = this.draftName.trim();
     if (!name) return;
-    if (this.editingRoleId) {
-      this.rolesService.updateRoleMeta(this.editingRoleId, name, this.draftDescription);
-    } else {
-      this.rolesService.createRole(name, this.draftDescription);
+    if (this.submitting) return;
+    this.submitting = true;
+    try {
+      if (this.editingRoleId) {
+        await this.rolesService.updateRoleMeta(this.editingRoleId, name, this.draftDescription);
+        this.toast.success('Role updated');
+      } else {
+        await this.rolesService.createRole(name, this.draftDescription);
+        this.toast.success('Role created');
+      }
+      this.closeAddModal();
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : 'Failed to save role';
+      this.toast.error(msg);
+    } finally {
+      this.submitting = false;
     }
-    this.closeAddModal();
   }
 
   protected openPermissions(r: Role): void {

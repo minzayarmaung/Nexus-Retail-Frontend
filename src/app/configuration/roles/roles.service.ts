@@ -59,7 +59,6 @@ export class RolesService {
   private readonly rolesApi = inject(RolesApiService);
 
   private readonly roles = signal<Role[]>([]);
-  private localRoleSeq = 0;
 
   readonly permissionGroups = PERMISSION_GROUPS;
   readonly rolesReadonly = this.roles.asReadonly();
@@ -89,23 +88,54 @@ export class RolesService {
     }
   }
 
-  createRole(name: string, description: string): Role {
-    const role: Role = {
-      id: `local-${++this.localRoleSeq}`,
-      name: name.trim(),
-      description: description.trim(),
-      status: 'active',
-      permissionIds: []
-    };
+  async getRoleById(id: string): Promise<Role | undefined> {
+    const existing = this.roles().find((r) => r.id === id);
+    if (existing) {
+      return existing;
+    }
+    const numericId = Number(id);
+    if (!Number.isFinite(numericId)) {
+      return undefined;
+    }
+    const dto = await firstValueFrom(this.rolesApi.getRoleById(numericId));
+    const mapped = mapApiRoleToRole(dto);
+    this.roles.update((list) => {
+      const idx = list.findIndex((r) => r.id === mapped.id);
+      if (idx === -1) return [...list, mapped];
+      const copy = [...list];
+      copy[idx] = { ...copy[idx], ...mapped };
+      return copy;
+    });
+    return mapped;
+  }
+
+  async createRole(name: string, description: string): Promise<Role> {
+    const dto = await firstValueFrom(
+      this.rolesApi.createRole({
+        name: name.trim(),
+        description: description.trim() || null
+      })
+    );
+    const role = mapApiRoleToRole(dto);
     this.roles.update((list) => [...list, role]);
     return role;
   }
 
-  updateRoleMeta(id: string, name: string, description: string): void {
+  async updateRoleMeta(id: string, name: string, description: string): Promise<void> {
+    const numericId = Number(id);
+    if (!Number.isFinite(numericId)) {
+      throw new Error('Invalid role id');
+    }
+    const dto = await firstValueFrom(
+      this.rolesApi.updateRole({
+        id: numericId,
+        name: name.trim(),
+        description: description.trim() || null
+      })
+    );
+    const updated = mapApiRoleToRole(dto);
     this.roles.update((list) =>
-      list.map((r) =>
-        r.id === id ? { ...r, name: name.trim(), description: description.trim() } : r
-      )
+      list.map((r) => (r.id === id ? { ...r, ...updated, permissionIds: r.permissionIds } : r))
     );
   }
 

@@ -8,6 +8,17 @@ export interface RoleApiDto {
   is_disabled: boolean;
 }
 
+export interface CreateRoleRequest {
+  name: string;
+  description: string | null;
+}
+
+export interface UpdateRoleRequest {
+  id: number;
+  name: string;
+  description: string | null;
+}
+
 export interface Role {
   /** Stable id for routing (numeric id from API as string, or client prefix for local-only rows). */
   id: string;
