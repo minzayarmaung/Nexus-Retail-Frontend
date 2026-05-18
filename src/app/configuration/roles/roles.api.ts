@@ -42,7 +42,7 @@ export class RolesApiService {
 
   getRoleById(id: number): Observable<RoleDetailApiDto> {
     return this.http
-      .get<RoleDetailApiDto | ApiResponse<RoleDetailApiDto>>(`${this.rolesUrl}/${id}`)
+      .get<RoleDetailApiDto | ApiResponse<RoleDetailApiDto>>(`${this.rolesUrl}/${id}/permissions`)
       .pipe(map((body) => this.unwrapRoleDetail(body)));
   }
 
