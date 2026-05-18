@@ -232,7 +232,7 @@ export class RolePermissionsComponent {
       by.get(gid)!.permissions.push({
         id: it.code,
         code: it.code,
-        label: `${it.entityName} — ${it.actionName}`
+        label: `${it.entityName}`
       });
     }
     return [...by.values()].map((g) => ({
