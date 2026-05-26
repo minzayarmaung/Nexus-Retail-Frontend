@@ -89,12 +89,23 @@ export class UsersService {
     return this.usersApi.generatePassword(username);
   }
 
-  async suspendUser(id: string): Promise<string> {
+    async suspendUser(id: string): Promise<string> {
+      const numericId = Number(id);
+      if (!Number.isFinite(numericId)) {
+        throw new Error('Invalid user id');
+      }
+      const msg = await this.usersApi.suspendUser(numericId);
+      this.detailCache.delete(id);
+      this._users.update((list) => list.filter((u) => u.id !== id));
+      return msg;
+    }
+
+  async deleteUserById(id: string): Promise<string> {
     const numericId = Number(id);
     if (!Number.isFinite(numericId)) {
       throw new Error('Invalid user id');
     }
-    const msg = await this.usersApi.suspendUser(numericId);
+    const msg = await this.usersApi.deleteUserById(numericId);
     this.detailCache.delete(id);
     this._users.update((list) => list.filter((u) => u.id !== id));
     return msg;

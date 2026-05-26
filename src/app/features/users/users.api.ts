@@ -62,6 +62,12 @@ export class UsersApiService {
     );
   }
 
+  deleteUserById(id: number): Promise<string> {
+    return firstValueFrom(
+      this.http.delete(`${this.usersUrl}/${id}`, { responseType: 'text' }),
+    );
+  }
+
   changePassword(userId: number, newPassword: string): Promise<unknown> {
     const params = new HttpParams().set('newPassword', newPassword);
     return firstValueFrom(
