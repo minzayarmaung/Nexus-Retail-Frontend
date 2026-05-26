@@ -6,6 +6,14 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Server
   },
   {
+    path: 'dashboard/users/:id',
+    renderMode: RenderMode.Server
+  },
+  {
+    path: 'dashboard/users/:id/edit',
+    renderMode: RenderMode.Server
+  },
+  {
     path: '**',
     renderMode: RenderMode.Prerender
   }

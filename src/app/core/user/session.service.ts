@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { AuthApiService } from '../auth/auth.api';
 import { AuthTokenStore } from '../auth/auth-token.store';
-import { normalizeRole } from '../auth/auth.model';
+import { loginDisplayName, normalizeRole, pickPrimaryRole } from '../auth/auth.model';
 import type { SessionUser, UserRole } from './user.model';
 import { DEFAULT_AVATAR_ID, type AvatarId } from './avatars';
 
@@ -107,12 +107,12 @@ export class SessionService {
   }
 
   async login(credentials: { identity: string; password: string }): Promise<void> {
-    const identity = credentials.identity.trim();
-    const password = credentials.password;
+    const identity = (credentials.identity ?? '').trim();
+    const password = (credentials.password ?? '').trim();
     if (!identity) {
       throw new Error('Username or email is required');
     }
-    if (!password.trim()) {
+    if (!password) {
       throw new Error('Password is required');
     }
 
@@ -122,12 +122,13 @@ export class SessionService {
 
     const res = await this.authApi.login(payload);
     this.authTokenStore.setAccessToken(res.token ?? null);
+    const displayName = loginDisplayName(res) || identity;
     this._user.set({
       id: String(res.userId),
       username: res.username || identity,
       email: res.email || '',
-      displayName: res.username || identity,
-      role: normalizeRole(res.role),
+      displayName,
+      role: normalizeRole(pickPrimaryRole(res.roles)),
       avatarId: DEFAULT_AVATAR_ID,
     });
   }

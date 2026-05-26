@@ -8,6 +8,10 @@ import { ConfigurationComponent } from './configuration/configuration.component'
 import { DashboardLayoutComponent } from './features/dashboard/dashboard-layout.component';
 import { RolesListComponent } from './configuration/roles/roles-list.component';
 import { RolePermissionsComponent } from './configuration/roles/role-permissions.component';
+import { roleGuard } from './core/auth/role.guard';
+import { UsersListComponent } from './features/users/users-list.component';
+import { UserDetailComponent } from './features/users/user-detail.component';
+import { UserFormComponent } from './features/users/user-form.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
@@ -38,6 +42,34 @@ export const routes: Routes = [
         path: 'configurations/roles/:roleId/permissions',
         component: RolePermissionsComponent,
         title: 'Role permissions'
+      },
+      {
+        path: 'users',
+        component: UsersListComponent,
+        title: 'Users',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
+      },
+      {
+        path: 'users/new',
+        component: UserFormComponent,
+        title: 'Create user',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
+      },
+      {
+        path: 'users/:id/edit',
+        component: UserFormComponent,
+        title: 'Edit user',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
+      },
+      {
+        path: 'users/:id',
+        component: UserDetailComponent,
+        title: 'User details',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
       },
 
       // Backward-compatible redirects
