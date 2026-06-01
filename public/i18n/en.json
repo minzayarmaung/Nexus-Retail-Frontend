@@ -44,11 +44,14 @@
   "sidebar": {
     "sectionMain": "Main",
     "sectionAdmin": "Administration",
+    "sectionSystem": "System",
     "sectionStore": "Store",
     "sectionMe": "Me"
   },
   "menu": {
     "dashboard": "Dashboard",
+    "system": "System",
+    "audit": "Audit Log",
     "companies": "Companies",
     "settings": "Configurations",
     "manageCodes": "Manage Codes",
@@ -62,6 +65,13 @@
     "employees": "Employees",
     "users": "Users",
     "shopOwners": "Shop Owners"
+  },
+  "hub": {
+    "systemSubtitle": "Platform tools and monitoring.",
+    "configurationsSubtitle": "Codes, roles, and system settings.",
+    "auditLogDesc": "Search activity history with basic and advanced filters.",
+    "manageCodesDesc": "Manage reference codes and values.",
+    "rolesDesc": "Define roles and assign permissions."
   },
   "dashboard": {
     "greeting": "Welcome back",

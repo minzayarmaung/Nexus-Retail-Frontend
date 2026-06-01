@@ -26,8 +26,6 @@ export class DashboardLayoutComponent {
 
   protected readonly sidebarOpen = signal(false);
   protected readonly accountOpen = signal(false);
-  protected readonly expandedGroups = signal<Record<string, boolean>>({ settings: true });
-
   protected readonly avatarUrl = (id: string) => avatarDataUrl(resolveAvatarId(id));
 
   protected readonly navGroups = computed(() => {
@@ -48,6 +46,10 @@ export class DashboardLayoutComponent {
     return groups;
   });
 
+  protected hubLinkFor(item: NavItem): string[] {
+    return this.linkFor(item);
+  }
+
   protected linkFor(item: NavItem): string[] {
     if (item.path.length === 0) {
       return ['/dashboard'];
@@ -55,24 +57,11 @@ export class DashboardLayoutComponent {
     return ['/dashboard', ...item.path];
   }
 
-  protected hasChildren(item: NavItem): boolean {
-    return !!item.children?.length;
-  }
-
-  protected toggleGroup(labelKey: string): void {
-    this.expandedGroups.update((groups) => ({
-      ...groups,
-      [labelKey]: !groups[labelKey]
-    }));
-  }
-
-  protected isGroupExpanded(labelKey: string): boolean {
-    return !!this.expandedGroups()[labelKey];
-  }
-
-  protected parentActive(item: NavItem): boolean {
-    const url = this.router.url;
-    return item.children?.some((child) => url.startsWith(this.linkFor(child).join('/'))) ?? false;
+  protected hubLinkActiveOptions(item: NavItem): { exact: boolean } {
+    if (item.children?.length) {
+      return { exact: false };
+    }
+    return this.linkActiveOptions(item);
   }
 
   protected linkActiveOptions(item: NavItem): { exact: boolean } {

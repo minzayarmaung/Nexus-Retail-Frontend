@@ -22,7 +22,12 @@ export interface NavItem {
   /** If set, sidebar shows this text instead of translating `labelKey` (no i18n entry needed). */
   plainLabel?: string;
   icon: NavIcon;
-  sectionKey: 'sidebar.sectionMain' | 'sidebar.sectionAdmin' | 'sidebar.sectionStore' | 'sidebar.sectionMe';
+  sectionKey:
+    | 'sidebar.sectionMain'
+    | 'sidebar.sectionAdmin'
+    | 'sidebar.sectionSystem'
+    | 'sidebar.sectionStore'
+    | 'sidebar.sectionMe';
   children?: NavItem[];
 }
 
@@ -40,6 +45,22 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       plainLabel: 'Users',
       icon: 'users',
       sectionKey: 'sidebar.sectionAdmin'
+    },
+    {
+      path: ['system'],
+      labelKey: 'menu.system',
+      plainLabel: 'System',
+      icon: 'shield',
+      sectionKey: 'sidebar.sectionSystem',
+      children: [
+        {
+          path: ['system', 'audit-logs'],
+          labelKey: 'menu.audit',
+          plainLabel: 'Audit Log',
+          icon: 'shield',
+          sectionKey: 'sidebar.sectionSystem'
+        }
+      ]
     },
     {
       path: ['configurations'],

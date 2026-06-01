@@ -30,60 +30,20 @@
             {{ g.sectionKey | translate }}
           </p>
           @for (item of g.items; track item.labelKey) {
-            @if (hasChildren(item)) {
-              <div class="mb-1">
-                <button
-                  type="button"
-                  (click)="toggleGroup(item.labelKey)"
-                  class="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
-                  [class.bg-slate-100]="parentActive(item)"
-                  [class.text-slate-900]="parentActive(item)"
-                  [class.dark:bg-white/10]="parentActive(item)"
-                  [class.dark:text-white]="parentActive(item)"
-                >
-                  <app-nav-icon [icon]="item.icon" />
-                  <span class="flex-1">{{ item.labelKey | translate }}</span>
-                  <svg
-                    class="size-4 transition-transform"
-                    [class.rotate-180]="isGroupExpanded(item.labelKey)"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.51a.75.75 0 01-1.08 0l-4.25-4.51a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                @if (isGroupExpanded(item.labelKey)) {
-                  <div class="ml-7 mt-1 space-y-1 border-l border-slate-200 pl-3 dark:border-slate-700">
-                    @for (child of item.children!; track child.path.join('/')) {
-                      <a
-                        [routerLink]="linkFor(child)"
-                        routerLinkActive="bg-slate-100 text-slate-900 dark:bg-white/10 dark:text-white"
-                        (click)="closeSidebar()"
-                        class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 no-underline transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
-                      >
-                        @if (child.plainLabel) {
-                          {{ child.plainLabel }}
-                        } @else {
-                          {{ child.labelKey | translate }}
-                        }
-                      </a>
-                    }
-                  </div>
-                }
-              </div>
-            } @else {
-              <a
-                [routerLink]="linkFor(item)"
-                routerLinkActive="bg-slate-100 text-slate-900 dark:bg-white/10 dark:text-white"
-                [routerLinkActiveOptions]="linkActiveOptions(item)"
-                (click)="closeSidebar()"
-                class="mb-1 flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 no-underline transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
-              >
-                <app-nav-icon [icon]="item.icon" />
+            <a
+              [routerLink]="hubLinkFor(item)"
+              routerLinkActive="bg-slate-100 text-slate-900 dark:bg-white/10 dark:text-white"
+              [routerLinkActiveOptions]="hubLinkActiveOptions(item)"
+              (click)="closeSidebar()"
+              class="mb-1 flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 no-underline transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-white"
+            >
+              <app-nav-icon [icon]="item.icon" />
+              @if (item.plainLabel) {
+                {{ item.plainLabel }}
+              } @else {
                 {{ item.labelKey | translate }}
-              </a>
-            }
+              }
+            </a>
           }
         }
       </nav>

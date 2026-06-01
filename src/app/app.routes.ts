@@ -12,6 +12,9 @@ import { roleGuard } from './core/auth/role.guard';
 import { UsersListComponent } from './features/users/users-list.component';
 import { UserDetailComponent } from './features/users/user-detail.component';
 import { UserFormComponent } from './features/users/user-form.component';
+import { ConfigurationsHubComponent } from './features/dashboard/configurations-hub.component';
+import { SystemHubComponent } from './features/dashboard/system-hub.component';
+import { AuditLogListComponent } from './features/system/audit-log/audit-log-list.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
@@ -35,7 +38,7 @@ export const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
-      { path: 'configurations', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
+      { path: 'configurations', component: ConfigurationsHubComponent, title: 'Configurations' },
       { path: 'configurations/manage-codes', component: ConfigurationComponent, title: 'Manage Codes' },
       { path: 'configurations/roles', component: RolesListComponent, title: 'Roles' },
       {
@@ -68,6 +71,20 @@ export const routes: Routes = [
         path: 'users/:id',
         component: UserDetailComponent,
         title: 'User details',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
+      },
+      {
+        path: 'system',
+        component: SystemHubComponent,
+        title: 'System',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
+      },
+      {
+        path: 'system/audit-logs',
+        component: AuditLogListComponent,
+        title: 'Audit Log',
         canActivate: [roleGuard],
         data: { roles: ['system_admin'] },
       },
