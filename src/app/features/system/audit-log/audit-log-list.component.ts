@@ -36,7 +36,7 @@ import { AuditLogService } from './audit-log.service';
                 class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100"
                 [(ngModel)]="draft.action"
                 name="action"
-                placeholder="e.g. CREATE_USER"
+                placeholder="e.g. USER_LOGIN"
               />
             </div>
             <div class="space-y-1.5">
@@ -184,34 +184,71 @@ import { AuditLogService } from './audit-log.service';
           </div>
         } @else {
           <div class="mt-6 overflow-x-auto">
-            <table class="w-full min-w-[900px] border-collapse text-left text-sm">
+            <table class="w-full min-w-[2800px] border-collapse text-left text-sm">
               <thead>
                 <tr
                   class="border-b border-slate-200 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:border-slate-700"
                 >
+                  <th class="py-3 pr-4">ID</th>
                   <th class="py-3 pr-4">Date / Time</th>
-                  <th class="py-3 pr-4">Action</th>
-                  <th class="py-3 pr-4">Maker</th>
-                  <th class="py-3 pr-4">Entity</th>
-                  <th class="py-3 pr-4">Result</th>
+                  <th class="py-3 pr-4">Action Name</th>
                   <th class="py-3 pr-4">Method</th>
+                  <th class="py-3 pr-4">API URL</th>
+                  <th class="py-3 pr-4">Entity Name</th>
+                  <th class="py-3 pr-4">Entity ID</th>
+                  <th class="py-3 pr-4">Maker Name</th>
+                  <th class="py-3 pr-4">Maker ID</th>
+                  <th class="py-3 pr-4">Result</th>
+                  <th class="py-3 pr-4">Error</th>
+                  <th class="py-3 pr-4">IP Address</th>
+                  <th class="py-3 pr-4">Browser</th>
+                  <th class="py-3 pr-4">Device</th>
+                  <th class="py-3 pr-4">OS</th>
+                  <th class="py-3 pr-4">OS Version</th>
+                  <th class="py-3 pr-4">Command (JSON)</th>
                 </tr>
               </thead>
               <tbody>
                 @for (row of auditService.rows(); track row.id || $index) {
                   <tr class="border-b border-slate-100 dark:border-slate-800">
+                    <td class="py-3 pr-4 whitespace-nowrap text-slate-600 dark:text-slate-400">{{ row.id }}</td>
                     <td class="py-3 pr-4 whitespace-nowrap text-slate-700 dark:text-slate-300">
                       {{ formatDate(row.madeOn) }}
                     </td>
-                    <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">{{ row.action }}</td>
-                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.makerName }}</td>
-                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.entityLabel }}</td>
-                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.processingResult }}</td>
+                    <td class="py-3 pr-4 font-medium text-slate-900 dark:text-slate-100">{{ row.actionName }}</td>
                     <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.actionMethod }}</td>
+                    <td
+                      class="max-w-[14rem] py-3 pr-4 truncate text-slate-600 dark:text-slate-400"
+                      [title]="row.apiUrl"
+                    >
+                      {{ row.apiUrl }}
+                    </td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.entityName }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.entityId }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.makerName }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.makerId }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.processingResult }}</td>
+                    <td
+                      class="max-w-[12rem] py-3 pr-4 truncate text-slate-600 dark:text-slate-400"
+                      [title]="row.errorMessage"
+                    >
+                      {{ row.errorMessage }}
+                    </td>
+                    <td class="py-3 pr-4 whitespace-nowrap text-slate-600 dark:text-slate-400">{{ row.ipAddress }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.browserName }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.deviceModel }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.operatingSystem }}</td>
+                    <td class="py-3 pr-4 text-slate-600 dark:text-slate-400">{{ row.operatingSystemVersion }}</td>
+                    <td
+                      class="max-w-[14rem] py-3 pr-4 truncate font-mono text-xs text-slate-600 dark:text-slate-400"
+                      [title]="row.commandAsJson"
+                    >
+                      {{ row.commandAsJson }}
+                    </td>
                   </tr>
                 } @empty {
                   <tr>
-                    <td colspan="6" class="py-8 text-center text-slate-500 dark:text-slate-400">
+                    <td colspan="17" class="py-8 text-center text-slate-500 dark:text-slate-400">
                       No audit logs match your filters.
                     </td>
                   </tr>

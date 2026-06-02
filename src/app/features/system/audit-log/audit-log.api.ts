@@ -14,7 +14,7 @@ export interface AuditPageRequest {
 @Injectable({ providedIn: 'root' })
 export class AuditLogApiService {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = `${API_BASE_PATH}/audit-logs`;
+  private readonly baseUrl = `${API_BASE_PATH}/audit`;
 
   searchAuditLogs(
     filters: AuditSearchFilters,
@@ -24,7 +24,7 @@ export class AuditLogApiService {
       .set('page', String(pageReq.page))
       .set('size', String(pageReq.size));
 
-    const sort = pageReq.sort ?? 'made_on_date,desc';
+    const sort = pageReq.sort ?? 'madeOnDate,desc';
     params = params.set('sort', sort);
 
     params = setIfPresent(params, 'action', filters.action);
