@@ -8,7 +8,7 @@ import type { CreateRoleRequest, RoleApiDto, RoleDetailApiDto, UpdateRoleBodyReq
 @Injectable({ providedIn: 'root' })
 export class RolesApiService {
   private readonly http = inject(HttpClient);
-  private readonly rolesUrl = `${API_BASE_PATH}/roles`;
+  private readonly rolesUrl = `${API_BASE_PATH}/system/roles`;
 
   /**
    * GET /nexusretail/api/v1/roles — supports a raw JSON array or `{ success, data }` envelope.

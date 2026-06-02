@@ -14,7 +14,7 @@ export interface AuditPageRequest {
 @Injectable({ providedIn: 'root' })
 export class AuditLogApiService {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = `${API_BASE_PATH}/audit`;
+  private readonly baseUrl = `${API_BASE_PATH}/system/audit`;
 
   searchAuditLogs(
     filters: AuditSearchFilters,

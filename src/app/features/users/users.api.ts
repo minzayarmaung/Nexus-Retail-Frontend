@@ -10,8 +10,8 @@ import type { UserCreateRequest, UserListResponseDto, UserUpdateRequest } from '
 export class UsersApiService {
   private readonly http = inject(HttpClient);
   private readonly api = inject(ApiClientService);
-  private readonly usersUrl = `${API_BASE_PATH}/users`;
-  private readonly authUrl = `${API_BASE_PATH}/auth`;
+  private readonly usersUrl = `${API_BASE_PATH}/system/users`;
+  private readonly authUrl = `${API_BASE_PATH}/system/auth`;
 
   getAllUsers(): Promise<UserListResponseDto[]> {
     return firstValueFrom(this.api.get<UserListResponseDto[]>(this.usersUrl));

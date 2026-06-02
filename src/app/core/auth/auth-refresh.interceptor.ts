@@ -7,7 +7,7 @@ import { AuthTokenStore } from './auth-token.store';
 let refreshPromise: Promise<void> | null = null;
 
 function shouldSkipRefresh(url: string): boolean {
-  return url.includes('/auth/login') || url.includes('/auth/logout') || url.includes('/auth/refresh');
+  return url.includes('/system/auth/login') || url.includes('/system/auth/logout') || url.includes('/system/auth/refresh');
 }
 
 function extractAccessToken(body: unknown): string | undefined {
@@ -47,7 +47,7 @@ export const authRefreshInterceptor: HttpInterceptorFn = (req, next) => {
       }
 
       if (!refreshPromise) {
-        const refreshUrl = `${API_BASE_PATH}/auth/refresh`;
+        const refreshUrl = `${API_BASE_PATH}/system/auth/refresh`;
         refreshPromise = firstValueFrom(
           http.post<unknown>(refreshUrl, null, {
             withCredentials: true,

@@ -7,7 +7,7 @@ import type { LoginRequest, LoginResponse } from './auth.model';
 @Injectable({ providedIn: 'root' })
 export class AuthApiService {
   private readonly api = inject(ApiClientService);
-  private readonly baseUrl = `${API_BASE_PATH}/auth`;
+  private readonly baseUrl = `${API_BASE_PATH}/system/auth`;
 
   login(payload: LoginRequest): Promise<LoginResponse> {
     return firstValueFrom(
