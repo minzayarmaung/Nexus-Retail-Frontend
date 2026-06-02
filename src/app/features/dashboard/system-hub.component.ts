@@ -16,7 +16,7 @@ import { NavHubComponent, type NavHubCard } from './nav-hub.component';
 export class SystemHubComponent {
   readonly cards: NavHubCard[] = [
     {
-      path: ['system', 'audit-logs'],
+      path: ['system', 'audit'],
       labelKey: 'menu.audit',
       descriptionKey: 'hub.auditLogDesc',
       icon: 'shield',

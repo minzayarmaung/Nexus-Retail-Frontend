@@ -64,6 +64,7 @@ export class SessionService {
   private readonly _user = signal<SessionUser | null>(null);
   readonly user = this._user.asReadonly();
   readonly isAuthenticated = computed(() => this._user() !== null);
+  readonly requiresPasswordChange = computed(() => this._user()?.requirePasswordChange === true);
 
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
@@ -102,7 +103,8 @@ export class SessionService {
       email: p.email,
       displayName: p.displayName,
       role: p.role,
-      avatarId: p.avatarId
+      avatarId: p.avatarId,
+      requirePasswordChange: false,
     });
   }
 
@@ -130,12 +132,29 @@ export class SessionService {
       displayName,
       role: normalizeRole(pickPrimaryRole(res.roles)),
       avatarId: DEFAULT_AVATAR_ID,
+      requirePasswordChange: !!res.isFirstTimeLogin && !!res.isGeneratePassword,
     });
+  }
+
+  async changeOwnPassword(newPassword: string): Promise<void> {
+    const user = this._user();
+    if (!user) {
+      throw new Error('No active session');
+    }
+    const userId = Number(user.id);
+    if (!Number.isFinite(userId) || userId <= 0) {
+      throw new Error('Invalid user ID');
+    }
+
+    await this.authApi.changePassword(userId, newPassword);
+    this._user.set({ ...user, requirePasswordChange: false });
   }
 
   async logout(): Promise<void> {
     try {
       await this.authApi.logout();
+    } catch {
+      // Ensure local sign-out still completes when backend logout is unavailable.
     } finally {
       this.authTokenStore.clear();
       this._user.set(null);

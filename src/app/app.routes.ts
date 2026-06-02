@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { LoginComponent } from './auth/login/login.component';
-import { authGuard, guestGuard } from './core/auth/auth.guard';
+import { authGuard, guestGuard, mustChangePasswordGuard } from './core/auth/auth.guard';
 import { DashboardHomeComponent } from './features/dashboard/dashboard-home.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { DashboardLayoutComponent } from './features/dashboard/dashboard-layout.component';
@@ -17,9 +17,10 @@ import { SystemHubComponent } from './features/dashboard/system-hub.component';
 import { AuditLogListComponent } from './features/system/audit-log/audit-log-list.component';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
+  { path: '', pathMatch: 'full', redirectTo: 'system/auth/login' },
+  { path: 'auth', pathMatch: 'full', redirectTo: 'system/auth/login' },
   {
-    path: 'auth',
+    path: 'system/auth',
     component: AuthComponent,
     canActivate: [guestGuard],
     children: [
@@ -36,6 +37,7 @@ export const routes: Routes = [
     path: 'dashboard',
     component: DashboardLayoutComponent,
     canActivate: [authGuard],
+    canActivateChild: [mustChangePasswordGuard],
     children: [
       { path: '', component: DashboardHomeComponent, title: 'Dashboard' },
       { path: 'configurations', component: ConfigurationsHubComponent, title: 'Configurations' },
@@ -82,7 +84,7 @@ export const routes: Routes = [
         data: { roles: ['system_admin'] },
       },
       {
-        path: 'system/audit-logs',
+        path: 'system/audit',
         component: AuditLogListComponent,
         title: 'Audit Log',
         canActivate: [roleGuard],
@@ -93,7 +95,8 @@ export const routes: Routes = [
       { path: 'configuration', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
       { path: 'settings', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
       { path: 'settings/manage-codes', pathMatch: 'full', redirectTo: 'configurations/manage-codes' },
+      { path: 'system/audit-logs', pathMatch: 'full', redirectTo: 'system/audit' },
     ]
   },
-  { path: '**', redirectTo: 'auth/login' }
+  { path: '**', redirectTo: 'system/auth/login' }
 ];

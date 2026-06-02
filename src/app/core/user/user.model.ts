@@ -7,4 +7,5 @@ export interface SessionUser {
   displayName: string;
   role: UserRole;
   avatarId: string;
+  requirePasswordChange?: boolean;
 }

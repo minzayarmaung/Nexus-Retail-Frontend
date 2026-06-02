@@ -123,5 +123,69 @@
         <router-outlet />
       </main>
     </div>
+
+    @if (session.requiresPasswordChange()) {
+      <div class="fixed inset-0 z-[200] flex items-center justify-center bg-slate-900/70 p-4">
+        <div
+          class="w-full max-w-lg rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xl dark:border-slate-700 dark:bg-slate-900"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Change password required"
+        >
+          <h2 class="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Change Password Required</h2>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+            You must change your generated password before continuing.
+          </p>
+          <ul class="mt-3 list-disc space-y-1 pl-5 text-xs text-slate-600 dark:text-slate-400">
+            <li>Use at least 8 characters.</li>
+            <li>Avoid using repeated characters.</li>
+            <li>Do not use your username in the password.</li>
+          </ul>
+
+          <form class="mt-5 space-y-4" (ngSubmit)="submitForcedPasswordChange()">
+            <div class="space-y-1.5">
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">New password</label>
+              <app-password-input
+                name="forcedNewPassword"
+                autocomplete="new-password"
+                [(ngModel)]="newPassword"
+                (ngModelChange)="onPasswordInput()"
+                placeholder="Enter new password"
+                [inputClass]="'w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 pr-10'"
+              />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Confirm password</label>
+              <app-password-input
+                name="forcedConfirmPassword"
+                autocomplete="new-password"
+                [(ngModel)]="confirmPassword"
+                (ngModelChange)="onPasswordInput()"
+                placeholder="Confirm new password"
+                [inputClass]="'w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-100 pr-10'"
+              />
+              @if (passwordsMismatch()) {
+                <p class="text-xs text-red-600 dark:text-red-400">Passwords do not match.</p>
+              }
+            </div>
+
+            @if (passwordChangeError()) {
+              <div class="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700 dark:border-red-900/50 dark:bg-red-950/40 dark:text-red-300">
+                {{ passwordChangeError() }}
+              </div>
+            }
+
+            <button
+              type="submit"
+              [disabled]="changingPassword() || passwordsMismatch()"
+              class="mt-2 w-full rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-60 dark:bg-slate-100 dark:text-slate-900"
+            >
+              {{ changingPassword() ? 'Changing password...' : 'Change password' }}
+            </button>
+          </form>
+        </div>
+      </div>
+    }
   </div>
 }

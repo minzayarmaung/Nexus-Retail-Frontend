@@ -14,7 +14,7 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Server
   },
   {
-    path: 'dashboard/system/audit-logs',
+    path: 'dashboard/system/audit',
     renderMode: RenderMode.Server
   },
   {

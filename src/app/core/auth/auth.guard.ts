@@ -1,5 +1,5 @@
 import { inject } from '@angular/core';
-import { Router, type CanActivateFn } from '@angular/router';
+import { Router, type CanActivateChildFn, type CanActivateFn } from '@angular/router';
 import { validateInternalReturnUrl } from './auth-return-url';
 import { SessionService } from '../user/session.service';
 
@@ -9,7 +9,7 @@ export const authGuard: CanActivateFn = (_route, state) => {
   if (session.isAuthenticated()) {
     return true;
   }
-  return router.createUrlTree(['/auth/login'], { queryParams: { returnUrl: state.url } });
+  return router.createUrlTree(['/system/auth/login'], { queryParams: { returnUrl: state.url } });
 };
 
 export const guestGuard: CanActivateFn = (_route, state) => {
@@ -24,6 +24,18 @@ export const guestGuard: CanActivateFn = (_route, state) => {
   const returnUrl = validateInternalReturnUrl(param);
   if (returnUrl) {
     return router.parseUrl(returnUrl);
+  }
+  return router.parseUrl('/dashboard');
+};
+
+export const mustChangePasswordGuard: CanActivateChildFn = (_childRoute, state) => {
+  const session = inject(SessionService);
+  const router = inject(Router);
+  if (!session.requiresPasswordChange()) {
+    return true;
+  }
+  if (state.url === '/dashboard') {
+    return true;
   }
   return router.parseUrl('/dashboard');
 };

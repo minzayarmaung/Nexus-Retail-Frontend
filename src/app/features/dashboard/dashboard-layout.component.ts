@@ -1,4 +1,6 @@
 import { Component, computed, inject, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { LanguageSwitcherComponent } from '../../i18n/language-switcher.component';
 import { TranslatePipe } from '../../i18n/translate.pipe';
@@ -6,6 +8,8 @@ import { NAV_BY_ROLE, type NavItem } from '../../core/navigation/nav.config';
 import { avatarDataUrl, resolveAvatarId } from '../../core/user/avatars';
 import { SessionService } from '../../core/user/session.service';
 import { NavIconComponent } from './nav-icon.component';
+import { PasswordInputComponent } from '../../shared/form/password-input.component';
+import { ToastService } from '../../core/toast/toast.service';
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -13,9 +17,11 @@ import { NavIconComponent } from './nav-icon.component';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    FormsModule,
     TranslatePipe,
     LanguageSwitcherComponent,
-    NavIconComponent
+    NavIconComponent,
+    PasswordInputComponent,
   ],
   templateUrl: './dashboard-layout.component.html',
   styleUrl: './dashboard-layout.component.css'
@@ -23,10 +29,20 @@ import { NavIconComponent } from './nav-icon.component';
 export class DashboardLayoutComponent {
   readonly session = inject(SessionService);
   private readonly router = inject(Router);
+  private readonly toast = inject(ToastService);
 
   protected readonly sidebarOpen = signal(false);
   protected readonly accountOpen = signal(false);
   protected readonly avatarUrl = (id: string) => avatarDataUrl(resolveAvatarId(id));
+  protected readonly changingPassword = signal(false);
+  protected readonly passwordChangeError = signal<string | null>(null);
+  protected newPassword = '';
+  protected confirmPassword = '';
+  protected readonly passwordsMismatch = computed(() => {
+    const newPassword = this.newPassword.trim();
+    const confirmPassword = this.confirmPassword.trim();
+    return !!newPassword && !!confirmPassword && newPassword !== confirmPassword;
+  });
 
   protected readonly navGroups = computed(() => {
     const role = this.session.user()?.role;
@@ -71,7 +87,60 @@ export class DashboardLayoutComponent {
   protected async logout(): Promise<void> {
     this.accountOpen.set(false);
     await this.session.logout();
-    await this.router.navigate(['/auth/login']);
+    await this.router.navigate(['/system/auth/login']);
+  }
+
+  protected async submitForcedPasswordChange(): Promise<void> {
+    const newPassword = this.newPassword.trim();
+    const confirmPassword = this.confirmPassword.trim();
+    this.passwordChangeError.set(null);
+
+    if (!newPassword || !confirmPassword) {
+      this.passwordChangeError.set('Password and confirm password are required');
+      return;
+    }
+    if (newPassword !== confirmPassword) {
+      this.passwordChangeError.set('Passwords do not match');
+      return;
+    }
+    if (this.changingPassword()) {
+      return;
+    }
+
+    this.changingPassword.set(true);
+    try {
+      await this.session.changeOwnPassword(newPassword);
+      this.newPassword = '';
+      this.confirmPassword = '';
+      this.passwordChangeError.set(null);
+      this.toast.success('Password changed successfully');
+    } catch (e) {
+      this.passwordChangeError.set(this.extractErrorMessage(e));
+    } finally {
+      this.changingPassword.set(false);
+    }
+  }
+
+  protected onPasswordInput(): void {
+    if (this.passwordChangeError()) {
+      this.passwordChangeError.set(null);
+    }
+  }
+
+  private extractErrorMessage(error: unknown): string {
+    if (error instanceof HttpErrorResponse) {
+      const payload = error.error;
+      if (payload && typeof payload === 'object') {
+        const message = (payload as Record<string, unknown>)['message'];
+        if (typeof message === 'string' && message.trim()) {
+          return message;
+        }
+      }
+    }
+    if (error instanceof Error && error.message.trim()) {
+      return error.message;
+    }
+    return 'Could not change password';
   }
 
   protected closeSidebar(): void {

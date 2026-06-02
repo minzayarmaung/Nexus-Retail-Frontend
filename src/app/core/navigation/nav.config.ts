@@ -54,7 +54,7 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
       sectionKey: 'sidebar.sectionSystem',
       children: [
         {
-          path: ['system', 'audit-logs'],
+          path: ['system', 'audit'],
           labelKey: 'menu.audit',
           plainLabel: 'Audit Log',
           icon: 'shield',
