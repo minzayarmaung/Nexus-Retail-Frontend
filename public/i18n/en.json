@@ -52,6 +52,7 @@
     "dashboard": "Dashboard",
     "system": "System",
     "audit": "Audit Log",
+    "manageReport": "Manage Report",
     "companies": "Companies",
     "settings": "Configurations",
     "manageCodes": "Manage Codes",
@@ -71,7 +72,8 @@
     "configurationsSubtitle": "Codes, roles, and system settings.",
     "auditLogDesc": "Search activity history with basic and advanced filters.",
     "manageCodesDesc": "Manage reference codes and values.",
-    "rolesDesc": "Define roles and assign permissions."
+    "rolesDesc": "Define roles and assign permissions.",
+    "manageReportDesc": "Manage reports and analytics."
   },
   "dashboard": {
     "greeting": "Welcome back",

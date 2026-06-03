@@ -1,6 +1,7 @@
 import type { UserRole } from '../user/user.model';
 
 export type NavIcon =
+  | 'report'
   | 'home'
   | 'users'
   | 'building'
@@ -58,6 +59,13 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
           labelKey: 'menu.audit',
           plainLabel: 'Audit Log',
           icon: 'shield',
+          sectionKey: 'sidebar.sectionSystem'
+        },
+        {
+          path: ['system', 'report'],
+          labelKey: 'menu.manageReport',
+          plainLabel: 'Manage Report',
+          icon: 'report',
           sectionKey: 'sidebar.sectionSystem'
         }
       ]

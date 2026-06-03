@@ -12,6 +12,15 @@ import type { NavIcon } from '../../core/navigation/nav.config';
           />
         </svg>
       }
+      @case ('report') {
+        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M4 3a2 2 0 012-2h5.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V17a2 2 0 01-2 2H6a2 2 0 01-2-2V3zm3 5a1 1 0 000 2h6a1 1 0 100-2H7zm0 4a1 1 0 000 2h6a1 1 0 100-2H7z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      }
       @case ('users') {
         <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path

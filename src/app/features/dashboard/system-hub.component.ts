@@ -21,5 +21,11 @@ export class SystemHubComponent {
       descriptionKey: 'hub.auditLogDesc',
       icon: 'shield',
     },
+        {
+      path: ['system', 'report'],
+      labelKey: 'menu.manageReport',
+      descriptionKey: 'hub.manageReportDesc',
+      icon: 'report',
+    },
   ];
 }
