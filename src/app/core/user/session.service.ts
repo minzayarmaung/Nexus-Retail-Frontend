@@ -132,7 +132,7 @@ export class SessionService {
       displayName,
       role: normalizeRole(pickPrimaryRole(res.roles)),
       avatarId: DEFAULT_AVATAR_ID,
-      requirePasswordChange: !!res.isFirstTimeLogin && !!res.isGeneratePassword,
+      requirePasswordChange: !!res.isFirstTimeLogin && !!res.isGeneratePassword && !res.cannotChangePassword,
     });
   }
 

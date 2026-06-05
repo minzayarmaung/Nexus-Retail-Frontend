@@ -16,6 +16,7 @@ export interface LoginResponse {
   lastName?: string;
   isFirstTimeLogin?: boolean;
   isGeneratePassword?: boolean;
+  cannotChangePassword?: boolean;
 }
 
 const ROLE_PRIORITY: UserRole[] = [
