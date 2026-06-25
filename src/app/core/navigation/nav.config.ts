@@ -14,7 +14,8 @@ export type NavIcon =
   | 'cart'
   | 'calendar'
   | 'clock'
-  | 'check';
+  | 'check'
+  | 'lock';
 
 export interface NavItem {
   /** Router link segments under `/dashboard` */
@@ -28,7 +29,8 @@ export interface NavItem {
     | 'sidebar.sectionAdmin'
     | 'sidebar.sectionSystem'
     | 'sidebar.sectionStore'
-    | 'sidebar.sectionMe';
+    | 'sidebar.sectionMe'
+    | 'sidebar.sectionOrganization';
   children?: NavItem[];
 }
 
@@ -88,6 +90,22 @@ export const NAV_BY_ROLE: Record<UserRole, NavItem[]> = {
           plainLabel: 'Roles & Permissions',
           icon: 'shield',
           sectionKey: 'sidebar.sectionAdmin'
+        }
+      ]
+    },
+    {
+      path: ['organization'],
+      labelKey: 'menu.organization',
+      plainLabel: 'Organization',
+      icon: 'building',
+      sectionKey: 'sidebar.sectionOrganization',
+      children: [
+        {
+          path: ['organization', 'password-preferences'],
+          labelKey: 'menu.passwordPreferences',
+          plainLabel: 'Password Preferences',
+          icon: 'lock',
+          sectionKey: 'sidebar.sectionOrganization'
         }
       ]
     }

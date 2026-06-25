@@ -15,6 +15,8 @@ import { UserFormComponent } from './features/users/user-form.component';
 import { ConfigurationsHubComponent } from './features/dashboard/configurations-hub.component';
 import { SystemHubComponent } from './features/dashboard/system-hub.component';
 import { AuditLogListComponent } from './features/system/audit-log/audit-log-list.component';
+import { OrganizationHubComponent } from './features/dashboard/organization-hub.component';
+import { PasswordPreferencesListComponent } from './features/organization/password-preferences/password-preferences-list.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'system/auth/login' },
@@ -87,6 +89,20 @@ export const routes: Routes = [
         path: 'system/audit',
         component: AuditLogListComponent,
         title: 'Audit Log',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
+      },
+      {
+        path: 'organization',
+        component: OrganizationHubComponent,
+        title: 'Organization',
+        canActivate: [roleGuard],
+        data: { roles: ['system_admin'] },
+      },
+      {
+        path: 'organization/password-preferences',
+        component: PasswordPreferencesListComponent,
+        title: 'Password Preferences',
         canActivate: [roleGuard],
         data: { roles: ['system_admin'] },
       },

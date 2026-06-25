@@ -11,5 +11,7 @@ export const SECTION_SLUG_TO_LABEL_KEY: Record<string, string> = {
   sales: 'menu.sales',
   schedules: 'menu.schedules',
   'my-shifts': 'menu.myShifts',
-  tasks: 'menu.tasks'
+  tasks: 'menu.tasks',
+  organization: 'menu.organization',
+  'password-preferences': 'menu.passwordPreferences'
 };
