@@ -46,7 +46,8 @@
     "sectionAdmin": "Administration",
     "sectionSystem": "System",
     "sectionStore": "Store",
-    "sectionMe": "Me"
+    "sectionMe": "Me",
+    "sectionOrganization": "Organization"
   },
   "menu": {
     "dashboard": "Dashboard",
@@ -65,7 +66,8 @@
     "tasks": "Tasks",
     "employees": "Employees",
     "users": "Users",
-    "shopOwners": "Shop Owners"
+    "shopOwners": "Shop Owners",
+    "organization": "Organization"
   },
   "hub": {
     "systemSubtitle": "Platform tools and monitoring.",
@@ -73,7 +75,9 @@
     "auditLogDesc": "Search activity history with basic and advanced filters.",
     "manageCodesDesc": "Manage reference codes and values.",
     "rolesDesc": "Define roles and assign permissions.",
-    "manageReportDesc": "Manage reports and analytics."
+    "manageReportDesc": "Manage reports and analytics.",
+    "organizationSubtitle": "Organization settings and preferences.",
+    "passwordPreferencesDesc": "Password requirements and policies."
   },
   "dashboard": {
     "greeting": "Welcome back",
