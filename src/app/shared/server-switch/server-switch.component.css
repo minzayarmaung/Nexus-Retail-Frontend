@@ -1,0 +1,384 @@
+.server-switch-container {
+  position: relative;
+  width: 100%;
+}
+
+.server-switch-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+.server-switch-button:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.server-switch-button.open {
+  border-color: #94a3b8;
+  background: #f1f5f9;
+}
+
+.server-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.server-name {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chevron-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.server-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 50;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.dropdown-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.dropdown-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.server-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.server-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.server-item:hover {
+  background: #f8fafc;
+}
+
+.server-item.selected {
+  background: #eff6ff;
+  border-left: 3px solid #3b82f6;
+}
+
+.server-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.server-item-name {
+  font-weight: 500;
+  color: #1e293b;
+  font-size: 0.875rem;
+}
+
+.server-item-url {
+  font-size: 0.75rem;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-server-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.remove-server-btn:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.remove-server-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.add-server-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: 1px dashed #cbd5e1;
+  border-radius: 0;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.add-server-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #475569;
+}
+
+.add-server-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.add-server-form {
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.form-field {
+  margin-bottom: 0.75rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 0.375rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #1e293b;
+  background: white;
+  transition: border-color 0.15s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.cancel-btn,
+.save-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cancel-btn {
+  background: white;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+}
+
+.cancel-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.save-btn {
+  background: #3b82f6;
+  border: 1px solid #3b82f6;
+  color: white;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Dark mode support */
+:root.dark .server-switch-button {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+:root.dark .server-switch-button:hover {
+  background: #334155;
+  border-color: #475569;
+}
+
+:root.dark .server-switch-button.open {
+  border-color: #64748b;
+  background: #334155;
+}
+
+:root.dark .server-dropdown {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+:root.dark .dropdown-header {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+:root.dark .dropdown-title {
+  color: #94a3b8;
+}
+
+:root.dark .server-item {
+  border-color: #1e293b;
+}
+
+:root.dark .server-item:hover {
+  background: #0f172a;
+}
+
+:root.dark .server-item.selected {
+  background: #1e3a5f;
+  border-left-color: #60a5fa;
+}
+
+:root.dark .server-item-name {
+  color: #f1f5f9;
+}
+
+:root.dark .server-item-url {
+  color: #94a3b8;
+}
+
+:root.dark .remove-server-btn {
+  color: #64748b;
+}
+
+:root.dark .remove-server-btn:hover {
+  background: #450a0a;
+  color: #f87171;
+}
+
+:root.dark .add-server-btn {
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+:root.dark .add-server-btn:hover {
+  background: #0f172a;
+  border-color: #64748b;
+  color: #cbd5e1;
+}
+
+:root.dark .add-server-form {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+:root.dark .form-field label {
+  color: #cbd5e1;
+}
+
+:root.dark .form-input {
+  background: #1e293b;
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+:root.dark .form-input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+:root.dark .form-input::placeholder {
+  color: #64748b;
+}
+
+:root.dark .cancel-btn {
+  background: #1e293b;
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+:root.dark .cancel-btn:hover {
+  background: #334155;
+  border-color: #64748b;
+}
+
+:root.dark .save-btn {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+:root.dark .save-btn:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #2563eb;
+}
